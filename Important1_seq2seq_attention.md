@@ -3,6 +3,8 @@
 ### 本着互相尊重的原则，如需转载请附加原文链接，非常感谢！
 
 
+![](https://latex.codecogs.com/gif.latex?c_i=\sum_{j}{\alpha_{ij}h_j})
+
 #### 本文收获
 * 经典 Sequence-to-Sequence 模型是怎么回事？
 * Attention 机制是什么？
@@ -26,6 +28,7 @@
 **问题 2**，图里的“\<EOS\>” 是啥啊？有啥作用呢？EOS 的全称是 End of Sequence，也就是序列终止标记。在训练集中本来是不包括的，所以你在把训练集输入到模型之前是需要自己把这个标记加上的。在 Encoder 阶段，它表达的意思是告诉模型 Encoder 已经到了最后一个字符了，那么你可以把这个节点的输出作为向量输入到 Decoder 里了。所以你看在图里，模型遇到 \<EOS\> 后开始预测。而在Decoder 阶段，\<EOS\> 代表预测结束了，当预测出这个字符以后，就可以停止了，这个字符以前的所有字符就组成了输出序列。
 
 好啦，Seq2Seq 整体上就这么多内容，是不是很简单。但是这个 RNN 本来我不想讲，但是它对于理解 Seq2Seq 又很重要，我就简述它的主要原理吧。
+
 
 #### RNN
 提起 RNN，普遍都会拿 LSTM 来举例子，我不详细解释 LSTM 的内部原理，这里给一个大神的解释，里面解释的清晰到位在最后还给了 GRU 的原理。把他那个帖子看完了，也就不用看这一段了。LSTM 解释：[Understanding LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)。
