@@ -1,5 +1,11 @@
 import re
+
 def repl1(m):
+    inner_word = m.group(0) 
+    return '<br><br>' + inner_word.strip() + '<br><br>'
+
+
+def repl2(m):
     inner_word = m.group(1) 
     #return '<br><br>$' + inner_word.strip() + '$<br><br>'
     remove_space = ''
@@ -8,7 +14,7 @@ def repl1(m):
             remove_space += ch
     return '<br><br>![](https://latex.codecogs.com/gif.latex?' + remove_space.strip() + ')<br><br>'
 
-def repl2(m):
+def repl3(m):
     inner_word = m.group(1) 
     #return '<br><br>$' + inner_word.strip() + '$<br><br>'
     remove_space = ''
@@ -20,8 +26,9 @@ def repl2(m):
 with open('Important1_seq2seq_attention.md', 'r') as f_read:
     text = f_read.readlines()
     for k, item in enumerate(text):
-        after_rep = re.sub(r'\$\$(.*?)\$\$', repl1, item)
-        after_rep = re.sub(r'\$(.*?)\$', repl2, after_rep)
+        after_rep = re.sub(r'\!\[(.*?)\)', repl1, item)
+        after_rep = re.sub(r'\$\$(.*?)\$\$', repl2, after_rep)
+        after_rep = re.sub(r'\$(.*?)\$', repl3, after_rep)
         text[k] = after_rep
     
     with open('2.md', 'w') as f_write:
