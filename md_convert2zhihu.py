@@ -6,7 +6,7 @@ def repl(m):
     for ch in inner_word:
         if ch != ' ':
             remove_space += ch
-    return '![](https://latex.codecogs.com/gif.latex?' + remove_space.strip() + ')'
+    return '<br><br>![](https://latex.codecogs.com/gif.latex?' + remove_space.strip() + ')</br></br>'
 
 with open('Important1_seq2seq_attention.md', 'r') as f_read:
     text = f_read.readlines()
