@@ -2,6 +2,7 @@
 
 ### 本着互相尊重的原则，如需转载请附加原文链接，非常感谢！
 
+> 大家都知道，我们人类在回答任何问题的时候都是根据我们的既有知识来回答。对于模型也不例外。现在已经有很多研究在基于 Knowledge 来生成回答。Knowledge-injecting 生成模型是一个系列，接下来会其他的基于背景知识的生成模型，本文是系列第一篇。
 
 #### 本文收获
 * 什么是根据背景知识生成模型？
@@ -11,7 +12,7 @@
 * <span id = "paper1">Paper 1</span>: [End-to-End Memory Network](http://papers.nips.cc/paper/5846-end-to-end-memory-networks.pdf)
 * <span id = "paper2">Paper 2</span>: [A Knowledge-Grounded Neural Conversation Model](https://isi.edu/~ghazvini/papers/Neural_conversational_model.pdf)
 ---
-**本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。接下来会写一个 Knowledge-Injecting 系列，本文是第一篇。那么就进入正题吧。
+**本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。那么就进入正题吧。
 
 ### 1. 什么是基于知识的生成模型 (Knowledge-injecting model)？
 大家都知道，我们人类在回答任何问题的时候都是根据我们的既有知识来回答。比如别人问你的名字，如果你不知道的话（当然啦，正常都知道啦），你没办法回答他。
@@ -263,7 +264,8 @@ class MemNNModel:
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzU2NDEzNCwtMzQ4ODczNzY3LDE1OD
-E2MzkwMDcsLTI2MTg3NDY1MywtODg4NTUzNTgzLC04Mjc2MDAy
-MzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVdfQ==
+eyJoaXN0b3J5IjpbNjkyMjc1MDgyLDEwODM1NjQxMzQsLTM0OD
+g3Mzc2NywxNTgxNjM5MDA3LC0yNjE4NzQ2NTMsLTg4ODU1MzU4
+MywtODI3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5Nz
+Q4NzQ1XX0=
 -->
