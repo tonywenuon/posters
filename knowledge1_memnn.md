@@ -67,10 +67,16 @@ $$o=\sum p_ic_i$$
 
 至此我们就有了一个由所有知识的加权求和的一个向量表示。那么理想情况下，重要的知识的权重就高，不相关的知识权重就低。
 
+$$u=u+o$$
+
+由这个公式来更新 `query` 的向量，也就把外部知识的向量整合进了 `query` 中。
+
+##### 预测结果
+有了最后的 `query` 的向量表示，那么预测最后的结果就简单了，就是一个包装了 Softmax 的
 $$$$
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNjA3OTY0MywtODg4NTUzNTgzLC04Mj
+eyJoaXN0b3J5IjpbMTI4MDE1OTUyMCwtODg4NTUzNTgzLC04Mj
 c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
 fQ==
 -->
