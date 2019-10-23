@@ -18,8 +18,8 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/knowledge1/knowledge1.png?raw=true)
 
-再比如上图中的例子，
+再比如上图中的例子，背景知识里有 “Consistently the best **omakase** in San Francisco”，那么人类
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExOTg5MTc1LDU5MDYyODY2NCw3MzI0NT
-k0NDksODE5NzQ4NzQ1XX0=
+eyJoaXN0b3J5IjpbLTgzNzA4MDgwMSw1OTA2Mjg2NjQsNzMyND
+U5NDQ5LDgxOTc0ODc0NV19
 -->
