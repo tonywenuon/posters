@@ -65,10 +65,12 @@ $$p_i=Softmax(u^Tm_i)$$
 
 $$o=\sum p_ic_i$$
 
-至此我们就有了一个加了权重
+至此我们就有了一个由所有知识的加权求和的一个向量表示。那么理想情况下，重要的知识的权重就高，不相关的知识权重就低。
+
+$$$$
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTAyODcxMjQsLTg4ODU1MzU4MywtOD
-I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
-XX0=
+eyJoaXN0b3J5IjpbLTIxNjA3OTY0MywtODg4NTUzNTgzLC04Mj
+c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
+fQ==
 -->
