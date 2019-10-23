@@ -81,9 +81,9 @@ $$\hat{a}=Softmax(Wu)$$
 
 #### 2.2 多层 MemNN
 
-架构图 b) 部分呢就是多层 MemNN，为了让 MemNN 推理性更强，作者提出了多层 MemNN，从图中可以看到，其实和单层 MemNN 没区别，就是多了 $A^1$，$C^1$，$A^2$，$C^2$，$A^3$，$C^3$ 而已，每一层都有自己的输入输出 embedding 
+架构图 b) 部分呢就是多层 MemNN，为了让 MemNN 推理性更强，作者提出了多层 MemNN，从图中可以看到，其实和单层 MemNN 没区别，就是多了 $A^1$，$C^1$，$A^2$，$C^2$，$A^3$，$C^3$ 而已，每一层都有自己的输入输出 embedding 矩阵。那么问题就来了。假设词表大小是 50000，向量 100 维。那么每个 A，B，C 的矩阵大小都是 50000*100=500w 个待训练参数。一层就是 1500w，三层就是 4500w 个待训练参数，这只是 A，B，C 还没有算 W 的
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjk2OTA3MjYsLTg4ODU1MzU4MywtOD
-I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
-XX0=
+eyJoaXN0b3J5IjpbMjEzMDU0MjQ3LC04ODg1NTM1ODMsLTgyNz
+YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
+
 -->
