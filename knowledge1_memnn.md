@@ -18,8 +18,8 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/knowledge1/knowledge1.png?raw=true)
 
-再比如上图中的例子，背景知识里有 “Consistently the best **omakase** in San Francisco”，那么人类
+再比如上图中的例子，用户输入“Going to Kusakabe tonight.”，背景知识里有 “Consistently the best **omakase** in San Francisco”，那么人类回答的话会回答 “Try ”
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNzA4MDgwMSw1OTA2Mjg2NjQsNzMyND
-U5NDQ5LDgxOTc0ODc0NV19
+eyJoaXN0b3J5IjpbLTEzMzM1NjQ4MDEsNTkwNjI4NjY0LDczMj
+Q1OTQ0OSw4MTk3NDg3NDVdfQ==
 -->
