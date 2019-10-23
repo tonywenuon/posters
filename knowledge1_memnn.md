@@ -73,15 +73,17 @@ $$u=u+o$$
 
 ##### 预测结果
 有了最后的 `query` 的向量表示，那么预测最后的结果就简单了，就是一个包装了 Softmax 的 MLP。
-$$predict\_label=Softmax(Wu)$$
+$$\hat{a}=Softmax(Wu)$$
 
-这里的 W 和前面的 A，B，C 矩阵一起，都是可训练参数。在利用交叉熵损失函数计算 predict_label 和真实 label 之间的 loss 值，就可以训练出一个单层网络了。
+这里的 W 和前面的 A，B，C 矩阵一起，都是可训练参数。在利用交叉熵损失函数计算 $\hat{a}$ 和真实 label 之间的 loss 值，就可以训练出一个单层网络了。架构图请见下图。
+
+
 
 #### 2.2 多层 MemNN
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1MTM3NTM1LC04ODg1NTM1ODMsLTgyNz
+eyJoaXN0b3J5IjpbMzA5ODE4Nzk4LC04ODg1NTM1ODMsLTgyNz
 YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
 
 -->
