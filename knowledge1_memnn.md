@@ -101,9 +101,14 @@ $$u^{k+1}=u^k+o^k$$
 ##### （2）层复制法
 这个也很好理解，就是每一层的参数都是一样的。
 
-* $A^1=A2=\dots=A^k$
+* $A^1=A^2=\dots=A^k$
+* $C^1=C^2=\dots=C^k$
+
+通过这两种方法，就可以极大地减少 MemNN 模型的待训练参数量了。
+
+### 3. Memory Neural Network (MemNN)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTY0MTA2NywtODg4NTUzNTgzLC04Mj
-c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
-fQ==
+eyJoaXN0b3J5IjpbODE2NTIxNDUwLC04ODg1NTM1ODMsLTgyNz
+YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
+
 -->
