@@ -45,10 +45,10 @@
 
 例子中，第一个数字代表这一行的 ID，在每一个问题之前，都是 knowledge，比如第三行，问题是 “Where is Mary？”，答案是 “bathroom”，答案的来源是 ID=1。其他的情况依次类推。是不是有点感觉了，作为模型来讲，要记住前面所有的信息才能回答相应的问题。那么到这儿，Memory Network 该出场了。
 
-### 2. Memory Neural Network
-
+### 2. Memory Neural Network (MemNN)
+对原文感兴趣的，请链接到 [Paper 1](#paper1) 去看原文。首先我还是根据原文，介绍一下 MemNN。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgwNDI4NTE1LC04Mjc2MDAyMzYsNTkwNj
-I4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVdfQ==
+eyJoaXN0b3J5IjpbLTg4ODU1MzU4MywtODI3NjAwMjM2LDU5MD
+YyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1XX0=
 -->
