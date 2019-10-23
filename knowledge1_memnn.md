@@ -256,9 +256,12 @@ class MemNNModel:
         return model, encoder_model, decoder_model
 ```
 
+上面 Keras 代码中，我们实现了一个邻接法的 MemNN，代码中的 story 相当于背景知识。
+完整代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMDAzOTQyNCwtMjYxODc0NjUzLC04OD
-g1NTM1ODMsLTgyNzYwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5
-LDgxOTc0ODc0NV19
+eyJoaXN0b3J5IjpbMTg5OTQyMDk0LC0yNjE4NzQ2NTMsLTg4OD
+U1MzU4MywtODI3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDks
+ODE5NzQ4NzQ1XX0=
 -->
