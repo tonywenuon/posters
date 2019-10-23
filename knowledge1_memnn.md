@@ -89,11 +89,16 @@ $$u^{k+1}=u^k+o^k$$
 
 其他部分和单层一样。那么另一个问题就来了。假设词表大小是 50000，向量 100 维。那么每个 A，B，C 的矩阵大小每个都是 50000*100=500w 个待训练参数。一层就是 1500w，三层就是 4500w 个待训练参数，这只是 A，B，C 还没有算 W 的大小。这个代价略高，为了解决这个问题，在原文中提出了两种解决办法来减少待训练参数。
 
-##### 邻接法
+##### （1）邻接法
+邻接法，顾名思义了，就是相邻的两层有某种关系，那么什么关系呢？作者规定：
 
+* $A^{k+1}=C^k$
+* $W^T=C^k$
+* $$
+ 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDcyMjYwOTQsLTg4ODU1MzU4MywtOD
-I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
-XX0=
+eyJoaXN0b3J5IjpbNzIxNzEzNTM3LC04ODg1NTM1ODMsLTgyNz
+YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
+
 -->
