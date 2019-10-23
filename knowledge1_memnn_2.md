@@ -63,7 +63,7 @@
 ##### 输出的向量表示
 输入有了，那么输出什么呢？当然了，整个模型的目标输出就是 `query` 的向量表示。但是在输出的时候，怎么把知识整合到 `query` 的向量中呢？这里还需要用到知识的输出 embedding 矩阵 C（维度也是 d*V）每个知识 ![](https://latex.codecogs.com/gif.latex?x_i) 会被表示成 ![](https://latex.codecogs.com/gif.latex?c_i)。虽然 C 和 A 都是用来表示知识的向量矩阵的，但是他们不一样，一个管输入表示，一个管输出表示。
 
-<br><br>![](https://latex.codecogs.com/gif.latex?o=\sump_ic_i)<br><br>
+<br><br>![](https://latex.codecogs.com/gif.latex?o=\sum{p_ic_i})<br><br>
 
 至此我们就有了一个由所有知识的加权求和的一个向量表示。那么理想情况下，重要的知识的权重就高，不相关的知识权重就低。
 
@@ -263,7 +263,7 @@ class MemNNModel:
 > “知乎专栏-问答不回答”，一个期待问答能回答的专
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTYzOTAwNywtMjYxODc0NjUzLC04OD
-g1NTM1ODMsLTgyNzYwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5
-LDgxOTc0ODc0NV19
+eyJoaXN0b3J5IjpbLTM0ODg3Mzc2NywxNTgxNjM5MDA3LC0yNj
+E4NzQ2NTMsLTg4ODU1MzU4MywtODI3NjAwMjM2LDU5MDYyODY2
+NCw3MzI0NTk0NDksODE5NzQ4NzQ1XX0=
 -->
