@@ -50,9 +50,13 @@
 
 #### 2.1 知识的向量表示
 
-首先对于输入的知识，要进行向量表示模型才能认识。假设 $x_1,\dots,x_i$ 表示 i 个知识。那么每个知识都会被表示成向量，我们用 $m_i$ 来代替这个向量。从词形到向量的过程，是一个单词映射的过程。再假设词表的大小是 V，向量维度是 d。那么我们现在就有个了 embedding 矩阵 A（维度是 d*V）通过这个矩阵 A，每个词都能映射成一个 d 维向量。知识表示完了，对于 query （理解成 bAbI 中的问题，比如 ID=3 的那行。），当然也得表示，原始模型中，用另一个 embedding 矩阵 B（维度也是 d*V）来表示。query 向量化后用 `u` 来代替。现在 `query` 和所有的背景知识都有向量表示了，下面要做的是
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQyMjA2MzE4LC04ODg1NTM1ODMsLTgyNz
-YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
+首先对于输入的知识，要进行向量表示模型才能认识。假设 $x_1,\dots,x_i$ 表示 i 个知识。那么每个知识都会被表示成向量，我们用 $m_i$ 来代替这个向量。从词形到向量的过程，是一个单词映射的过程。再假设词表的大小是 V，向量维度是 d。那么我们现在就有个了 embedding 矩阵 A（维度是 d*V）通过这个矩阵 A，每个词都能映射成一个 d 维向量。知识表示完了，对于 query （理解成 bAbI 中的问题，比如 ID=3 的那行。），当然也得表示，原始模型中，用另一个 embedding 矩阵 B（维度也是 d*V）来表示。query 向量化后用 `u` 来代替。现在 `query` 和所有的背景知识都有向量表示了，那么下面的工作就是回答这个问题：如何能知道当前的 `query` 和哪个知识最相关呢？
 
+模型角度来讲，我们通常有几种计算相关度的方法，[Paper 1](#paper1) 中使用点积相似度。
+
+$$p_i=Softmax(u^Tm_i$$
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTQ5MjA4NDQ4MiwtODg4NTUzNTgzLC04Mj
+c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
+fQ==
 -->
