@@ -81,9 +81,9 @@ $$\hat{a}=Softmax(Wu)$$
 
 #### 2.2 多层 MemNN
 
-架构图请见下图 a) 部分
+架构图 b) 部分呢就是多层 MemNN，为了让 MemNN 推理性更强，作者提出了多层 MemNN，从图中可以看到，其实和单层 MemNN 没区别，就是多了 $A^1$，$C^1$，$A^2$，$C^2$，$A^3$，$C^3$ 而已，每一层都有自己的输入输出 embedding 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQ2MjgzNzIsLTg4ODU1MzU4MywtOD
+eyJoaXN0b3J5IjpbLTIxMjk2OTA3MjYsLTg4ODU1MzU4MywtOD
 I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
 XX0=
 -->
