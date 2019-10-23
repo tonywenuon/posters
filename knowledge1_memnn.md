@@ -98,9 +98,12 @@ $$u^{k+1}=u^k+o^k$$
  
 也就是相邻层之间，低层的输出和高层的输入 embedding 矩阵共享参数；最后预测层和最后层的输出 embedding 共享参数;第一层的 `query` 和外部知识共享参数。
 
-##### （2）
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0NzMzNDEsLTg4ODU1MzU4MywtODI3Nj
-AwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1XX0=
+##### （2）层复制法
+这个也很好理解，就是每一层的参数都是一样的。
 
+* $A^1=A2=\dots=A^k$
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIxMTY0MTA2NywtODg4NTUzNTgzLC04Mj
+c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
+fQ==
 -->
