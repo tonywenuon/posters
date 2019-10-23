@@ -50,9 +50,9 @@
 
 #### 2.1 知识的向量表示
 
-首先对于输入的知识，要进行向量表示
+首先对于输入的知识，要进行向量表示模型才能认识。假设 $x_1,\dots,x_i$ 表示 i 个知识。那么每个知识都会被表示成向量，我们用 $m_i$ 来代替这个向量。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYzMjkxOTEwLC04ODg1NTM1ODMsLTgyNz
-YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
-
+eyJoaXN0b3J5IjpbLTE2Nzg1NDQyNjIsLTg4ODU1MzU4MywtOD
+I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
+XX0=
 -->
