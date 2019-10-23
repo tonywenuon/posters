@@ -108,7 +108,7 @@ $$u^{k+1}=u^k+o^k$$
 
 ### 3. 如何用 Keras 实现一个 Memory Network 的模型？
 
-首先先定义一个 Position Embedding，这个的意思是说，每个词在一个 sentence 里的顺序是不一样的，比如 
+首先先定义一个 Position Embedding，这个的意思是说，每个词在一个 sentence 里的顺序是不一样的，比如 “I like Jazz `music` very much. Do you like Hip-hop `music`?”
 ```python
 class PosEncodeEmbedding(Layer):
     """
@@ -156,7 +156,7 @@ class PosEncodeEmbedding(Layer):
         return res
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNDAxMzg5NywtMjYxODc0NjUzLC04OD
+eyJoaXN0b3J5IjpbLTk4MDg3ODgxNywtMjYxODc0NjUzLC04OD
 g1NTM1ODMsLTgyNzYwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5
 LDgxOTc0ODc0NV19
 -->
