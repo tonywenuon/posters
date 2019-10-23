@@ -61,9 +61,9 @@ $$p_i=Softmax(u^Tm_i)$$
 把 `u` 和每一个 $m_i$ 计算相似度，最后取 Softmax，就可以得到 `query` 和知识的相关程度，用 $p_i$ 来表示。
 
 ##### 输出的向量表示
-输入有了，那么输出什么呢？
+输入有了，那么输出什么呢？当然了，整个模型的目标输出就是 `query` 的向量表示。但是在输出的时候，怎么把知识整合到 `query` 的向量中呢？这里还需要用到知识的输出 embedding 矩阵 C（维度也是 d*V），虽然 C 和 A 都是用来表示知识的向量矩阵的，但是他们不一样，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzcwODE0NDEsLTg4ODU1MzU4MywtOD
-I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
-XX0=
+eyJoaXN0b3J5IjpbLTUwMjMyODEyNSwtODg4NTUzNTgzLC04Mj
+c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
+fQ==
 -->
