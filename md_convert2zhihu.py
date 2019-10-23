@@ -1,5 +1,9 @@
 import re
 
+src_file_name = 'knowledge1_memnn'
+src_file = src_file_name + '.md'
+tar_file = src_file_name + '_2.md'
+
 def repl1(m):
     inner_word = m.group(0) 
     return '<br><br>' + inner_word.strip() + '<br><br>'
@@ -23,7 +27,7 @@ def repl3(m):
             remove_space += ch
     return '![](https://latex.codecogs.com/gif.latex?' + remove_space.strip() + ')'
 
-with open('Important1_seq2seq_attention.md', 'r') as f_read:
+with open(src_file, 'r') as f_read:
     text = f_read.readlines()
     for k, item in enumerate(text):
         after_rep = re.sub(r'\!\[(.*?)\)', repl1, item)
@@ -31,5 +35,5 @@ with open('Important1_seq2seq_attention.md', 'r') as f_read:
         after_rep = re.sub(r'\$(.*?)\$', repl3, after_rep)
         text[k] = after_rep
     
-    with open('2.md', 'w') as f_write:
+    with open(tar_file, 'w') as f_write:
         f_write.writelines(text)
