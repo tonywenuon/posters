@@ -48,7 +48,9 @@
 ### 2. Memory Neural Network (MemNN)
 对原文感兴趣的，请链接到 [Paper 1](#paper1) 去看原文。首先我还是根据原文，介绍一下 MemNN。MemNN 是用来记忆外部信息的。
 
-#### 2.1 单层 MemNN 知识的向量表示
+#### 2.1 单层 MemNN
+
+##### 所有输入的向量表示（背景知识+`query`）
 
 首先对于输入的知识，要进行向量表示模型才能认识。假设 $x_1,\dots,x_i$ 表示 i 个知识。那么每个知识都会被表示成向量，我们用 $m_i$ 来代替这个向量。从词形到向量的过程，是一个单词映射的过程。再假设词表的大小是 V，向量维度是 d。那么我们现在就有个了 embedding 矩阵 A（维度是 d*V）通过这个矩阵 A，每个词都能映射成一个 d 维向量。知识表示完了，对于 query （理解成 bAbI 中的问题，比如 ID=3 的那行。），当然也得表示，原始模型中，用另一个 embedding 矩阵 B（维度也是 d*V）来表示。query 向量化后用 `u` 来代替。现在 `query` 和所有的背景知识都有向量表示了，那么下面的工作就是回答这个问题：如何能知道当前的 `query` 和哪个知识最相关呢？
 
@@ -56,9 +58,11 @@
 
 $$p_i=Softmax(u^Tm_i)$$
 
-把 `u` 和每一个 $m_i$ 计算相似度，最后取 Softmax，就可以得到
+把 `u` 和每一个 $m_i$ 计算相似度，最后取 Softmax，就可以得到 `query` 和知识的相关程度，用 $p_i$ 来表示。
+
+##### 输出的
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzYyMDE3NzQsLTg4ODU1MzU4MywtOD
+eyJoaXN0b3J5IjpbLTIwNzIzOTQ4MzEsLTg4ODU1MzU4MywtOD
 I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
 XX0=
 -->
