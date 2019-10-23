@@ -18,8 +18,33 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/knowledge1/knowledge1.png?raw=true)
 
-再比如上图中的例子，用户输入“Going to Kusakabe tonight.”，背景知识里有 “Consistently the best **omakase** in San Francisco”，那么人类回答的话会回答 “Try omasake”，但是模型来回答就仅仅是 “Have a great time!” 了。由此
+再比如上图中的例子，用户输入“Going to Kusakabe tonight.”，背景知识里有 “Consistently the best **omakase** in San Francisco”，那么人类回答的话会回答 “Try omasake”，但是模型来回答就仅仅是 “Have a great time!” 了。
+
+再举一个例子，来自于 Facebook 的 bAbI 数据集。
+
+```
+1 Mary moved to the bathroom.
+2 John went to the hallway.
+3 Where is Mary? bathroom 1
+4 Daniel went back to the hallway.
+5 Sandra moved to the garden.
+6 Where is Daniel? hallway 4
+7 John moved to the office.
+8 Sandra journeyed to the bathroom.
+9 Where is Daniel? hallway 4
+10 Mary moved to the hallway.
+11 Daniel travelled to the office.
+12 Where is Daniel? office 11
+13 John went back to the garden.
+14 John moved to the bedroom.
+15 Where is Sandra? bathroom 8
+1 Sandra travelled to the office.
+2 Sandra went to the bathroom.
+3 Where is Sandra? bathroom 2
+```
+
+例子中，第一个数字代表这一行的 ID，在每一个问题之前，都是 knowledge，比如第三行，问题是 “Where”
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNzYwMDIzNiw1OTA2Mjg2NjQsNzMyND
-U5NDQ5LDgxOTc0ODc0NV19
+eyJoaXN0b3J5IjpbLTExMDE4NTg0MzgsLTgyNzYwMDIzNiw1OT
+A2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
 -->
