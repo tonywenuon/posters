@@ -106,9 +106,9 @@ $$u^{k+1}=u^k+o^k$$
 
 通过这两种方法，就可以极大地减少 MemNN 模型的待训练参数量了。
 
-### 3. Memory Neural Network (MemNN)
+### 3. 如何用 Keras 实现一个 Memory Network 的模型？
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE2NTIxNDUwLC04ODg1NTM1ODMsLTgyNz
-YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
-
+eyJoaXN0b3J5IjpbLTI2MTg3NDY1MywtODg4NTUzNTgzLC04Mj
+c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
+fQ==
 -->
