@@ -13,7 +13,7 @@
 ---
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。接下来会写一个 Knowledge-Injecting 系列，本文是第一篇。那么就进入正题吧。
 
-### 1. 什么是基于知识生成模型 (Knowledge-injecting model)？
+### 1. 什么是基于知识的生成模型 (Knowledge-injecting model)？
 大家都知道，我们人类在回答任何问题的时候都是根据我们的既有知识来回答。比如别人问你的名字，如果你不知道的话（当然啦，正常都知道啦），你没办法回答他。
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/knowledge1/knowledge1.png?raw=true)
@@ -259,9 +259,11 @@ class MemNNModel:
 上面 Keras 代码中，我们实现了一个邻接法的 MemNN，代码中的 story 相当于背景知识。
 完整代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
 
+---
+> “知乎专栏-问答不回答”，一个期待问答能回答的专
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTQyMDk0LC0yNjE4NzQ2NTMsLTg4OD
-U1MzU4MywtODI3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDks
-ODE5NzQ4NzQ1XX0=
+eyJoaXN0b3J5IjpbMTU4MTYzOTAwNywtMjYxODc0NjUzLC04OD
+g1NTM1ODMsLTgyNzYwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5
+LDgxOTc0ODc0NV19
 -->
