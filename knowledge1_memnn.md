@@ -72,11 +72,13 @@ $$u=u+o$$
 由这个公式来更新 `query` 的向量，也就把外部知识的向量整合进了 `query` 中。
 
 ##### 预测结果
-有了最后的 `query` 的向量表示，那么预测最后的结果就简单了，就是一个包装了 Softmax 的
-$$$$
+有了最后的 `query` 的向量表示，那么预测最后的结果就简单了，就是一个包装了 Softmax 的 MLP。
+$$predict\_label=Softmax(Wu)$$
+
+这里的 W 和前面的 A，B，C 矩阵一起，都是可训练参数。在利用
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MDE1OTUyMCwtODg4NTUzNTgzLC04Mj
-c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
-fQ==
+eyJoaXN0b3J5IjpbNjg1MDc2NDczLC04ODg1NTM1ODMsLTgyNz
+YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
+
 -->
