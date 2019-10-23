@@ -14,11 +14,11 @@
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。那么就进入正题吧。
 
 ### 1. 什么是基于知识生成模型 (Knowledge-injecting model)？
+大家都知道，我们人类在回答任何问题的时候都是根据我们的既有知识来回答
 
-
-！
+![](https://github.com/tonywenuon/posters/blob/master/images/knowledge1/knowledge1.png?raw=true)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODAwMTYyLDgxOTc0ODc0NV19
+eyJoaXN0b3J5IjpbNzMyNDU5NDQ5LDgxOTc0ODc0NV19
 -->
