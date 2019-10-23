@@ -18,8 +18,8 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/knowledge1/knowledge1.png?raw=true)
 
-
+再比如上图中的例子，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3ND
-g3NDVdfQ==
+eyJoaXN0b3J5IjpbNzExOTg5MTc1LDU5MDYyODY2NCw3MzI0NT
+k0NDksODE5NzQ4NzQ1XX0=
 -->
