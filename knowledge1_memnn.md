@@ -50,9 +50,9 @@
 
 #### 2.1 知识的向量表示
 
-首先对于输入的知识，要进行向量表示模型才能认识。假设 $x_1,\dots,x_i$ 表示 i 个知识。那么每个知识都会被表示成向量，我们用 $m_i$ 来代替这个向量。
+首先对于输入的知识，要进行向量表示模型才能认识。假设 $x_1,\dots,x_i$ 表示 i 个知识。那么每个知识都会被表示成向量，我们用 $m_i$ 来代替这个向量。从词形到向量的过程，是一个单词映射的过程，再假设词表的大小是 V，向量维度是 d。那么我们现在就有个了 embedding 矩阵 A（维度）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzg1NDQyNjIsLTg4ODU1MzU4MywtOD
+eyJoaXN0b3J5IjpbLTIwMzE2NDM4NzQsLTg4ODU1MzU4MywtOD
 I3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5NzQ4NzQ1
 XX0=
 -->
