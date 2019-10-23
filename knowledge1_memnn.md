@@ -94,11 +94,11 @@ $$u^{k+1}=u^k+o^k$$
 
 * $A^{k+1}=C^k$
 * $W^T=C^k$
-* $$
+* $B=A^1$
  
-
+也就是相邻层之间，低层的输出和高层的输入 embedding 矩阵共享参数，第一层的 `query` 和
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIxNzEzNTM3LC04ODg1NTM1ODMsLTgyNz
-YwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
-
+eyJoaXN0b3J5IjpbMTQ0MDM1NzAyNywtODg4NTUzNTgzLC04Mj
+c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
+fQ==
 -->
