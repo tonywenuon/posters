@@ -11,7 +11,7 @@
 * <span id = "paper1">Paper 1</span>: [End-to-End Memory Network](http://papers.nips.cc/paper/5846-end-to-end-memory-networks.pdf)
 * <span id = "paper2">Paper 2</span>: [A Knowledge-Grounded Neural Conversation Model](https://isi.edu/~ghazvini/papers/Neural_conversational_model.pdf)
 ---
-**本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。那么就进入正题吧。
+**本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。接下来会写一个 Knowledge-Injecting 系列，本文是第一篇。那么就进入正题吧。
 
 ### 1. 什么是基于知识生成模型 (Knowledge-injecting model)？
 大家都知道，我们人类在回答任何问题的时候都是根据我们的既有知识来回答。比如别人问你的名字，如果你不知道的话（当然啦，正常都知道啦），你没办法回答他。
@@ -44,7 +44,11 @@
 ```
 
 例子中，第一个数字代表这一行的 ID，在每一个问题之前，都是 knowledge，比如第三行，问题是 “Where is Mary？”，答案是 “bathroom”，答案的来源是 ID=1。其他的情况依次类推。是不是有点感觉了，作为模型来讲，要记住前面所有的信息才能回答相应的问题。那么到这儿，Memory Network 该出场了。
+
+### 2. Memory Neural Network
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzYzNzc0MzMsLTgyNzYwMDIzNiw1OT
-A2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
+eyJoaXN0b3J5IjpbODgwNDI4NTE1LC04Mjc2MDAyMzYsNTkwNj
+I4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVdfQ==
 -->
