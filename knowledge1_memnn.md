@@ -2,6 +2,7 @@
 
 ### 本着互相尊重的原则，如需转载请附加原文链接，非常感谢！
 
+> 大家都知道，我们人类在回答任何问题的时候都是根据我们的既有知识来回答。对于模型也不例外。现在已经有很多研究在基于 Knowledge 来生成回答。Knowledge-injecting 生成模型是一个系列，接下来会其他的基于背景知识的生成模型，本文是系列第一篇。
 
 #### 本文收获
 * 什么是根据背景知识生成模型？
@@ -263,7 +264,8 @@ class MemNNModel:
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzU2NDEzNCwtMzQ4ODczNzY3LDE1OD
-E2MzkwMDcsLTI2MTg3NDY1MywtODg4NTUzNTgzLC04Mjc2MDAy
-MzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVdfQ==
+eyJoaXN0b3J5IjpbLTE4ODQyODA2NTMsMTA4MzU2NDEzNCwtMz
+Q4ODczNzY3LDE1ODE2MzkwMDcsLTI2MTg3NDY1MywtODg4NTUz
+NTgzLC04Mjc2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MT
+k3NDg3NDVdfQ==
 -->
