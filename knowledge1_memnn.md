@@ -43,8 +43,8 @@
 3 Where is Sandra? bathroom 2
 ```
 
-例子中，第一个数字代表这一行的 ID，在每一个问题之前，都是 knowledge，比如第三行，问题是 “Where”
+例子中，第一个数字代表这一行的 ID，在每一个问题之前，都是 knowledge，比如第三行，问题是 “Where is Mary？”，答案是 “bathroom”，答案的来源是 ID=1。其他的情况依次类推。是不是有点感觉了，作为模型来讲，要记住前面所有的信息才能回答相应的问题。那么到这儿，Memory Network 该出场了。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDE4NTg0MzgsLTgyNzYwMDIzNiw1OT
+eyJoaXN0b3J5IjpbLTE0MzYzNzc0MzMsLTgyNzYwMDIzNiw1OT
 A2Mjg2NjQsNzMyNDU5NDQ5LDgxOTc0ODc0NV19
 -->
