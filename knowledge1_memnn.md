@@ -13,7 +13,12 @@
 ---
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。那么就进入正题吧。
 
+### 1. 什么是基于知识生成模型 (Knowledge-injecting model)？
+
+
+！
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE5NzQ4NzQ1XX0=
+eyJoaXN0b3J5IjpbMTQ1ODAwMTYyLDgxOTc0ODc0NV19
 -->
