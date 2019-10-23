@@ -107,8 +107,56 @@ $$u^{k+1}=u^k+o^k$$
 通过这两种方法，就可以极大地减少 MemNN 模型的待训练参数量了。
 
 ### 3. 如何用 Keras 实现一个 Memory Network 的模型？
+
+
+```python
+class PosEncodeEmbedding(Layer):
+    """
+    Position Encoding described in section 4.1
+    """
+    def __init__(self, _type, seq_len, embedding_dim, **kwargs):
+        self._type = _type
+        self.seq_len = seq_len
+        self.embedding_dim = embedding_dim
+        self.pe_encoding = self.__position_encoding()
+        super(PosEncodeEmbedding, self).__init__(**kwargs)
+
+    def get_config(self):
+        config = super().get_config()
+        config['_type'] = self._type
+        config['seq_len'] = self.seq_len
+        config['embedding_dim'] = self.embedding_dim
+        config['pe_encoding'] = self.pe_encoding
+        return config 
+
+    def compute_output_shape(self, input_shape):
+        return input_shape
+
+    def __position_encoding(self):
+        encoding = np.ones((self.embedding_dim, self.seq_len), dtype=np.float32)
+        ls = self.seq_len + 1
+        le = self.embedding_dim + 1
+        for i in range(1, le):
+            for j in range(1, ls):
+                encoding[i-1, j-1] = (i - (self.embedding_dim + 1) / 2) * (j - (self.seq_len + 1) / 2)
+        encoding = 1 + 4 * encoding / self.embedding_dim / self.seq_len
+        # Make position encoding of time words identity to avoid modifying them 
+        encoding[:, -1] = 1.0
+        # shape: (seq_len, embedding_dim)
+        return np.transpose(encoding)
+
+    def call(self, inputs):
+        assert len(inputs.shape) >= 2
+        res = None
+        if self._type == 'query':
+            res = inputs * self.pe_encoding
+        elif self._type == 'story':
+            pe_encoding = np.expand_dims(self.pe_encoding, 0)
+            res = inputs * pe_encoding
+        return res
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MTg3NDY1MywtODg4NTUzNTgzLC04Mj
-c2MDAyMzYsNTkwNjI4NjY0LDczMjQ1OTQ0OSw4MTk3NDg3NDVd
-fQ==
+eyJoaXN0b3J5IjpbLTY3ODA0MzY0OSwtMjYxODc0NjUzLC04OD
+g1NTM1ODMsLTgyNzYwMDIzNiw1OTA2Mjg2NjQsNzMyNDU5NDQ5
+LDgxOTc0ODc0NV19
 -->
