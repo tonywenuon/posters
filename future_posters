@@ -1,0 +1,19 @@
+1. Vanilla Transformers (Important)
+2. Multi-Task (Knowledge)
+3. TED model (Knowledge)
+4. BERT (BERT Series)
+5. XLNet (Important)
+6. RoBERTa (BERT Series)
+7. ALBERT (BERT Series)
+8. MASS (Important)
+
+
+## Clues
+1. XLNet claims that BERT has two limitations: (1) Independence assumption for the masked token prediction. (2) Mismatched 
+between pre-training and fine-tuning process.
+2. RoBERTa. (1) Done comprehensive analysis on BERT and give alternatives of BERT. (2) Demonstrate that more data is useful
+for the further performance. (3) Under the right design choices for the masked language model pretraining, BERT is competitive
+to other new models.
+3. ALBERT. (1) Two parameter-reduction techniques: factorized embedding parameterization, and cross-layer parameter sharing.
+(2) Self-supervised loss for sentence-order prediction (SOP) instead of next sentence prediction (NSP). => bigger model and 
+more data result in higher performance.
