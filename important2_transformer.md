@@ -73,7 +73,7 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 > Question: Where did you live in the last two years ? \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD
 
-那么现在问题就来了。在你计算 self-attention 的时候，所有的 `\PAD` 也都会参与计算，但是 `\PAD` 又不是 sequence 里的内容。大量的 `\PAD` 如果不加以过滤，就相当于
+那么现在问题就来了。在你计算 self-attention 的时候，所有的 `\PAD` 也都会参与计算，但是 `\PAD` 又不是 sequence 里的内容。大量的 `\PAD` 如果不加以过滤，就相当于给向量表示引入了很多噪音。根据个人经验，这就会导致不论输入什么 Question，各个字符的向量表示都会比较相近（因为大家都是参合了 `\PAD` 的信息）。这样进而导致了 Transformer 的 Decoder 后的结果都很 gene
 
 ### 1.5 Residual Connection 和 Layer Normalization
 这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 $H(x) = f(x)$ 变成 $H(x) = f(x) + x$，这就是残差网络。他本身的出发点是从网络深度来的。理论上来说，越深的网络，其效果也是越好的。换句话说，深的网络不会比浅的网络效果差。但是实际情况却不是这样的，有时候由于网络太深导致难以训练，返到不如浅网络好。这一现象被称为**退化问题（degradation problem）**。残差网络就是解决这个问题的，残差网络越深在训练集的效果越好 (ref 1)。而 Layer Normalization 则是用来提高训练速度的。
@@ -124,10 +124,10 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTIwMjczODgsMTk2MjQzMjQyLC0xMj
-k0NTUzNDU4LDQwODA1Mjk4MiwtMTg0Nzg2OTI5MCwxMTM4NTA5
-NTksNDAzODMyODMzLC0xMzE1MjE2MDUsLTE5NzY5MjI3MjEsLT
-E3MzAzMDM2OTYsMTk1NTA1MTE3MywxMjE3OTIwNjk1LC0xMDk0
-MzAxMDc1LDg4MDcyNDE1MSwxNjM0MjY5OTE2LDE1Njk5MDkzNz
-QsMTcyODY4NjY3NCwxNzQwNjE1OTYxXX0=
+eyJoaXN0b3J5IjpbNTYzNjQxNzczLDE5NjI0MzI0MiwtMTI5ND
+U1MzQ1OCw0MDgwNTI5ODIsLTE4NDc4NjkyOTAsMTEzODUwOTU5
+LDQwMzgzMjgzMywtMTMxNTIxNjA1LC0xOTc2OTIyNzIxLC0xNz
+MwMzAzNjk2LDE5NTUwNTExNzMsMTIxNzkyMDY5NSwtMTA5NDMw
+MTA3NSw4ODA3MjQxNTEsMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LD
+E3Mjg2ODY2NzQsMTc0MDYxNTk2MV19
 -->
