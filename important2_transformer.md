@@ -58,7 +58,7 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 ### 1.4 Masks
 
-感谢 @李敬泉 的建议，在这里我在讨论一下两种 mask。实际上在 Transformer 中只有一种 mask，就是在 Decoder 阶段使用的 mask。另一种mask 是我根据自己经验介绍点关于 `<pad>` 的mask。
+感谢 @李敬泉 的建议，在这里我再补充讨论一下两种 mask。实际上在 Transformer 中只有一种 mask，就是在 Decoder 阶段使用的 mask。另一种mask 是我根据自己经验介绍点关于 `<pad>` 的mask。
 
 #### Decoder mask
 拿个例子来说，假设现在给的场景是智能对话。在训练集中有这样一组问答。
@@ -124,10 +124,10 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM3Mzg4MTc0LDE5NjI0MzI0MiwtMTI5ND
-U1MzQ1OCw0MDgwNTI5ODIsLTE4NDc4NjkyOTAsMTEzODUwOTU5
-LDQwMzgzMjgzMywtMTMxNTIxNjA1LC0xOTc2OTIyNzIxLC0xNz
-MwMzAzNjk2LDE5NTUwNTExNzMsMTIxNzkyMDY5NSwtMTA5NDMw
-MTA3NSw4ODA3MjQxNTEsMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LD
-E3Mjg2ODY2NzQsMTc0MDYxNTk2MV19
+eyJoaXN0b3J5IjpbLTUyNzYwNzQxNSwxOTYyNDMyNDIsLTEyOT
+Q1NTM0NTgsNDA4MDUyOTgyLC0xODQ3ODY5MjkwLDExMzg1MDk1
+OSw0MDM4MzI4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcyMSwtMT
+czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
+MDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NC
+wxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
 -->
