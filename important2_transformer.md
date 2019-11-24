@@ -17,11 +17,11 @@
 
 ## 1. 什么是 Transformer？
 
-Transformer，
+Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有意思的，哈哈。言归正传，Transformer 实际上是一种架构，从架构上并体现不出来他为什么起名叫 Transformer。在 Transformer 中最重要的两个结构是 Self-Attention 和 Multi-Head。下面我们依据
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI4NzA3MzI5LC0xMDk0MzAxMDc1LDg4MD
-cyNDE1MSwxNjM0MjY5OTE2LDE1Njk5MDkzNzQsMTcyODY4NjY3
-NCwxNzQwNjE1OTYxXX0=
+eyJoaXN0b3J5IjpbMTQ4Njc5MTQ0MywtMTA5NDMwMTA3NSw4OD
+A3MjQxNTEsMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mjg2ODY2
+NzQsMTc0MDYxNTk2MV19
 -->
