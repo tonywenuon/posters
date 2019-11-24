@@ -21,9 +21,9 @@ Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/important2/transformer.png?raw=true)
 
-如图左边部分是 Transformer 的 Encoder，右边是 Decoder。Encoder 主要有两层：Multi-Head Attention 和一个前向网络。其中的 `Add & Norm` 是 
+如图左边部分是 Transformer 的 Encoder，右边是 Decoder。Encoder 主要有两层：Multi-Head Attention 和一个前向网络。其中的 `Add & Norm` 是 Residual Connection 和 Layer  Normalization。这里，前向网络，，这两个并不是本文的重点，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjI0NTEzMywtMTA5NDMwMTA3NSw4OD
+eyJoaXN0b3J5IjpbLTIzMTcwNjA1OCwtMTA5NDMwMTA3NSw4OD
 A3MjQxNTEsMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mjg2ODY2
 NzQsMTc0MDYxNTk2MV19
 -->
