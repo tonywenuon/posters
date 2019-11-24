@@ -43,10 +43,10 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 图中显示的就是 8 head 的结构。然后再每一个 64 维上进行 self-attention 的计算，这就是 Transformer 的第一层的设定了。也就是架构图中的 `Multi-Head Attention`。作者呢是假定，不同的 head 能够获取到这个词的不同维度的信息，所以多头会优于单头的设定。当然了，这一点假设在原文中并没有明确的验证。近期在 EMNLP 2019 会议中有人专门对多头进行了研究，指明其实在 Transformer Encoder 的多头设定中，这个多头是有很多冗余信息的，头多了反倒会对结果有负面的影响。至于到底设置成多少头呢，这个大家自己做实验的时候根据自己的情况来设定吧。至此，两个最主要的结构都介绍完了。
 
 ### 1.3 Residual Connection 和 Layer Normalization
-这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 $H(x) = f(x)$ 变成 $H(x) = f(x) + x$，这就是残差网络。他本身的出发点是要使
+这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 $H(x) = f(x)$ 变成 $H(x) = f(x) + x$，这就是残差网络。他本身的出发点是从网络深度来的。理论上来说，越深的网络，其效果也是越好的。换句话说，深的网络不会比浅的网络效果差。但是实际情况却不是这样的，有时候由于网络太深导致难以训练，返到不如浅网络好。这一现象被称为**退化问题（degradation problem）**。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzUxNTUyMDcsNDAzODMyODMzLC0xMz
+eyJoaXN0b3J5IjpbLTEwMDgxNDM3NDAsNDAzODMyODMzLC0xMz
 E1MjE2MDUsLTE5NzY5MjI3MjEsLTE3MzAzMDM2OTYsMTk1NTA1
 MTE3MywxMjE3OTIwNjk1LC0xMDk0MzAxMDc1LDg4MDcyNDE1MS
 wxNjM0MjY5OTE2LDE1Njk5MDkzNzQsMTcyODY4NjY3NCwxNzQw
