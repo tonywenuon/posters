@@ -49,7 +49,11 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 * 基于三角函数的位置编码
 * 基于自动训练的位置编码向量 （trainable vector）
 
-自动训练的 position encoding 就不多说了，就加个位置
+自动训练的 position encoding 就不多说了，把每个词的 embedding 加个位置向量就 ok 了。基于三角函数的则是：
+
+![](https://github.com/tonywenuon/posters/blob/master/images/important2/pe.png?raw=true)
+
+可以看到作者是对于奇数偶数位置分开设定，
 
 ### 1.4 Residual Connection 和 Layer Normalization
 这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 $H(x) = f(x)$ 变成 $H(x) = f(x) + x$，这就是残差网络。他本身的出发点是从网络深度来的。理论上来说，越深的网络，其效果也是越好的。换句话说，深的网络不会比浅的网络效果差。但是实际情况却不是这样的，有时候由于网络太深导致难以训练，返到不如浅网络好。这一现象被称为**退化问题（degradation problem）**。残差网络就是解决这个问题的，残差网络越深在训练集的效果越好 (ref 1)。而 Layer Normalization 则是用来提高训练速度的。
@@ -57,7 +61,7 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjA4MzgzNzksNDAzODMyODMzLC0xMz
+eyJoaXN0b3J5IjpbLTE3NDI2OTExNzUsNDAzODMyODMzLC0xMz
 E1MjE2MDUsLTE5NzY5MjI3MjEsLTE3MzAzMDM2OTYsMTk1NTA1
 MTE3MywxMjE3OTIwNjk1LC0xMDk0MzAxMDc1LDg4MDcyNDE1MS
 wxNjM0MjY5OTE2LDE1Njk5MDkzNzQsMTcyODY4NjY3NCwxNzQw
