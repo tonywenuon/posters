@@ -19,11 +19,11 @@
 
 Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有意思的，哈哈。言归正传，Transformer 实际上是一种架构，从架构上并体现不出来他为什么起名叫 Transformer。在 Transformer 中最重要的两个结构是 Self-Attention 和 Multi-Head。下面我们依据架构图逐一介绍。
 
-！
+![](https://github.com/tonywenuon/posters/blob/master/images/important2/transformer.png?raw=true)
 
-
+如图左边部分是 Transformer 的 Encoder，右边是 Decoder。Encoder 主要有两层：Multi-Head Attention 和一个前向网络。其中的 `Add & Norm` 是 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NTQ4OTExNiwtMTA5NDMwMTA3NSw4OD
+eyJoaXN0b3J5IjpbLTQxMjI0NTEzMywtMTA5NDMwMTA3NSw4OD
 A3MjQxNTEsMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mjg2ODY2
 NzQsMTc0MDYxNTk2MV19
 -->
