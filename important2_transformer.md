@@ -63,6 +63,7 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 实现一个 Transformer 比 Seq2Seq 会复杂一些。这里只给出最关键部分的代码。
 
+
 我把源码连接贴出来，感兴趣代码的自己关注哦。
 代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
 
@@ -71,9 +72,9 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzODUwOTU5LDQwMzgzMjgzMywtMTMxNT
-IxNjA1LC0xOTc2OTIyNzIxLC0xNzMwMzAzNjk2LDE5NTUwNTEx
-NzMsMTIxNzkyMDY5NSwtMTA5NDMwMTA3NSw4ODA3MjQxNTEsMT
-YzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mjg2ODY2NzQsMTc0MDYx
-NTk2MV19
+eyJoaXN0b3J5IjpbNTE4MzY4MTI1LDExMzg1MDk1OSw0MDM4Mz
+I4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcyMSwtMTczMDMwMzY5
+NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQzMDEwNzUsOD
+gwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NCwxNzI4Njg2
+Njc0LDE3NDA2MTU5NjFdfQ==
 -->
