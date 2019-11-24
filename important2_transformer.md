@@ -38,10 +38,12 @@ Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有
 ### 1.2 Multi-Head
 Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头”。这里的 Head 其实就是指把一个完整的向量分成几段。分成几段就是几 “Head”。例如，使用的向量长度是 512 （也就是 $d_k$）。这是说对于每一个词用 512 维来表示。那么当 head = 8 的时候，就是说把这 512 分成 8 份，每份的长度是 512/8 = 64。
 
+![](https://github.com/tonywenuon/posters/blob/master/images/important2/multi_head.png?raw=true)
 
+图中显示的就是 8 head 的结构。然后再每一个 64 维上进行 self-attention 的计算，这就是 Transformer 的第一层的设定了。也就是架构图中的 `Multi-Head Attention`。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTUyMTYwNSwtMTk3NjkyMjcyMSwtMT
-czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
-MDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NC
-wxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
+eyJoaXN0b3J5IjpbNTkyNTUxOTIxLC0xMzE1MjE2MDUsLTE5Nz
+Y5MjI3MjEsLTE3MzAzMDM2OTYsMTk1NTA1MTE3MywxMjE3OTIw
+Njk1LC0xMDk0MzAxMDc1LDg4MDcyNDE1MSwxNjM0MjY5OTE2LD
+E1Njk5MDkzNzQsMTcyODY4NjY3NCwxNzQwNjE1OTYxXX0=
 -->
