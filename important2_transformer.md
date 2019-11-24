@@ -61,14 +61,19 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 ## 2. 如何用 Keras 实现一个 Transformer 模型？
 
+实现一个 Transformer 比 Seq2Seq 会复杂一些。这里只给出最关键部分的代码。
 
+我把源码连接贴出来，感兴趣代码的自己关注哦。
+代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
 
+> 1. [https://www.cnblogs.com/wuliytTaotao/p/9560205.html](https://www.cnblogs.com/wuliytTaotao/p/9560205.html)
 
-
+---
+> “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMzUyOTA2NCw0MDM4MzI4MzMsLTEzMT
-UyMTYwNSwtMTk3NjkyMjcyMSwtMTczMDMwMzY5NiwxOTU1MDUx
-MTczLDEyMTc5MjA2OTUsLTEwOTQzMDEwNzUsODgwNzI0MTUxLD
-E2MzQyNjk5MTYsMTU2OTkwOTM3NCwxNzI4Njg2Njc0LDE3NDA2
-MTU5NjFdfQ==
+eyJoaXN0b3J5IjpbMTEzODUwOTU5LDQwMzgzMjgzMywtMTMxNT
+IxNjA1LC0xOTc2OTIyNzIxLC0xNzMwMzAzNjk2LDE5NTUwNTEx
+NzMsMTIxNzkyMDY5NSwtMTA5NDMwMTA3NSw4ODA3MjQxNTEsMT
+YzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mjg2ODY2NzQsMTc0MDYx
+NTk2MV19
 -->
