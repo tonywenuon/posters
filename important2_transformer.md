@@ -40,10 +40,10 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/important2/multi_head.png?raw=true)
 
-图中显示的就是 8 head 的结构。然后再每一个 64 维上进行 self-attention 的计算，这就是 Transformer 的第一层的设定了。也就是架构图中的 `Multi-Head Attention`。
+图中显示的就是 8 head 的结构。然后再每一个 64 维上进行 self-attention 的计算，这就是 Transformer 的第一层的设定了。也就是架构图中的 `Multi-Head Attention`。作者呢是假定，不同的 head 能够获取到这个词的不同维度的信息，所以多头会优于单头的设定。当然了，这一点假设在原文中并没有明确的验证。近期在 EMNLP 2019 会议中有人专门对多头进行了研究，知名
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkyNTUxOTIxLC0xMzE1MjE2MDUsLTE5Nz
-Y5MjI3MjEsLTE3MzAzMDM2OTYsMTk1NTA1MTE3MywxMjE3OTIw
-Njk1LC0xMDk0MzAxMDc1LDg4MDcyNDE1MSwxNjM0MjY5OTE2LD
-E1Njk5MDkzNzQsMTcyODY4NjY3NCwxNzQwNjE1OTYxXX0=
+eyJoaXN0b3J5IjpbMTM3ODY1NzUyMCwtMTMxNTIxNjA1LC0xOT
+c2OTIyNzIxLC0xNzMwMzAzNjk2LDE5NTUwNTExNzMsMTIxNzky
+MDY5NSwtMTA5NDMwMTA3NSw4ODA3MjQxNTEsMTYzNDI2OTkxNi
+wxNTY5OTA5Mzc0LDE3Mjg2ODY2NzQsMTc0MDYxNTk2MV19
 -->
