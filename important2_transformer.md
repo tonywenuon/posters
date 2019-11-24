@@ -29,7 +29,7 @@ Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/important2/self_attention.png?raw=true)
 
-图中右边表示当计算 `it` 的 vector 的时候，会计算和左侧
+图中右边表示当计算 `it` 的 vector 的时候，会计算和左侧每一个词的相似度。颜色越深表示相似度越高。很明显，可以看到 `it` 和 `animal` 的相似度是最高的。然后每个词的相似度乘以其对应的向量表示，加到一起，就形成了 `it` 的 vector。
 
 
 ### 1.2 Multi-Head
@@ -37,7 +37,7 @@ Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMDkwNDQxMSwtMTk3NjkyMjcyMSwtMT
+eyJoaXN0b3J5IjpbLTM4NTczMTk1MywtMTk3NjkyMjcyMSwtMT
 czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
 MDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NC
 wxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
