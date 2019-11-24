@@ -27,12 +27,17 @@ Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有
 ### 1.1 Self-Attention
 还是拿这个例子来说，“The animal didn't cross the road because it was too tired.”。前面说到，当计算 `it` 的向量表示的时候，在 LSTM 里，会一步一步的从 `animal` 计算到 `it`，来得到 `it` 的向量表示。而 Self-Attention 呢，则是直接计算了 `it` 与其他所有的词的 Attention，把这个 Attention 当做 Weight 来对其他词的向量表示加权求和，最终得到 `it` 的向量表示。还是上图好理解，见下图。
 
+![](https://github.com/tonywenuon/posters/blob/master/images/important2/self_attention.png?raw=true)
+
+图中右边表示当计算 `it` 的 vector 的时候，会计算和左侧
+
+
 ### 1.2 Multi-Head
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5ODI5OTUwMCwtMTk3NjkyMjcyMSwtMT
+eyJoaXN0b3J5IjpbMTQwMDkwNDQxMSwtMTk3NjkyMjcyMSwtMT
 czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
 MDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NC
 wxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
