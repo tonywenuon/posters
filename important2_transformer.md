@@ -26,9 +26,12 @@ Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有
 ### 1.1 Self-Attention
 
 
-### 1.
+### 1.2 Multi-Head
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MzEyNDk5NSwxMjE3OTIwNjk1LC0xMD
+eyJoaXN0b3J5IjpbMTk1NTA1MTE3MywxMjE3OTIwNjk1LC0xMD
 k0MzAxMDc1LDg4MDcyNDE1MSwxNjM0MjY5OTE2LDE1Njk5MDkz
 NzQsMTcyODY4NjY3NCwxNzQwNjE1OTYxXX0=
 -->
