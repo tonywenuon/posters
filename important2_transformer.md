@@ -42,11 +42,12 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 图中显示的就是 8 head 的结构。然后再每一个 64 维上进行 self-attention 的计算，这就是 Transformer 的第一层的设定了。也就是架构图中的 `Multi-Head Attention`。作者呢是假定，不同的 head 能够获取到这个词的不同维度的信息，所以多头会优于单头的设定。当然了，这一点假设在原文中并没有明确的验证。近期在 EMNLP 2019 会议中有人专门对多头进行了研究，指明其实在 Transformer Encoder 的多头设定中，这个多头是有很多冗余信息的，头多了反倒会对结果有负面的影响。至于到底设置成多少头呢，这个大家自己做实验的时候根据自己的情况来设定吧。至此，两个最主要的结构都介绍完了。
 
-### 1.3 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQyNzYzMjQsLTEzMTUyMTYwNSwtMT
-k3NjkyMjcyMSwtMTczMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5
-MjA2OTUsLTEwOTQzMDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MT
-YsMTU2OTkwOTM3NCwxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
+### 1.3 Residual Connection 和 Layer Normalization
 
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDAzODMyODMzLC0xMzE1MjE2MDUsLTE5Nz
+Y5MjI3MjEsLTE3MzAzMDM2OTYsMTk1NTA1MTE3MywxMjE3OTIw
+Njk1LC0xMDk0MzAxMDc1LDg4MDcyNDE1MSwxNjM0MjY5OTE2LD
+E1Njk5MDkzNzQsMTcyODY4NjY3NCwxNzQwNjE1OTYxXX0=
 -->
