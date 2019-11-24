@@ -18,7 +18,7 @@
 
 ## 1. 什么是 Transformer？
 
-Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有意思的，哈哈。言归正传，Transformer 实际上是一种架构，从架构上并体现不出来他为什么起名叫 Transformer。在 Transformer 中最重要的两个结构是 Self-Attention 和 Multi-Head。下面我们依据架构图逐一介绍。
+Transformer，变形金刚，我觉得这个翻译还挺有意思的，哈哈。言归正传，Transformer 实际上是一种架构，从架构上并体现不出来他为什么起名叫 Transformer。在 Transformer 中最重要的两个结构是 Self-Attention 和 Multi-Head。下面我们依据架构图逐一介绍。
 
 <br><br>![](https://github.com/tonywenuon/posters/blob/master/images/important2/transformer.png?raw=true)<br><br>
 
@@ -104,9 +104,10 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4MDUyOTgyLC0xODQ3ODY5MjkwLDExMz
-g1MDk1OSw0MDM4MzI4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcy
-MSwtMTczMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLT
-EwOTQzMDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkw
-OTM3NCwxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
+eyJoaXN0b3J5IjpbLTEyOTQ1NTM0NTgsNDA4MDUyOTgyLC0xOD
+Q3ODY5MjkwLDExMzg1MDk1OSw0MDM4MzI4MzMsLTEzMTUyMTYw
+NSwtMTk3NjkyMjcyMSwtMTczMDMwMzY5NiwxOTU1MDUxMTczLD
+EyMTc5MjA2OTUsLTEwOTQzMDEwNzUsODgwNzI0MTUxLDE2MzQy
+Njk5MTYsMTU2OTkwOTM3NCwxNzI4Njg2Njc0LDE3NDA2MTU5Nj
+FdfQ==
 -->
