@@ -33,15 +33,15 @@ Transformer，大家普遍翻译成变形金刚，我觉得这个翻译还挺有
 
 这段文字阐述呢，对应于原文章的公式：
 ![](https://github.com/tonywenuon/posters/blob/master/images/important2/sa_equation.png?raw=true)
-公式中的 $\sqrt d_k$ 是
+公式中的 $\sqrt d_k$ 是尺度因子。根据原文的阐述，之所以除以这个因子，是因为当 $d_k$ 很小的时候，有没有这个因子区别不大。但是如果这个值很大，
 
 ### 1.2 Multi-Head
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDY3MDEyNjcsLTE5NzY5MjI3MjEsLT
-E3MzAzMDM2OTYsMTk1NTA1MTE3MywxMjE3OTIwNjk1LC0xMDk0
-MzAxMDc1LDg4MDcyNDE1MSwxNjM0MjY5OTE2LDE1Njk5MDkzNz
-QsMTcyODY4NjY3NCwxNzQwNjE1OTYxXX0=
+eyJoaXN0b3J5IjpbMjE0MzkxMTM5MCwtMTk3NjkyMjcyMSwtMT
+czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
+MDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NC
+wxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
 -->
