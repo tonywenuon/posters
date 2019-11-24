@@ -13,8 +13,8 @@
 ---
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。
 
-Motivation: 在 Transformer 被提出之间，基本上 RNN 架构统治了 sequence-to-sequence 模型。尤其在 Attention 机制被提出后，Seq2Seq with Attention 得到了广泛的应用（详细原理可参见）。
+Motivation: 在 Transformer 被提出之间，基本上 RNN 架构统治了 sequence-to-sequence 模型。尤其在 Attention 机制被提出后，Seq2Seq with Attention 得到了广泛的应用（详细原理可参见[https://zhuanlan.zhihu.com/p/87961308](https://zhuanlan.zhihu.com/p/87961308)）。虽然 LSTM 或者 GRU 有记忆能力，一定程度上能够获取长距离记忆，但是一旦距离过长，那么他的作用就有限了。举个例子来说，比如原句子为 “”
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQzNjAxMTYsMTU2OTkwOTM3NCwxNz
-I4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
+eyJoaXN0b3J5IjpbMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mj
+g2ODY2NzQsMTc0MDYxNTk2MV19
 -->
