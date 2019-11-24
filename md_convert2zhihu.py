@@ -1,6 +1,6 @@
 import re
 
-src_file_name = 'knowledge1_memnn'
+src_file_name = 'important2_transformer'
 src_file = src_file_name + '.md'
 tar_file = src_file_name + '_2.md'
 
