@@ -58,7 +58,11 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 ### 1.4 Masks
 
-感谢 @李敬泉 的建议，在这里我在讨论一下两种 mask。实际上在 Transformer 中只有一种 mask，就是在 Decoder 的
+感谢 @李敬泉 的建议，在这里我在讨论一下两种 mask。实际上在 Transformer 中只有一种 mask，就是在 Decoder 阶段使用的 mask。另一种mask 是我根据自己经验介绍点关于 `<pad>` 的mask。
+
+#### Decoder mask
+拿个例子来说，假设现在给的场景是智能对话。在训练集中有这样一组问答。
+
 
 ### 1.5 Residual Connection 和 Layer Normalization
 这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 $H(x) = f(x)$ 变成 $H(x) = f(x) + x$，这就是残差网络。他本身的出发点是从网络深度来的。理论上来说，越深的网络，其效果也是越好的。换句话说，深的网络不会比浅的网络效果差。但是实际情况却不是这样的，有时候由于网络太深导致难以训练，返到不如浅网络好。这一现象被称为**退化问题（degradation problem）**。残差网络就是解决这个问题的，残差网络越深在训练集的效果越好 (ref 1)。而 Layer Normalization 则是用来提高训练速度的。
@@ -109,7 +113,7 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTIyOTQ2OSwxOTYyNDMyNDIsLTEyOT
+eyJoaXN0b3J5IjpbMTU3NTM5Nzc3MCwxOTYyNDMyNDIsLTEyOT
 Q1NTM0NTgsNDA4MDUyOTgyLC0xODQ3ODY5MjkwLDExMzg1MDk1
 OSw0MDM4MzI4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcyMSwtMT
 czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
