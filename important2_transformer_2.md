@@ -56,8 +56,28 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 可以看到作者是对于奇数偶数位置分开设定，而且使用三角函数的好处是三角函数的周期函数，这样能够一定程度上体现出相对位置的信息，而不是只体现绝对位置。至此，最主要的结构都介绍完了。
 
-### 1.4 Residual Connection 和 Layer Normalization
+### 1.4 Masks
+
+感谢 @李敬泉 的建议，在这里我再补充讨论一下两种 mask。实际上在 Transformer 中只有一种 mask，就是在 Decoder 阶段使用的 mask。另一种mask 是我根据自己经验介绍点关于 `<pad>` 的mask。
+
+#### Decoder mask
+拿个例子来说，假设现在给的场景是智能对话。在训练集中有这样一组问答。
+
+> Question: Where did you live in the last two years ?
+> Answer: I used to live in the Los Angeles .
+
+那么，在训练的时候，整个 Answer 都会被输入到 Decoder 中。那么问题就来了，当你想要生成 `used` 的时候，模型是不应该看到 `used` 这个词和这个词以后的所有词的，而只应该看到 `I`，根据 `I` 来生成下一个词，即`used`。如果模型可以看到 `used`，那就不用预测了不是。所以在计算 `used` 这个词的时候，就应该用个 mask，把后面所有词的 vector 给 mask 掉，即他们不参与生成 `used` 这个词时的计算。Answer 里一共有 9 个词（包含标点），那么 mask 就是 `[1 0 0 0 0 0 0 0 0]`，在 self-attention 加权求和的时候，再乘以这个 mask 向量，就相当于过滤掉了 `used` 及其以后所有的词。
+
+#### PAD mask
+还是拿上面的 QA 例子来介绍。通常来讲，输入到模型的数据都要数据对齐。所谓数据对齐是说所有的数据都要保持同样长度。例如我们规定 Question 的最大长度是 20。那么那些长度大于 20 的 sequence 要被截断，长度小于 20 的要用一个特殊标记来对齐长度，例如用 “\PAD”。按上面的例子，Question 就要变成
+
+> Question: Where did you live in the last two years ? \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD
+
+那么现在问题就来了。在你计算 self-attention 的时候，所有的 `\PAD` 也都会参与计算，但是 `\PAD` 又不是 sequence 里的内容。大量的 `\PAD` 如果不加以过滤，就相当于给向量表示引入了很多噪音。根据个人经验，这就会导致不论输入什么 Question，各个字符的向量表示都会比较相近（因为大家都是参合了 `\PAD` 的信息）。这样进而导致了 Transformer 的 Decoder 后的结果都很相似，也就是通常 paper 里所说的 generic，例如不论输入什么总是回复相同的 “I don't know.”。所以呢，这里要引入第二个 mask。对应于 sequence 长度，这个 PAD mask 就应该是 `[1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0]`。在计算 self-attention 的时候，这就把 `\PAD` 给 mask 掉了。
+
+### 1.5 Residual Connection 和 Layer Normalization
 这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 ![](https://latex.codecogs.com/gif.latex?H(x)=f(x)) 变成 ![](https://latex.codecogs.com/gif.latex?H(x)=f(x)+x)，这就是残差网络。他本身的出发点是从网络深度来的。理论上来说，越深的网络，其效果也是越好的。换句话说，深的网络不会比浅的网络效果差。但是实际情况却不是这样的，有时候由于网络太深导致难以训练，返到不如浅网络好。这一现象被称为**退化问题（degradation problem）**。残差网络就是解决这个问题的，残差网络越深在训练集的效果越好 (ref 1)。而 Layer Normalization 则是用来提高训练速度的。
+
 
 ## 2. 如何用 Keras 实现一个 Transformer 模型？
 
@@ -104,10 +124,10 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTQ1NTM0NTgsNDA4MDUyOTgyLC0xOD
-Q3ODY5MjkwLDExMzg1MDk1OSw0MDM4MzI4MzMsLTEzMTUyMTYw
-NSwtMTk3NjkyMjcyMSwtMTczMDMwMzY5NiwxOTU1MDUxMTczLD
-EyMTc5MjA2OTUsLTEwOTQzMDEwNzUsODgwNzI0MTUxLDE2MzQy
-Njk5MTYsMTU2OTkwOTM3NCwxNzI4Njg2Njc0LDE3NDA2MTU5Nj
-FdfQ==
+eyJoaXN0b3J5IjpbLTUyNzYwNzQxNSwxOTYyNDMyNDIsLTEyOT
+Q1NTM0NTgsNDA4MDUyOTgyLC0xODQ3ODY5MjkwLDExMzg1MDk1
+OSw0MDM4MzI4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcyMSwtMT
+czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
+MDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NC
+wxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
 -->
