@@ -63,6 +63,28 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 实现一个 Transformer 比 Seq2Seq 会复杂一些。这里只给出最关键部分的代码。
 
+```python
+ 86         q_reshape = K.reshape(q, (-1, q_shape[-2], q_shape[-1]))
+ 87         k_reshape = K.reshape(k_transposed, (-1, k_t_shape[-2], k_t_shape[-1]))
+ 
+ 88         mask_attention = self.mask_attention(
+ 89                             # core scaled dot product
+ 90                             K.batch_dot(
+ 91                                 q_reshape,
+ 92                                 k_reshape)
+ 93                             / sqrt_d, attn_mask)
+ 94         attention_heads = K.reshape(
+ 95             K.batch_dot(
+ 96                 self.apply_dropout_if_needed(
+ 97                     mask_attention,
+ 98                     training=training),
+ 99                 K.reshape(v, (-1, v_shape[-2], v_shape[-1]))),
+100             (-1, self.num_heads, q_shape[-2], q_shape[-1]))
+101
+102         attention_heads_merged = K.reshape(
+103             K.permute_dimensions(attention_heads, [0, 2, 1, 3]),
+104             (-1, d_model))
+```
 
 我把源码连接贴出来，感兴趣代码的自己关注哦。
 代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
@@ -72,9 +94,9 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE4MzY4MTI1LDExMzg1MDk1OSw0MDM4Mz
-I4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcyMSwtMTczMDMwMzY5
-NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQzMDEwNzUsOD
-gwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NCwxNzI4Njg2
-Njc0LDE3NDA2MTU5NjFdfQ==
+eyJoaXN0b3J5IjpbLTE4NDc4NjkyOTAsMTEzODUwOTU5LDQwMz
+gzMjgzMywtMTMxNTIxNjA1LC0xOTc2OTIyNzIxLC0xNzMwMzAz
+Njk2LDE5NTUwNTExNzMsMTIxNzkyMDY5NSwtMTA5NDMwMTA3NS
+w4ODA3MjQxNTEsMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mjg2
+ODY2NzQsMTc0MDYxNTk2MV19
 -->
