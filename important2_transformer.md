@@ -61,32 +61,42 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 
 ## 2. 如何用 Keras 实现一个 Transformer 模型？
 
-实现一个 Transformer 比 Seq2Seq 会复杂一些。这里只给出最关键部分的代码。
+实现一个 Transformer 比 Seq2Seq 会复杂一些。这里只给出最关键部分的代码。给出的代码是如何计算 multi-head self-attention。
 
 ```python
- 86         q_reshape = K.reshape(q, (-1, q_shape[-2], q_shape[-1]))
- 87         k_reshape = K.reshape(k_transposed, (-1, k_t_shape[-2], k_t_shape[-1]))
- 
- 88         mask_attention = self.mask_attention(
- 89                             # core scaled dot product
- 90                             K.batch_dot(
- 91                                 q_reshape,
- 92                                 k_reshape)
- 93                             / sqrt_d, attn_mask)
- 94         attention_heads = K.reshape(
- 95             K.batch_dot(
- 96                 self.apply_dropout_if_needed(
- 97                     mask_attention,
- 98                     training=training),
- 99                 K.reshape(v, (-1, v_shape[-2], v_shape[-1]))),
-100             (-1, self.num_heads, q_shape[-2], q_shape[-1]))
-101
-102         attention_heads_merged = K.reshape(
-103             K.permute_dimensions(attention_heads, [0, 2, 1, 3]),
-104             (-1, d_model))
+   1 # shape (batch_size, head_number, sequence_length, d_k//head_number)
+  2 q_shape = K.shape(q)
+  3 v_shape = K.shape(v)
+  4 k_t_shape = K.shape(k_transposed)
+  5
+  6 # shape (batch_size*head_number, sequence_length, d_k//head_number)
+  7 q_reshape = K.reshape(q, (-1, q_shape[-2], q_shape[-1]))
+  8 # shape (batch_size*head_number, d_k//head_number, k_sequence_length)
+  9 k_reshape = K.reshape(k_transposed, (-1, k_t_shape[-2], k_t_shape[-1]))
+ 10
+ 11 # compute masked attention because some of the tokens in the sequence should be marked, e.g. <PAD>
+ 12 mask_attention = self.mask_attention(
+ 13     # core scaled dot product
+ 14     K.batch_dot(
+ 15         q_reshape,
+ 16         k_reshape)
+ 17     / sqrt_d, attn_mask)
+ 18
+ 19 # weighted summation between Q, K and V
+ 20 attention_heads = K.reshape(
+ 21     K.batch_dot(
+ 22         mask_attention,
+ 23         K.reshape(v, (-1, v_shape[-2], v_shape[-1]))),
+ 24     (-1, self.num_heads, q_shape[-2], q_shape[-1]))
+ 25
+ 26 # merge all of the head
+ 27 attention_heads_merged = K.reshape(
+ 28     K.permute_dimensions(attention_heads, [0, 2, 1, 3]),
+ 29     (-1, d_model))
+
 ```
 
-我把源码连接贴出来，感兴趣代码的自己关注哦。
+我把源码连接贴出来，感兴趣代码的自己关注源代码哦。
 代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
 
 > 1. [https://www.cnblogs.com/wuliytTaotao/p/9560205.html](https://www.cnblogs.com/wuliytTaotao/p/9560205.html)
@@ -94,9 +104,9 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDc4NjkyOTAsMTEzODUwOTU5LDQwMz
-gzMjgzMywtMTMxNTIxNjA1LC0xOTc2OTIyNzIxLC0xNzMwMzAz
-Njk2LDE5NTUwNTExNzMsMTIxNzkyMDY5NSwtMTA5NDMwMTA3NS
-w4ODA3MjQxNTEsMTYzNDI2OTkxNiwxNTY5OTA5Mzc0LDE3Mjg2
-ODY2NzQsMTc0MDYxNTk2MV19
+eyJoaXN0b3J5IjpbNDA4MDUyOTgyLC0xODQ3ODY5MjkwLDExMz
+g1MDk1OSw0MDM4MzI4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcy
+MSwtMTczMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLT
+EwOTQzMDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkw
+OTM3NCwxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
 -->
