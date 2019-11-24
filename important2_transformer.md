@@ -17,11 +17,11 @@
 
 ## 1. 什么是 Transformer？
 
-Transformer 
+Transformer，
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTQzMDEwNzUsODgwNzI0MTUxLDE2Mz
-QyNjk5MTYsMTU2OTkwOTM3NCwxNzI4Njg2Njc0LDE3NDA2MTU5
-NjFdfQ==
+eyJoaXN0b3J5IjpbMzI4NzA3MzI5LC0xMDk0MzAxMDc1LDg4MD
+cyNDE1MSwxNjM0MjY5OTE2LDE1Njk5MDkzNzQsMTcyODY4NjY3
+NCwxNzQwNjE1OTYxXX0=
 -->
