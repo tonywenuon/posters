@@ -71,7 +71,9 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 #### PAD mask
 还是拿上面的 QA 例子来介绍。通常来讲，输入到模型的数据都要数据对齐。所谓数据对齐是说所有的数据都要保持同样长度。例如我们规定 Question 的最大长度是 20。那么那些长度大于 20 的 sequence 要被截断，长度小于 20 的要用一个特殊标记来对齐长度，例如用 “\PAD”。按上面的例子，Question 就要变成
 
-> Question: Where did you live in the last two years ?
+> Question: Where did you live in the last two years ? \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD \PAD
+
+那么现在问题就来了。在你计算 self-attention 的时候，所有的 `\PAD` 也都会参与计算，但是 `\PAD` 又不是 sequence 里的内容。大量的 `\PAD` 如果不加以过滤，就相当于
 
 ### 1.5 Residual Connection 和 Layer Normalization
 这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 $H(x) = f(x)$ 变成 $H(x) = f(x) + x$，这就是残差网络。他本身的出发点是从网络深度来的。理论上来说，越深的网络，其效果也是越好的。换句话说，深的网络不会比浅的网络效果差。但是实际情况却不是这样的，有时候由于网络太深导致难以训练，返到不如浅网络好。这一现象被称为**退化问题（degradation problem）**。残差网络就是解决这个问题的，残差网络越深在训练集的效果越好 (ref 1)。而 Layer Normalization 则是用来提高训练速度的。
@@ -122,7 +124,7 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODE1MzgwOTAsMTk2MjQzMjQyLC0xMj
+eyJoaXN0b3J5IjpbLTE2OTIwMjczODgsMTk2MjQzMjQyLC0xMj
 k0NTUzNDU4LDQwODA1Mjk4MiwtMTg0Nzg2OTI5MCwxMTM4NTA5
 NTksNDAzODMyODMzLC0xMzE1MjE2MDUsLTE5NzY5MjI3MjEsLT
 E3MzAzMDM2OTYsMTk1NTA1MTE3MywxMjE3OTIwNjk1LC0xMDk0
