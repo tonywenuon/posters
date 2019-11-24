@@ -66,7 +66,7 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 > Question: Where did you live in the last two years?
 > Answer: I used to live in the Los Angeles.
 
-那么，在训练的时候，整个 Answer 都会被输入到 Decoder 中。那么问题就来了，当你想要生成 `used` 的时候，模型是不应该看到 `used` 这个词和这个词以后的所有词的。如果模型
+那么，在训练的时候，整个 Answer 都会被输入到 Decoder 中。那么问题就来了，当你想要生成 `used` 的时候，模型是不应该看到 `used` 这个词和这个词以后的所有词的，而只应该看到 `I`，根据 `I` 来生成下一个词，即`used`。如果模型可以看到 `used`，那就不用预测了不是。所以在计算 `used` 这个词的时候，就应该用个 mask，
 
 ### 1.5 Residual Connection 和 Layer Normalization
 这两部分的设定都是 follow 前人的工作。Residual Connection 是说把优化目标由 $H(x) = f(x)$ 变成 $H(x) = f(x) + x$，这就是残差网络。他本身的出发点是从网络深度来的。理论上来说，越深的网络，其效果也是越好的。换句话说，深的网络不会比浅的网络效果差。但是实际情况却不是这样的，有时候由于网络太深导致难以训练，返到不如浅网络好。这一现象被称为**退化问题（degradation problem）**。残差网络就是解决这个问题的，残差网络越深在训练集的效果越好 (ref 1)。而 Layer Normalization 则是用来提高训练速度的。
@@ -117,10 +117,10 @@ Multi-Head 也很简单。不要被 Head 所迷惑，此 “头” 非彼 “头
 ---
 > “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzk4Mjc3OCwxOTYyNDMyNDIsLTEyOT
-Q1NTM0NTgsNDA4MDUyOTgyLC0xODQ3ODY5MjkwLDExMzg1MDk1
-OSw0MDM4MzI4MzMsLTEzMTUyMTYwNSwtMTk3NjkyMjcyMSwtMT
-czMDMwMzY5NiwxOTU1MDUxMTczLDEyMTc5MjA2OTUsLTEwOTQz
-MDEwNzUsODgwNzI0MTUxLDE2MzQyNjk5MTYsMTU2OTkwOTM3NC
-wxNzI4Njg2Njc0LDE3NDA2MTU5NjFdfQ==
+eyJoaXN0b3J5IjpbLTE3NDI4NjcyMjYsMTk2MjQzMjQyLC0xMj
+k0NTUzNDU4LDQwODA1Mjk4MiwtMTg0Nzg2OTI5MCwxMTM4NTA5
+NTksNDAzODMyODMzLC0xMzE1MjE2MDUsLTE5NzY5MjI3MjEsLT
+E3MzAzMDM2OTYsMTk1NTA1MTE3MywxMjE3OTIwNjk1LC0xMDk0
+MzAxMDc1LDg4MDcyNDE1MSwxNjM0MjY5OTE2LDE1Njk5MDkzNz
+QsMTcyODY4NjY3NCwxNzQwNjE1OTYxXX0=
 -->
