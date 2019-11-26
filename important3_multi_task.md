@@ -68,7 +68,7 @@
 * **NoFacts task**。这里就是正常的 Seq2Seq model。输入是 question，输出是 ground truth 的 response。
 * **Autoencoder**。整合 question 和 fact 的 Encoder 输出作为最终的 Encoder 输出，再以 fact 作为 Decoder 的输出来训练。
 
-这三种的架构如图所示,
+这三种的架构如图所示，这个多任务学习，共享的是 Decoder 的参数。
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/important3/knowledge_ms.png?raw=true)
 
@@ -81,6 +81,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NTc2NDE1OSw4MDIzNDg4NSwtMTY3MT
+eyJoaXN0b3J5IjpbMTYwODA0OTYzOSw4MDIzNDg4NSwtMTY3MT
 Q3MDUzM119
 -->
