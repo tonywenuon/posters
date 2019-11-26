@@ -64,7 +64,9 @@
 
 我们引用 [paper 2](#paper2) 来实现一个基于多任务学习的端到端模型。Paper 2 主要目的是在基本的端到端模型，即`Question-Answer` pair 中加入背景知识。那么端到端模型，只有一个输入 Encoder，一个输出 Decoder，如何直接加入背景知识呢？作者利用了多任务学习模型。在文章里建立了三个任务：
 
-* Facts task。利用 question 作为 query，先从知识库中检索出一个 fact 集合。把 question 和 fact 都通过 Encoder 计算后的结果加到一起作为 Encoder 的输出。而 Decoder 的部分就是 ground truth 
+* **Facts task**。利用 question 作为 query，先从知识库中检索出一个 fact 集合。把 question 和 fact 都通过 Encoder 计算后的结果加到一起作为 Encoder 的输出。而 Decoder 的部分就是 ground truth 的 response 了。
+* **NoFacts task**。这里就是正常的 Seq2Seq model。输入是 question，输出是 ground truth 的 response。
+* **Autoencoder**。整合 question 和 fact 的 Encoder 输出作为最终的 Encoder 输出，再以 
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/important3/knowledge_ms.png?raw=true)
 
@@ -77,6 +79,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTU5MzM4Niw4MDIzNDg4NSwtMTY3MT
+eyJoaXN0b3J5IjpbMTYwNDg4NjY4MCw4MDIzNDg4NSwtMTY3MT
 Q3MDUzM119
 -->
