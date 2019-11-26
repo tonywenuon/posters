@@ -261,11 +261,11 @@ class MemNNModel:
 完整代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
 
 ---
-> “知乎专栏-问答不回答”，一个期待问答能回答的专栏。
+> [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkyMjc1MDgyLDEwODM1NjQxMzQsLTM0OD
-g3Mzc2NywxNTgxNjM5MDA3LC0yNjE4NzQ2NTMsLTg4ODU1MzU4
-MywtODI3NjAwMjM2LDU5MDYyODY2NCw3MzI0NTk0NDksODE5Nz
-Q4NzQ1XX0=
+eyJoaXN0b3J5IjpbMTQ5ODM1NjYxOCw2OTIyNzUwODIsMTA4Mz
+U2NDEzNCwtMzQ4ODczNzY3LDE1ODE2MzkwMDcsLTI2MTg3NDY1
+MywtODg4NTUzNTgzLC04Mjc2MDAyMzYsNTkwNjI4NjY0LDczMj
+Q1OTQ0OSw4MTk3NDg3NDVdfQ==
 -->
