@@ -72,6 +72,59 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/important3/knowledge_ms.png?raw=true)
 
+主要代码可以见下面代码块。
+
+```python
+  1 # facts input corresponding to the question
+  2 inp_fact = Input(name='fact_input',
+  3                     shape=(self.args.fact_number, self.args.src_seq_length),
+  4                     dtype='int32'
+  5                    )
+  6 # question input
+  7 inp_q = Input(name='query_input',
+  8                     shape=(self.args.src_seq_length, ),
+  9                     dtype='int32'
+ 10                    )
+ 11
+ 12 # ground truth response input
+ 13 inp_tar = Input(name='tar_input',
+ 14                     shape=(self.args.tar_seq_length, ),
+ 15                     dtype='int32',
+ 16                    )
+ 17 # task 3, the target of autoencoder
+ 18 inp_fact_tar = Input(name='fact_tar_input',
+ 19                     shape=(self.args.tar_seq_length, ),
+ 20                     dtype='int32',
+ 21                    )
+ 22
+ 23 enc_output1, enc_state1 = self.s2s_encoder(inp_q)
+ 24 enc_state2 = self.memnn_encoder1([inp_q, inp_fact])
+ 25 enc_state3 = self.memnn_encoder2([inp_q, inp_fact])
+ 26
+ 27 emb_ans = self.decoder_embedding(inp_tar)
+ 28 emb_fact_ans = self.decoder_embedding(inp_fact_tar)
+ 29
+ 30 # task 1: seq2seq, input: question; output: answer
+ 31 output1, state1 = self.decoder(emb_ans, initial_state=enc_state1)
+ 32 # task 2: memnn, input: question and facts; output: fact
+ 33 output2, state2 = self.decoder(emb_fact_ans, initial_state=enc_state2)
+ 34 # task 3: memnn, input: question and facts; output: answer
+ 35 output3, state3 = self.decoder(emb_ans, initial_state=enc_state3)
+ 36
+ 37 # final output
+ 38 final_output1 = self.decoder_dense1(output1)
+ 39 final_output2 = self.decoder_dense2(output2)
+ 40 final_output3 = self.decoder_dense3(output3)
+ 41
+ 42 # define model
+ 43 model = Model(
+ 44     inputs=[inp_q, inp_tar, inp_fact_tar, inp_fact],
+ 45     outputs=[final_output1, final_output2, final_output3]
+ 46 )
+
+```
+其中 `self.s2s_encoder` 是 Seq2Seq 的 Encoder 模块；`self.memnn_encoder1` 是 
+
 完整代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
 
 ---
@@ -81,6 +134,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwODA0OTYzOSw4MDIzNDg4NSwtMTY3MT
-Q3MDUzM119
+eyJoaXN0b3J5IjpbNzMwMTk2ODYyLDE2MDgwNDk2MzksODAyMz
+Q4ODUsLTE2NzE0NzA1MzNdfQ==
 -->
