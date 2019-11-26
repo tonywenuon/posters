@@ -123,9 +123,9 @@
  46 )
 
 ```
-其中 `self.s2s_encoder` 是 Seq2Seq 的 Encoder 模块；`self.memnn_encoder1` 是 
+其中 `self.s2s_encoder` 是 Seq2Seq 的 Encoder 模块；`self.memnn_encoder1` 是 Memory Network 的 Encoder 模块。
 
-完整代码连接：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
+完整代码请参考：[keras_dialogue_generation_toolkit](https://github.com/tonywenuon/keras_dialogue_generation_toolkit)。
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
@@ -134,6 +134,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMwMTk2ODYyLDE2MDgwNDk2MzksODAyMz
-Q4ODUsLTE2NzE0NzA1MzNdfQ==
+eyJoaXN0b3J5IjpbLTIwNTUwMjU2NiwxNjA4MDQ5NjM5LDgwMj
+M0ODg1LC0xNjcxNDcwNTMzXX0=
 -->
