@@ -57,13 +57,23 @@
 
 
 
+### 5. GLUE
+
+General Language Understanding Evaluation (GLUE) 是一个数据 benchmark，
 
 
 
+The General Language Understanding Evaluation (GLUE) benchmark is a collection of resources for training, evaluating, and analyzing natural language understanding systems. GLUE consists of:
+
+-   A benchmark of nine sentence- or sentence-pair language understanding tasks built on established existing datasets and selected to cover a diverse range of dataset sizes, text genres, and degrees of difficulty,
+-   A diagnostic dataset designed to evaluate and analyze model performance with respect to a wide range of linguistic phenomena found in natural language, and
+-   A public leaderboard for tracking performance on the benchmark and a dashboard for visualizing the performance of models on the diagnostic set.
+
+The format of the GLUE benchmark is model-agnostic, so any system capable of processing sentence and sentence pairs and producing corresponding predictions is eligible to participate. The benchmark tasks are selected so as to favor models that share information across tasks using parameter sharing or other transfer learning techniques. The ultimate goal of GLUE is to drive research in the development of general and robust natural language understanding systems.
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OT
+U4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAs
+LTEwMDU5NzY4OV19
 -->
