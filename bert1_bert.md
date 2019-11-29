@@ -39,7 +39,7 @@
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/bert_embedding.png?raw=true)
 
 ### 2. BERT pre-training 之 Masked Language Model（MLM）
-说的容易做的难。如果一个 token 在训练的时候就都包含了左右的信息（当然了，也包含自己的），那岂不就相当于知道自己的信息还预测自己，如果这都可以，那还用那么多模型干啥。BERT 首先做的就是在原始的 sequence 的tokens 里面，随机的选择 15% 来屏蔽掉，即 mask 掉。然后这些被 mask 掉的 tokens 用来做预测的 targets，即 BERT 的目标之一就是预测这些被 mask 了的 tokens。
+说的容易做的难。如果一个 token 在训练的时候就都包含了左右的信息（当然了，也包含自己的），那岂不就相当于知道自己的信息还预测自己，如果这都可以，那还用那么多模型干啥。BERT 首先做的就是在原始的 sequence 的tokens 里面，随机的选择 15% 来屏蔽掉，即 mask 掉。然后这些被 mask 掉的 tokens 用来做预测的 targets，即 BERT 的目标之一就是预测这些被 mask 了的 tokens。还是看上面给出的这个例子。
 
 
 > **Input** = `[CLS]` the man went to `[MASK]` store `[SEP]` he bought a gallon `[MASK]` milk `[SEP]`
@@ -49,7 +49,7 @@
 
 
 ### 3. BERT pre-training 之 Next Sequence Prediction（NSP）
-实际上，确实上面就是 BERT 最核心的部分。那么为什么还要有 NSP 呢。这是因为，很多下游任务，例如问答，自然语言推理等任务，都是依赖于两个句子的关系的
+实际上，确实上面就是 BERT 最核心的部分。那么为什么还要有 NSP 呢。这是因为，很多下游任务，例如问答，自然语言推理等任务，都是依赖于两个句子的关系的。而这一需求，从上面的 MLM 中并体现不出来。因此作者设计了这个 Next Sequence Prediction 任务。还记得上面的 `[]
 
 ### 4. BERT 的训练（输入格式及模型结构）
 
@@ -59,7 +59,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE5NDgzMTI5LDEwNDk1ODkzMDMsNDMyOT
-I2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2ODld
-fQ==
+eyJoaXN0b3J5IjpbLTc5ODIxNDg5NiwxMDQ5NTg5MzAzLDQzMj
+kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
+XX0=
 -->
