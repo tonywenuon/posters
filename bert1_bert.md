@@ -59,7 +59,7 @@
 
 ### 5. GLUE
 
-General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。
+General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务。下面我会分开介绍一下每个任务都是什么。整体的 leaderboard [https://gluebenchmark.com/leaderboard/](https://gluebenchmark.com/leaderboard/)
 
 
 
@@ -73,7 +73,7 @@ The format of the GLUE benchmark is model-agnostic, so any system capable of pro
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzg5NDMyMjQsMjI2OTIwMTIzLDE1Nz
-UyMDkyOTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3
-LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbOTAwMjkwMDc5LDIyNjkyMDEyMywxNTc1Mj
+A5Mjk2LDEwNDk1ODkzMDMsNDMyOTI2NTcyLDEzOTU0OTkzNywt
+NjY4MTUyMjkwLC0xMDA1OTc2ODldfQ==
 -->
