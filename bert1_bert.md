@@ -34,11 +34,11 @@
 
 > **Input** = [CLS] the man went to `[MASK]` store [SEP] he bought a gallon [MASK] milk [SEP]
 
-这个例子中的 `[MASK]` 来替代原始的 token。好啦，这样我们预测 `[MASK]` 的 token 就可以啦。但是关于这个 `[MASK]` 还有个问题，大家先想一下如果是你来考虑，后面会有什么问题呢？我们继续，在做 pre-training 的时候是没有问题的，可以很好的预测 token。但是当把 BERT 用到下游任务的时候，问题就来了，在下游任务，是没有 `[MASK]` 标记的。你不能要求下游任务的训练集，测试集都有 `[MASK]` 标记，那这个模型就不 general 了。BERT 是这样做的，在刚才的 15% 的被 mask 了的 tokens 中，80% 的保持 `[MASK]` 状态，10% 用随机 sample 一个 token 来替代 `[MASK]`，10% 的保持原 token 不变。这样就允许模型看到一些非 `[MASK]` 的 token，虽然也看到了被 mask 的token 自身。不过也就只有 15%*10% = 1.5% 的样本，对整体的影响不大。
+这个例子中的 `[MASK]` 来替代原始的 token。好啦，这样我们预测 `[MASK]` 的 token 就可以啦。但是关于这个 `[MASK]` 还有个问题，大家先想一下如果是你来考虑，后面会有什么问题呢？我们继续，在做 pre-training 的时候是没有问题的，可以很好的预测 token。但是当把 BERT 用到下游任务的时候，问题就来了，在下游任务，是没有 `[MASK]` 标记的。你不能要求下游任务的训练集，测试集都有 `[MASK]` 标记，那这个模型就不 general 了。BERT 是这样做的，在刚才的 15% 的被 mask 了的 tokens 中，80% 的保持 `[MASK]` 状态，10% 用随机 sample 一个 token 来替代 `[MASK]`，10% 的保持原 token 不变。这样就允许模型看到一些非 `[MASK]` 的 token，虽然也看到了被 mask 的token 自身。不过也就只有 15%*10% = 1.5% 的样本，对整体模型效果的影响不大。至此，BERT 就构建完了。谢谢大家的关照，可以关闭本帖子了。哈哈，皮一下很开心。我们继续吧。
 
 
 ### 3. BERT pre-training 之 Next Sequence Prediction（NSP）
-
+实际上，确实上面就是 BERT 最核心的部分。
 
 ### 4. BERT 的训练（输入格式及模型结构）
 
@@ -48,7 +48,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTY5NzY4NTUsMTA0OTU4OTMwMyw0Mz
-I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
-OV19
+eyJoaXN0b3J5IjpbLTY0MDAyMTk4OCwxMDQ5NTg5MzAzLDQzMj
+kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
+XX0=
 -->
