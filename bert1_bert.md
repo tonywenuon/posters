@@ -59,7 +59,7 @@
 
 ### 5. GLUE
 
-General Language Understanding Evaluation (GLUE) 是一个数据 benchmark，
+General Language Understanding Evaluation (GLUE) 是一个 benchmark，
 
 
 
@@ -73,7 +73,7 @@ The format of the GLUE benchmark is model-agnostic, so any system capable of pro
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OT
-U4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAs
-LTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbMTA2MzM2Njk3MywyMjY5MjAxMjMsMTU3NT
+IwOTI5NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMzk1NDk5Mzcs
+LTY2ODE1MjI5MCwtMTAwNTk3Njg5XX0=
 -->
