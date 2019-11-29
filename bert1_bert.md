@@ -22,14 +22,16 @@
 **贡献2：** 奠定了 pre-train + fine-tune 两阶段建模的实践基础。虽然以前也有 pre-train 模型，如 word2vec，GPT，ELMo，但是没有哪个起到了 BERT 这样大的作用。在 NLP 领域，后来的研究也都 follow 了这样的两阶段设定。
 
 ### 1. Motivtion of BERT
-这一小节里，首先来描述一下为什么要提出 BERT。
+这一小节里，首先来描述一下为什么要提出 BERT。BERT 的主要贡献之一是证明了双向向量表示的重要性。这里所说的双向是深度
 
+![](https://github.com/tonywenuon/posters/blob/master/images/bert1/3models.png?raw=true)
 
+见上图，三个模型的对比中
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMyOTI2NTcyLDEzOTU0OTkzNywtNjY4MT
-UyMjkwLC0xMDA1OTc2ODldfQ==
+eyJoaXN0b3J5IjpbLTIzOTI0MTQ2Miw0MzI5MjY1NzIsMTM5NT
+Q5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
 -->
