@@ -49,7 +49,7 @@
 
 
 ### 3. BERT pre-training 之 Next Sequence Prediction（NSP）
-实际上，确实上面就是 BERT 最核心的部分。那么为什么还要有 NSP 呢。这是因为，很多下游任务，例如问答，自然语言推理等任务，都是依赖于两个句子的关系的。而这一需求，从上面的 MLM 中并体现不出来。因此作者设计了这个 Next Sequence Prediction 任务。还记得上面的 `[]
+实际上，确实上面就是 BERT 最核心的部分。那么为什么还要有 NSP 呢。这是因为，很多下游任务，例如问答，自然语言推理等任务，都是依赖于两个句子的关系的。而这一需求，从上面的 MLM 中并体现不出来。因此作者设计了这个 Next Sequence Prediction 任务。还记得上面的 `[CLS]` 标记吗，它的输出可以认为是整个 sequence 的向量，所以在这里，就用 `[CLS]` 的向量表示来做一个二分类任务，来判断输入中的 sequence B 是否是 sequence A 的下一个 sequence。
 
 ### 4. BERT 的训练（输入格式及模型结构）
 
@@ -59,7 +59,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5ODIxNDg5NiwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbLTEzMDk5MDUwODEsMTA0OTU4OTMwMyw0Mz
+I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
+OV19
 -->
