@@ -6,7 +6,7 @@
 
 #### 本文收获
 * 什么是 BERT？
-* BERT 最重要的贡献是什么？bidirectional 和 pre-train
+* BERT 最重要的贡献是什么？
 * 如何用 BERT 来实现几个下游 NLP 任务？
 * BERT 的局限性在哪里？
 * BERT 用到了哪些数据集？以及数据集的简介和地址是什么？
@@ -19,7 +19,7 @@
 鼎鼎大名的 BERT 想必都有所耳闻了，在18年刚刚问世的时候在11个不同的 NLP 任务上取得了 state-of-the-art 的成绩，包括 QA，NER，Test Classification 等任务，那是不可谓不风光啊。即便到了现在，虽然 XLNet，T5 都出来了，BERT 的重要性还是不可同日而语。就把 BERT 的主要贡献放在最前面来说，就当做是个结论了。
 
 **贡献1：** BERT 在文章里证明了双向向量表征的重要性 （Bidirectional Representation）。自从 BERT 得到了这个结论，后面的模型，如 XLNet，ALBERT 都把双向作为一个默认配置。
-**贡献2：** 奠定了 pre-train + fine-tune 两阶段建模的实践基础。虽然以前也有 pre-train 模型，如 word2vec，GPT，ELMo，但是没有哪个起到了 BERT 这样大的作用。在 NLP 领域，后来的研究也都 follow 了这样的两阶段设定。
+**贡献2：** 奠定了 pre-training + fine-tune 两阶段建模的实践基础。虽然以前也有 pre-train 模型，如 word2vec，GPT，ELMo，但是没有哪个起到了 BERT 这样大的作用。在 NLP 领域，后来的研究也都 follow 了这样的两阶段设定。
 
 ### 1. Motivtion of BERT
 这一小节里，首先来描述一下为什么要提出 BERT。BERT 的主要贡献之一是证明了双向向量表示的重要性。这里所说的双向是深度双向表示，我们慢慢来说。
@@ -35,11 +35,14 @@
 ### 3. BERT pre-training 之 Next Sequence Prediction（NSP）
 
 
+### 4. BERT fine-tune
 
+
+### 5. BERT fine-tune
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTYzMzA2Nyw0MzI5MjY1NzIsMTM5NT
-Q5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbNjY1MTk1MTEsNDMyOTI2NTcyLDEzOTU0OT
+kzNywtNjY4MTUyMjkwLC0xMDA1OTc2ODldfQ==
 -->
