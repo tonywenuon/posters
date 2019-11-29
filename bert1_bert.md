@@ -22,8 +22,12 @@
 **贡献2：** 奠定了 pre-train + fine-tune 两阶段建模的实践基础。虽然以前也有 pre-train 模型，如 word2vec，GPT，ELMo，但是没有哪个起到了 BERT 这样大的作用。在 NLP 领域，后来的研究也都 follow 了这样的两阶段设定。
 
 
+
+
+
+
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgxMTAwNTQsLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbLTY2ODE1MjI5MCwtMTAwNTk3Njg5XX0=
 -->
