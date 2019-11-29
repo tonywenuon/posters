@@ -61,7 +61,7 @@
 
 General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务。下面我会分开介绍一下每个任务都是什么。整体的 [leaderboard ](https://gluebenchmark.com/leaderboard/) 请点击链接查看（目前已被 Google T5 屠榜）。
 
-1. **MNLI** 
+**（1）MNLI** 
 
 
 
@@ -70,7 +70,7 @@ General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTMwMzMzOTEsMjI2OTIwMTIzLDE1Nz
-UyMDkyOTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3
-LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbLTkzNzc4NTkzOCwyMjY5MjAxMjMsMTU3NT
+IwOTI5NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMzk1NDk5Mzcs
+LTY2ODE1MjI5MCwtMTAwNTk3Njg5XX0=
 -->
