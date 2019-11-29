@@ -26,12 +26,12 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/3models.png?raw=true)
 
-见上图，三个模型的对比中我们可以看到。传统的语言模型（Language Model）是从左向右（Left-to-Right）建模的。如图中的 OpenAI GPT，从第二层开始，每一个 token 的向量计算都是只用到了他左侧的前一层向量。这种模型的缺点是，当前 token 看不到他右边的 token 的信息，因此某种程度上，这种从左到右建模的模型天然的没有充分利用信息。接下来看图中的 ELMo，ELMo 模型采用的双向 LSTM，然后再最后一层把左右 LSTM concatenate 到一起，形成每个 token 的最终向量表示。但是 ELMo 是左侧，右侧向量表示独立训练，最后才 concatenate 到一起的。左侧和右侧向量表示在计算的时候并没有因此他的语义表示比较浅层。
+见上图，三个模型的对比中我们可以看到。传统的语言模型（Language Model）是从左向右（Left-to-Right）建模的。如图中的 OpenAI GPT，从第二层开始，每一个 token 的向量计算都是只用到了他左侧的前一层向量。这种模型的缺点是，当前 token 看不到他右边的 token 的信息，因此某种程度上，这种从左到右建模的模型天然的没有充分利用信息。接下来看图中的 ELMo，ELMo 模型采用的双向 LSTM，然后再最后一层把左右 LSTM concatenate 到一起，形成每个 token 的最终向量表示。但是 ELMo 是左侧，右侧向量表示独立训练，最后才 concatenate 到一起的。左侧和右侧向量表示在计算的时候并没有交互，因此他的语义表示比较浅层。那么这个时候就提出了一个问题：是否可以提出一个模型，在训练阶段计算某个 token 的向量表示的时候，既能利用上它左侧 token 的信息，又能
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwOTE1Mjg5MSw0MzI5MjY1NzIsMTM5NT
+eyJoaXN0b3J5IjpbMTg2NjE2MTU3Myw0MzI5MjY1NzIsMTM5NT
 Q5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
 -->
