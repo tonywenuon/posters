@@ -42,7 +42,8 @@
 说的容易做的难。如果一个 token 在训练的时候就都包含了左右的信息（当然了，也包含自己的），那岂不就相当于知道自己的信息还预测自己，如果这都可以，那还用那么多模型干啥。BERT 首先做的就是在原始的 sequence 的tokens 里面，随机的选择 15% 来屏蔽掉，即 mask 掉。然后这些被 mask 掉的 tokens 用来做预测的 targets，即 BERT 的目标之一就是预测这些被 mask 了的 tokens。
 
 
-> **Input** = `[CLS]` the man went to `[MASK]` store `[SEP]` he bought a 
+> **Input** = `[CLS]` the man went to `[MASK]` store `[SEP]` he bought a gallon `[MASK]` milk `[SEP]`
+
 
 这个例子中的 `[MASK]` 来替代原始的 token。好啦，这样我们预测 `[MASK]` 的 token 就可以啦。但是关于这个 `[MASK]` 还有个问题，大家先想一下如果是你来考虑，后面会有什么问题呢？我们继续，在做 pre-training 的时候是没有问题的，可以很好的预测 token。但是当把 BERT 用到下游任务的时候，问题就来了，在下游任务，是没有 `[MASK]` 标记的。你不能要求下游任务的训练集，测试集都有 `[MASK]` 标记，那这个模型就不 general 了。BERT 是这样做的，在刚才的 15% 的被 mask 了的 tokens 中，80% 的保持 `[MASK]` 状态，10% 用随机 sample 一个 token 来替代 `[MASK]`，10% 的保持原 token 不变。这样就允许模型看到一些非 `[MASK]` 的 token，虽然也看到了被 mask 的token 自身。不过也就只有 15%*10% = 1.5% 的样本，对整体模型效果的影响不大。至此，BERT 就构建完了。谢谢大家的关照，可以关闭本帖子了。哈哈，皮一下很开心。我们继续吧。
 
@@ -58,7 +59,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODQxOTg0NSwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbNTE5NDgzMTI5LDEwNDk1ODkzMDMsNDMyOT
+I2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2ODld
+fQ==
 -->
