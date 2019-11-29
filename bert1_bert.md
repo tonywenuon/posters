@@ -59,21 +59,18 @@
 
 ### 5. GLUE
 
-General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务。下面我会分开介绍一下每个任务都是什么。整体的 leaderboard [https://gluebenchmark.com/leaderboard/](https://gluebenchmark.com/leaderboard/)
+General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务。下面我会分开介绍一下每个任务都是什么。整体的 [leaderboard ](https://gluebenchmark.com/leaderboard/) 请点击链接查看（目前已被 Google T5 屠榜）。
+
+1. **MNLI** 
 
 
 
--   A benchmark of nine sentence- or sentence-pair language understanding tasks built on established existing datasets and selected to cover a diverse range of dataset sizes, text genres, and degrees of difficulty,
--   A diagnostic dataset designed to evaluate and analyze model performance with respect to a wide range of linguistic phenomena found in natural language, and
--   A public leaderboard for tracking performance on the benchmark and a dashboard for visualizing the performance of models on the diagnostic set.
-
-The format of the GLUE benchmark is model-agnostic, so any system capable of processing sentence and sentence pairs and producing corresponding predictions is eligible to participate. The benchmark tasks are selected so as to favor models that share information across tasks using parameter sharing or other transfer learning techniques. The ultimate goal of GLUE is to drive research in the development of general and robust natural language understanding systems.
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAwMjkwMDc5LDIyNjkyMDEyMywxNTc1Mj
-A5Mjk2LDEwNDk1ODkzMDMsNDMyOTI2NTcyLDEzOTU0OTkzNywt
-NjY4MTUyMjkwLC0xMDA1OTc2ODldfQ==
+eyJoaXN0b3J5IjpbLTE5MTMwMzMzOTEsMjI2OTIwMTIzLDE1Nz
+UyMDkyOTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3
+LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
 -->
