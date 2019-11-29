@@ -34,7 +34,7 @@
 
 > **Input** = [CLS] the man went to `[MASK]` store [SEP] he bought a gallon [MASK] milk [SEP]
 
-这个例子中的 `[MASK]` 来替代原始的 token。
+这个例子中的 `[MASK]` 来替代原始的 token。好啦，这样我们预测 `[MASK]` 的 token 就可以啦。但是关于这个 `[MASK]` 还有问题，在我们做 pre-training 的时候是没有问题的，
 
 
 ### 3. BERT pre-training 之 Next Sequence Prediction（NSP）
@@ -48,7 +48,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NjA5NDAyNCwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbLTE4NDgyMzA0MzIsMTA0OTU4OTMwMyw0Mz
+I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
+OV19
 -->
