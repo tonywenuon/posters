@@ -29,7 +29,11 @@
 见上图，三个模型的对比中我们可以看到。传统的语言模型（Language Model）是从左向右（Left-to-Right）建模的。如图中的 OpenAI GPT，从第二层开始，每一个 token 的向量计算都是只用到了他左侧的前一层向量。这种模型的缺点是，当前 token 看不到他右边的 token 的信息，因此某种程度上，这种从左到右建模的模型天然的没有充分利用信息。接下来看图中的 ELMo，ELMo 模型采用的双向 LSTM，然后再最后一层把左右 LSTM concatenate 到一起，形成每个 token 的最终向量表示。但是 ELMo 是左侧，右侧向量表示独立训练，最后才 concatenate 到一起的。左侧和右侧向量表示在计算的时候并没有交互，因此他的语义表示比较浅层。那么这个时候就提出了一个问题：是否可以提出一个模型，在训练阶段计算某个 token 的向量表示的时候，既能利用上它左侧 tokens 的信息，又能用上右侧 tokens 的信息。当然啦，BERT 就是这么来的啦。
 
 ### 2. BERT pre-training 之 Masked Language Model（MLM）
-说的容易做的难。如果一个 token 在训练的时候就都包含了左右的信息（当然了，也包含自己的），那岂不就相当于知道自己的信息还预测自己，如果这都可以，那还用那么多模型干啥。BERT 首先做的就是在原始的 sequence 的tokens 里面，随机的选择 15% 来屏蔽掉，即 mask 掉。然后这些被
+说的容易做的难。如果一个 token 在训练的时候就都包含了左右的信息（当然了，也包含自己的），那岂不就相当于知道自己的信息还预测自己，如果这都可以，那还用那么多模型干啥。BERT 首先做的就是在原始的 sequence 的tokens 里面，随机的选择 15% 来屏蔽掉，即 mask 掉。然后这些被 mask 掉的 tokens 用来做预测的 targets，即 BERT 的目标之一就是预测这些被 mask 了的 tokens。那么给个例子，方便有个直观的印象。
+
+```
+[CLS] the man went to [MASK] store [SEP] he bought a gallon [MASK] milk [SEP]
+```
 
 
 ### 3. BERT pre-training 之 Next Sequence Prediction（NSP）
@@ -43,7 +47,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MzEyNzkxMSwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbMjU4MDEwMTI3LDEwNDk1ODkzMDMsNDMyOT
+I2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2ODld
+fQ==
 -->
