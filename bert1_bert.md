@@ -34,7 +34,7 @@
 > **Input** = `[CLS]` the man `[MASK]` to the store `[SEP]` penguin `[MASK]` are flight ##less birds `[SEP]`
 > **Label** = NotNext
 
-先给出 BERT 的输入，它的输入既可以是单个句子，也可以是句子对（如问答对）。两个句子中间用 `[SEP]` 标记来隔开。
+先给出 BERT 的输入，它的输入既可以是单个句子，也可以是句子对（如问答对）。两个句子中间用 `[SEP]` 标记来隔开。所以的输入的第一个 token 总是 `[CLS]` 这个标记的最终向量表示用来表征整个句子的向量，并且可以用做分类问题。
 
 ### 2. BERT pre-training 之 Masked Language Model（MLM）
 说的容易做的难。如果一个 token 在训练的时候就都包含了左右的信息（当然了，也包含自己的），那岂不就相当于知道自己的信息还预测自己，如果这都可以，那还用那么多模型干啥。BERT 首先做的就是在原始的 sequence 的tokens 里面，随机的选择 15% 来屏蔽掉，即 mask 掉。然后这些被 mask 掉的 tokens 用来做预测的 targets，即 BERT 的目标之一就是预测这些被 mask 了的 tokens。
@@ -59,7 +59,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMjg2NzkwLDEwNDk1ODkzMDMsNDMyOT
+eyJoaXN0b3J5IjpbODc5OTEwNjAyLDEwNDk1ODkzMDMsNDMyOT
 I2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2ODld
 fQ==
 -->
