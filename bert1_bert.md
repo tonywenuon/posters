@@ -26,12 +26,12 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/3models.png?raw=true)
 
-见上图，三个模型的对比中我们可以看到。传统的语言模型（Language Model）是从左向右（Left-to-Right）建模的。
+见上图，三个模型的对比中我们可以看到。传统的语言模型（Language Model）是从左向右（Left-to-Right）建模的。如图中的 OpenAI GPT，从第二层开始，每一个 token 的向量计算都是只用到了他左侧的前一层向量。这种模型的
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NTEwOTM2NCw0MzI5MjY1NzIsMTM5NT
+eyJoaXN0b3J5IjpbLTI4MDY5MzE4Nyw0MzI5MjY1NzIsMTM5NT
 Q5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
 -->
