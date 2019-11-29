@@ -35,7 +35,7 @@
 ### 3. BERT pre-training 之 Next Sequence Prediction（NSP）
 
 
-### 4. BERT fine-tune
+### 4. BERT 的训练（输入格式及模型结构）
 
 
 ### 5. BERT fine-tune
@@ -43,6 +43,6 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY1MTk1MTEsNDMyOTI2NTcyLDEzOTU0OT
-kzNywtNjY4MTUyMjkwLC0xMDA1OTc2ODldfQ==
+eyJoaXN0b3J5IjpbMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NT
+Q5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4OV19
 -->
