@@ -16,7 +16,7 @@
 ---
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。
 
-鼎鼎大名的 BERT 想必都有所耳闻了，在18年刚刚问世的时候在11个不同的 NLP 任务上取得了 state-of-the-art 的成绩，包括 QA，NER，Test Classification 等任务，那是不可谓不风光啊。即便到了现在，虽然 XLNet，T5 都出来了，BERT 的重要性还是不可同日而语。就把 BERT 的主要贡献放在最前面来说，就当做是个结论了。
+鼎鼎大名的 BERT 想必都有所耳闻了，在18年刚刚问世的时候在11个不同的 NLP 任务上取得了 state-of-the-art 的成绩，包括 QA，NER，Test Classification 等任务，那是不可谓不风光啊。即便到了现在，虽然 XLNet，T5 都出来了，BERT 的重要性还是不可同日而语。就把 BERT 的主要贡献放在最前面来说，就当做是个结论了。BERT 是一个层次 Transformer 模型，关于 Transformer 的介绍，请参见 [【重要系列 2】之 Transformer](https://zhuanlan.zhihu.com/p/93488997)
 
 **贡献1：** BERT 在文章里证明了双向向量表征的重要性 （Bidirectional Representation）。自从 BERT 得到了这个结论，后面的模型，如 XLNet，ALBERT 都把双向作为一个默认配置。
 **贡献2：** 奠定了 pre-training + fine-tune 两阶段建模的实践基础。虽然以前也有 pre-train 模型，如 word2vec，GPT，ELMo，但是没有哪个起到了 BERT 这样大的作用。在 NLP 领域，后来的研究也都 follow 了这样的两阶段设定。
@@ -59,7 +59,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDk5MDUwODEsMTA0OTU4OTMwMyw0Mz
-I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
-OV19
+eyJoaXN0b3J5IjpbMTc2OTY2MTU1NywxMDQ5NTg5MzAzLDQzMj
+kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
+XX0=
 -->
