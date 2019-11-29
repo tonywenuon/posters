@@ -5,7 +5,7 @@
 
 
 #### 本文收获
-* 什么是 BERT？BERT 的？
+* 什么是 BERT？BERT 的创作动机是什么？
 * BERT 最重要的贡献是什么？
 * 如何用 BERT 来实现几个下游 NLP 任务？
 * BERT 的局限性在哪里？
@@ -63,7 +63,7 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5Mzg3NDI1NCwxMDQ5NTg5MzAzLDQzMj
+eyJoaXN0b3J5IjpbMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMj
 kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
 XX0=
 -->
