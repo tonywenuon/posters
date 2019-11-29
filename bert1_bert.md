@@ -9,6 +9,7 @@
 * BERT 最重要的贡献是什么？bidirectional 和 pre-train
 * 如何用 BERT 来实现几个下游 NLP 任务？
 * BERT 的局限性在哪里？
+* BERT 用到了哪些数据集？以及数据集的简介和地址是什么？
 
 #### 重要文章
 * <span id = "paper1">Paper 1</span>:[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
@@ -20,8 +21,9 @@
 **贡献1：** BERT 在文章里证明了双向向量表征的重要性 （Bidirectional Representation）。自从 BERT 得到了这个结论，后面的模型，如 XLNet，ALBERT 都把双向作为一个默认配置。
 **贡献2：** 奠定了 pre-train + fine-tune 两阶段建模的实践基础。虽然以前也有 pre-train 模型，如 word2vec，GPT，ELMo，但是没有哪个起到了 BERT 这样大的作用。在 NLP 领域，后来的研究也都 follow 了这样的两阶段设定。
 
+
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbOTgxMTAwNTQsLTEwMDU5NzY4OV19
 -->
