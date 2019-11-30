@@ -57,7 +57,7 @@
 
 ### 4. BERT fine-tuning
 #### 4.1 GLUE 实验
-首先我们用 C 来表示 `[CLS]` 的最终向量表示。那么对于 
+首先我们用 C 来表示 `[CLS]` 的最终向量表示。那么对于 GLUE 任务，在 Fine-Tuning 阶段，只需要引入一个分类层就可以了，这个层里包含可训练参数
 
 ### 5. GLUE 数据集
 
@@ -87,9 +87,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk2Mjg3NzkyLC0zMzE5NTE1MDIsNTY3ND
-cxMzk5LC0yMTIzMzczODMwLDIwNTcxNTk1NzMsLTkzNzc4NTkz
-OCwyMjY5MjAxMjMsMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbMTk5MDk5NjU3MywtMzMxOTUxNTAyLDU2Nz
+Q3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5NTczLC05Mzc3ODU5
+MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMwMyw0Mz
+I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
+OV19
 -->
