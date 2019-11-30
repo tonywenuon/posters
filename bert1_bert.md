@@ -70,7 +70,7 @@ Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。其
 SQuAD v2.0 跟 SQuAD v1.1 的区别是在 v2.0 中，给定的段落并不一定包含问题的答案，其实这样的设定也跟实际生活中更加贴近。解决这个问题，我们可以在上面的解决方案上进行扩展。还记得 `[CLS]` 标记吧（感觉这个标记在 BERT 中是万能的，啥都能用它）。在预测答案的起始终止位置的时候，我们增加一个 `null` 答案来表示该段落中没有答案，概率用 $s_{null}$ 来表示， $s_{null} = S\cdot C+E\cdot C$ 。根据 4.2 的方法，我们还能够得到一个文字片段的概率，用 $s_{i,j}$ 来表示。那么只有当 $s_{i,j} - s_{null} > \tau$ 的时候，才使用从段落里抽取的答案，否则判断为该段落里没有答案。而这个 $\tau$ 呢，则是根据在 dev set 上最大化 F1 计算出来的。
 
 #### 4.4  SWAG
-Situations With Adversarial Generations（SWAG）数据集包含了 113k 个句子对。其目的是，给定一个句子 A 和 4 个其他句子，来判断 4 个句子中，哪个句子是句子 A 最合适的后续句子。为了解决这个问题，
+Situations With Adversarial Generations（SWAG）数据集包含了 113k 个句子对。其目的是，给定一个句子 A 和 4 个其他句子，来判断 4 个句子中，哪个句子是句子 A 最合适的后续句子。为了解决这个问题，首先把句子 A 和其余 4 个句子 concatenate 起来作为输入。
 
 ### 5. GLUE 数据集
 
@@ -100,9 +100,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxODkxNzU3LC0zMzE5NTE1MDIsNTY3ND
-cxMzk5LC0yMTIzMzczODMwLDIwNTcxNTk1NzMsLTkzNzc4NTkz
-OCwyMjY5MjAxMjMsMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbLTEwNDIzNDQxMzQsLTMzMTk1MTUwMiw1Nj
+c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
+OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
+MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
+ODldfQ==
 -->
