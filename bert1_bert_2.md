@@ -23,7 +23,7 @@
 
 <br><br>![](https://github.com/tonywenuon/posters/blob/master/images/bert1/2stages.png?raw=true)<br><br>
 
-### 1. Motivtion of BERT
+### 1. Motivation of BERT
 这一小节里，首先来描述一下为什么要提出 BERT。BERT 的主要贡献之一是证明了双向向量表示的重要性。这里所说的双向是深度双向表示，我们慢慢来说。
 
 <br><br>![](https://github.com/tonywenuon/posters/blob/master/images/bert1/3models.png?raw=true)<br><br>
