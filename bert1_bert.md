@@ -55,11 +55,11 @@
 实际上，确实上面就是 BERT 最核心的部分。那么为什么还要有 NSP 呢。这是因为，很多下游任务，例如问答，自然语言推理等任务，都是依赖于两个句子的关系的。而这一需求，从上面的 MLM 中并体现不出来。因此作者设计了这个 Next Sequence Prediction 任务。还记得上面的 `[CLS]` 标记吗，它的输出可以认为是整个 sequence 的向量，所以在这里，就用 `[CLS]` 的向量表示来做一个二分类任务，来判断输入中的 sequence B 是否是 sequence A 的下一个 sequence。[参见上面例子](#bert_input) ，输入里面的 `Label` 就是是否是下一个句子的 ground truth了。训练的时候呢，50% 的 sample 输入的 sequence B 部分是真实的下一句，即 `Label = IsNext`。另 50% 的输入 sequence B 是随机生成的，也就是 `Label = NotNext`。在最后的实验分析中也有对比，增加 NSP 任务，对整体模型是有正向效果的。
 
 
-### 4. BERT fine-tune
+### 4. BERT fine-tuning
+#### 4.1 GLUE 实验
+首先我们用 C 来表示 `[CLS]` 的最终向量表示。那么对于 
 
-
-
-### 5. GLUE
+### 5. GLUE 数据集
 
 General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务，数据可以在[这里下载](https://gluebenchmark.com/tasks)到。下面我会分开介绍一下每个任务都是什么。整体的 [leaderboard ](https://gluebenchmark.com/leaderboard/) 请点击链接查看（目前已被 Google T5 屠榜）。里面的英文名字我就不翻译了，我也还没找到 commonly accepted 的中文翻译名。如果谁知道每一个任务的中文名，烦请指教。
 
@@ -87,9 +87,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MTkxMTQ0NiwtMzMxOTUxNTAyLDU2Nz
-Q3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5NTczLC05Mzc3ODU5
-MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMwMyw0Mz
-I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
-OV19
+eyJoaXN0b3J5IjpbMjk2Mjg3NzkyLC0zMzE5NTE1MDIsNTY3ND
+cxMzk5LC0yMTIzMzczODMwLDIwNTcxNTk1NzMsLTkzNzc4NTkz
+OCwyMjY5MjAxMjMsMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMj
+kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
+XX0=
 -->
