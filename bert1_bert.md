@@ -72,6 +72,8 @@ SQuAD v2.0 跟 SQuAD v1.1 的区别是在 v2.0 中，给定的段落并不一定
 #### 4.4  SWAG
 Situations With Adversarial Generations（SWAG）数据集包含了 113k 个句子对。其目的是，给定一个句子 A 和 4 个其他句子，来判断 4 个句子中，哪个句子是句子 A 最合适的后续句子。为了解决这个问题，首先把句子 A 和其余 4 个句子 concatenate 起来作为输入。判断的方法跟 4.1 中的 GLUE 一样。只需要引入另外一个层，这个层里包含一个参数向量 $W \in \mathbb{R}^{K\times H}$，计算向量 W 和 C 的内积，在跟着一个 softmax，用计算出来的概率来表达当前这个句子是否是句子 A 的后续句子。
 
+以上就是 GLUE，SQuAD 和 SWAG 如何在 BERT pre-training 的基础上进行 Fine-Tuning 的方法。根据文章中的描述，在 Fine-Tuning 的过程，只需要数个小时就可以训练完成了，因为只需要几个 epoch 就可以收敛。
+
 ### 5. GLUE 数据集
 
 General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务，数据可以在[这里下载](https://gluebenchmark.com/tasks)到。下面我会分开介绍一下每个任务都是什么。整体的 [leaderboard ](https://gluebenchmark.com/leaderboard/) 请点击链接查看（目前已被 Google T5 屠榜）。里面的英文名字我就不翻译了，我也还没找到 commonly accepted 的中文翻译名。如果谁知道每一个任务的中文名，烦请指教。
@@ -100,9 +102,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjI4NzgxMjMsLTMzMTk1MTUwMiw1Nj
-c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
-OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
-MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
-ODldfQ==
+eyJoaXN0b3J5IjpbMTA0MjU4MzM5MSwtMzMxOTUxNTAyLDU2Nz
+Q3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5NTczLC05Mzc3ODU5
+MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMwMyw0Mz
+I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
+OV19
 -->
