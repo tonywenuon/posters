@@ -64,9 +64,9 @@ General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 
 **（1）MNLI** 
 全称 Multi-Genre Natural Language Inference。MNLI 是一个蕴含关系分类的任务，它是一个大语料集，BERT 中表述用了 392k 的数据。它的任务是，给定一个句子对，目的是预测第二个句子跟第一个句子是否是：包含，互斥还是中立关系。
 **（2）QQP** 
-
+Quora Question Pairs 是一个二分类任务，其目的是判别在 Quora 上的两个问题是否在语义上是相同的。
 **（3）QNLI** 
-
+Question Natural Language Inference，
 **（4）SST-2** 
 
 **（5）CoLA** 
@@ -86,7 +86,7 @@ General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3ODM4MzcyMSwtMjEyMzM3MzgzMCwyMD
+eyJoaXN0b3J5IjpbLTUwNDgwODc1OCwtMjEyMzM3MzgzMCwyMD
 U3MTU5NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDky
 OTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02Nj
 gxNTIyOTAsLTEwMDU5NzY4OV19
