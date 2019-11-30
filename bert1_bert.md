@@ -63,7 +63,7 @@
 
 #### 4.2 SQuAD v1.1
 Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。
-
+具体的做法是，把问题放到 segment A 的位置，把包含答案的段落放在 segment B 的位置。接下来我们引入两个向量。$S \in \mathbb{R}^H$ 来表示
 
 ### 5. GLUE 数据集
 
@@ -93,9 +93,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNjc1OTQ0LC0zMzE5NTE1MDIsNTY3ND
-cxMzk5LC0yMTIzMzczODMwLDIwNTcxNTk1NzMsLTkzNzc4NTkz
-OCwyMjY5MjAxMjMsMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMj
-kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
-XX0=
+eyJoaXN0b3J5IjpbLTE1NjA1MTg2NzQsLTMzMTk1MTUwMiw1Nj
+c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
+OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
+MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
+ODldfQ==
 -->
