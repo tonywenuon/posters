@@ -57,11 +57,13 @@
 
 ### 4. BERT fine-tuning
 #### 4.1 GLUE 实验
-首先我们用 $C \in \mathbb{R}^H$ 来表示 `[CLS]` 的最终向量表示。那么对于 GLUE 任务，在 Fine-Tuning 阶段，只需要引入一个分类层就可以了，这个层里包含可训练参数 $W \in \mathbb{R}^{K\times H}$。这里 K 是最终预测的 label 的个数，H 是向量维度。接下来，最终的预测类别就可以用 $log(softmax(CW^T))$ 来表示。
+首先我们用 $C \in \mathbb{R}^H$ 来表示 `[CLS]` 的最终向量表示。那么对于 GLUE 任务，在 Fine-Tuning 阶段，只需要引入一个分类层就可以了，这个层里包含可训练参数 $W \in \mathbb{R}^{K\times H}$。这里 K 是最终预测的 label 的个数，H 是向量维度。接下来，最终的预测类别就可以用 $log(softmax(CW^T))$ 来表示。如下图所示，你所需要的就是用上面的公式和 C 的向量表示就可以了。
+
+![](https://github.com/tonywenuon/posters/blob/master/images/bert1/mnli.png?raw=true)
 
 #### 4.2 SQuAD v1.1
-Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的QA 
- is a collection of 100k crowd- sourced question/answer pairs
+Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。
+
 
 ### 5. GLUE 数据集
 
@@ -91,9 +93,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NDIwMjYzMSwtMzMxOTUxNTAyLDU2Nz
-Q3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5NTczLC05Mzc3ODU5
-MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMwMyw0Mz
-I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
-OV19
+eyJoaXN0b3J5IjpbNzYzNjc1OTQ0LC0zMzE5NTE1MDIsNTY3ND
+cxMzk5LC0yMTIzMzczODMwLDIwNTcxNTk1NzMsLTkzNzc4NTkz
+OCwyMjY5MjAxMjMsMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMj
+kyNjU3MiwxMzk1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5
+XX0=
 -->
