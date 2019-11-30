@@ -62,7 +62,7 @@
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/mnli.png?raw=true)
 
 #### 4.2 SQuAD v1.1
-Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。其目的是给定一个问题，然后在所给的段落中查找出这个问题所对应的答案。其实很类似一个答案抽取的问题。具体的做法是，把问题放到 segment A 的位置，把包含答案的段落放在 segment B 的位置来 Fine-Tuning。接下来我们引入两个向量。$S \in \mathbb{R}^H$ 来表示答案起始位置判断向量，$E \in \mathbb{R}^H$ 来表示答案结束位置判断向量。然后判断一个词是否是起始词，就用该词 $T_i$ 和 S 的内积来表示其起始概率，判断一个词是否是答案结束词，就用该词 $T_i$ 和 E 的内积来表示其结束概率。后面在跟一个 softmax 就得到了每个词作为起始或者结束词的概率。最后，一个答案片段的最终分数用 $S\cdot T_i + E\cdot T_j$ 来表示，其中 i 和 j 是不同的 token 位置。取得到最大分数的文字片段作为最终的答案。见下图来形象化的理解上面的解释。
+Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。其目的是给定一个问题，然后在所给的段落中查找出这个问题所对应的答案。其实很类似一个答案抽取的问题。具体的做法是，把问题放到 segment A 的位置，把包含答案的段落放在 segment B 的位置来 Fine-Tuning。接下来我们引入两个向量。$S \in \mathbb{R}^H$ 来表示答案起始位置判断向量，$E \in \mathbb{R}^H$ 来表示答案结束位置判断向量。然后判断一个词是否是起始词，就用该词 $T_i$ 和 S 的内积来表示其起始概率，判断一个词是否是答案结束词，就用该词 $T_i$ 和 E 的内积来表示其结束概率。后面在跟一个 softmax 就得到了每个词作为起始或者结束词的概率。最后，一个答案片段的最终分数用 $S \cdot T_i + E \cdot T_j$ 来表示，其中 i 和 j 是不同的 token 位置。取得到最大分数的文字片段作为最终的答案。见下图来形象化的理解上面的解释。
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/squad.png?raw=true)
 
@@ -107,9 +107,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NzE4OTQ2MSwtMTMyNjIxOTkxOCwtMz
-MxOTUxNTAyLDU2NzQ3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5
-NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMT
-A0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIy
-OTAsLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbMjA3NzAyMDkwOSwxMTU3MTg5NDYxLC0xMz
+I2MjE5OTE4LC0zMzE5NTE1MDIsNTY3NDcxMzk5LC0yMTIzMzcz
+ODMwLDIwNTcxNTk1NzMsLTkzNzc4NTkzOCwyMjY5MjAxMjMsMT
+U3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMzk1NDk5
+MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5XX0=
 -->
