@@ -102,12 +102,12 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 
 -   **Google原版bert**:  [https://github.com/google-research/bert](https://github.com/google-research/bert)
 - **CyberZHG 大佬版**：[https://github.com/CyberZHG/keras-bert](https://github.com/CyberZHG/keras-bert)
--  **bojoni 版**：[https://github.com/bojone/bert4keras](https://github.com/bojone/bert4keras)
+-  **bojone 版**：[https://github.com/bojone/bert4keras](https://github.com/bojone/bert4keras)
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzk2NTY1ODYsLTMzMTk1MTUwMiw1Nj
+eyJoaXN0b3J5IjpbLTEzMjYyMTk5MTgsLTMzMTk1MTUwMiw1Nj
 c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
 OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
 MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
