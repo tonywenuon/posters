@@ -70,9 +70,9 @@ Question Natural Language Inference，是 Standford Question Answering 数据集
 **（4）SST-2** 
 Standford Sentiment Treebank 是一个单句子的二分类任务，他包含了关于影评的句子。人工的来标注他们对该电影的评价。
 **（5）CoLA** 
-Corpus of Linguistic Acceptability 也是一个单句子的二分类任务。
+Corpus of Linguistic Acceptability 也是一个单句子的二分类任务。其目标是判断一个英文句子是否在语言上是“可接受的”。
 **（6）STS-B** 
-
+Semantic Textual Similarity Benchmark 是句子对集合，他是从新闻的标题和其他来源
 **（7）MRPC** 
 
 **（8）RTE** 
@@ -86,8 +86,8 @@ Corpus of Linguistic Acceptability 也是一个单句子的二分类任务。
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1Nzg3MDc1MCwtMjEyMzM3MzgzMCwyMD
-U3MTU5NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDky
-OTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02Nj
-gxNTIyOTAsLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbMjI5OTc2OTMxLC0yMTIzMzczODMwLDIwNT
+cxNTk1NzMsLTkzNzc4NTkzOCwyMjY5MjAxMjMsMTU3NTIwOTI5
+NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMzk1NDk5MzcsLTY2OD
+E1MjI5MCwtMTAwNTk3Njg5XX0=
 -->
