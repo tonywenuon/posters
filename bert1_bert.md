@@ -72,9 +72,9 @@ Standford Sentiment Treebank 是一个单句子的二分类任务，他包含了
 **（5）CoLA** 
 Corpus of Linguistic Acceptability 也是一个单句子的二分类任务。其目标是判断一个英文句子是否在语言上是“可接受的”。
 **（6）STS-B** 
-Semantic Textual Similarity Benchmark 是句子对集合，他是从新闻的标题和其他来源
+Semantic Textual Similarity Benchmark 是句子对集合，他是从新闻的标题和其他来源聚合而成。他的标注是从 1 分到 5 分的标注，来表示给定的两个句子在语义上的相似度有多大。
 **（7）MRPC** 
-
+Microsoft Research Paraphrase Corpus 也是句子对集合。他是自动的重
 **（8）RTE** 
 
 **（9）WNLI** 
@@ -86,8 +86,8 @@ Semantic Textual Similarity Benchmark 是句子对集合，他是从新闻的标
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI5OTc2OTMxLC0yMTIzMzczODMwLDIwNT
-cxNTk1NzMsLTkzNzc4NTkzOCwyMjY5MjAxMjMsMTU3NTIwOTI5
-NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMzk1NDk5MzcsLTY2OD
-E1MjI5MCwtMTAwNTk3Njg5XX0=
+eyJoaXN0b3J5IjpbLTg4NDY5ODM5NSwtMjEyMzM3MzgzMCwyMD
+U3MTU5NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDky
+OTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02Nj
+gxNTIyOTAsLTEwMDU5NzY4OV19
 -->
