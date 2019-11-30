@@ -78,16 +78,15 @@ Microsoft Research Paraphrase Corpus 也是句子对集合。他是自动的从�
 **（8）RTE（2.5k）** 
 Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他的数据规模比较小。
 **（9）WNLI** 
-Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 report 这个结果，因为
-
+Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 report 这个结果，因为 WNLI 的 train 和 dev set 的设置有问题，并且 test set 的分布和 train set 的分布不同。
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDYzMjE0NTMsNTY3NDcxMzk5LC0yMT
-IzMzczODMwLDIwNTcxNTk1NzMsLTkzNzc4NTkzOCwyMjY5MjAx
-MjMsMTU3NTIwOTI5NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMz
-k1NDk5MzcsLTY2ODE1MjI5MCwtMTAwNTk3Njg5XX0=
+eyJoaXN0b3J5IjpbLTMzMTk1MTUwMiw1Njc0NzEzOTksLTIxMj
+MzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1OTM4LDIyNjkyMDEy
+MywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsNDMyOTI2NTcyLDEzOT
+U0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2ODldfQ==
 -->
