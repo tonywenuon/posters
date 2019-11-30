@@ -62,7 +62,7 @@
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/mnli.png?raw=true)
 
 #### 4.2 SQuAD v1.1
-Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。其目的是给定一个问题，然后在所给的段落中查找出这个问题所对应的答案。其实很类似一个答案抽取的问题。具体的做法是，把问题放到 segment A 的位置，把包含答案的段落放在 segment B 的位置来 Fine-Tuning。接下来我们引入两个向量。$S \in \mathbb{R}^H$ 来表示答案起始位置判断向量，$E \in \mathbb{R}^H$ 来表示答案结束位置判断向量。然后判断一个词是否是起始词，就用该词 $T_i$ 和 S 的内积来表示其起始概率，判断一个词是否是答案结束词，就用该词 $T_i$ 和 E 的内积来表示其结束概率。后面在跟一个 softmax 就得到了每个词作为起始或者
+Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。其目的是给定一个问题，然后在所给的段落中查找出这个问题所对应的答案。其实很类似一个答案抽取的问题。具体的做法是，把问题放到 segment A 的位置，把包含答案的段落放在 segment B 的位置来 Fine-Tuning。接下来我们引入两个向量。$S \in \mathbb{R}^H$ 来表示答案起始位置判断向量，$E \in \mathbb{R}^H$ 来表示答案结束位置判断向量。然后判断一个词是否是起始词，就用该词 $T_i$ 和 S 的内积来表示其起始概率，判断一个词是否是答案结束词，就用该词 $T_i$ 和 E 的内积来表示其结束概率。后面在跟一个 softmax 就得到了每个词作为起始或者结束词的概率。最后，一个答案片段的最终分数用 $S\cdot T_i + E\cdot T_j$ 来表示，其中 i 。取得到最大分数的文字片段作为最终的答案。
 
 ### 5. GLUE 数据集
 
@@ -92,9 +92,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMTA5NTc3MSwtMzMxOTUxNTAyLDU2Nz
-Q3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5NTczLC05Mzc3ODU5
-MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMwMyw0Mz
-I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
-OV19
+eyJoaXN0b3J5IjpbLTEzMzE2Njc0MzQsLTMzMTk1MTUwMiw1Nj
+c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
+OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
+MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
+ODldfQ==
 -->
