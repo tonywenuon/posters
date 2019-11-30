@@ -76,9 +76,9 @@ Semantic Textual Similarity Benchmark 是句子对集合，他是从新闻的标
 **（7）MRPC** 
 Microsoft Research Paraphrase Corpus 也是句子对集合。他是自动的从互联网新闻中抽取出来并且由人工来标注给定的句子对是否语义一致。
 **（8）RTE** 
-Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他的数据规模
+Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他的数据规模比较小。
 **（9）WNLI** 
-
+Winograd NLI 是一个小的自然语言推理数据集。
 
 
 
@@ -86,8 +86,8 @@ Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他�
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyODE2ODE0OCwtMjEyMzM3MzgzMCwyMD
-U3MTU5NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDky
-OTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02Nj
-gxNTIyOTAsLTEwMDU5NzY4OV19
+eyJoaXN0b3J5IjpbNDk0MzM1ODQxLC0yMTIzMzczODMwLDIwNT
+cxNTk1NzMsLTkzNzc4NTkzOCwyMjY5MjAxMjMsMTU3NTIwOTI5
+NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMzk1NDk5MzcsLTY2OD
+E1MjI5MCwtMTAwNTk3Njg5XX0=
 -->
