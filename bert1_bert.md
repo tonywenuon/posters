@@ -66,6 +66,13 @@ Stanford Question Answering Dataset (SQuAD v1.1) 包含了 100k 的 QA 对。其
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/squad.png?raw=true)
 
+#### 4.3 SQuAD v2.0
+SQuAD v2.0 跟 SQuAD v1.1 的区别是在 v2.0 中，给定的段落并不一定包含问题的答案，
+
+
+
+
+
 ### 5. GLUE 数据集
 
 General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务，数据可以在[这里下载](https://gluebenchmark.com/tasks)到。下面我会分开介绍一下每个任务都是什么。整体的 [leaderboard ](https://gluebenchmark.com/leaderboard/) 请点击链接查看（目前已被 Google T5 屠榜）。里面的英文名字我就不翻译了，我也还没找到 commonly accepted 的中文翻译名。如果谁知道每一个任务的中文名，烦请指教。
@@ -94,9 +101,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MjU0NzIzNCwtMzMxOTUxNTAyLDU2Nz
-Q3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5NTczLC05Mzc3ODU5
-MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMwMyw0Mz
-I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
-OV19
+eyJoaXN0b3J5IjpbLTEwNTU4ODY0NTUsLTMzMTk1MTUwMiw1Nj
+c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
+OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
+MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
+ODldfQ==
 -->
