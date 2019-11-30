@@ -98,20 +98,18 @@ Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他�
 Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 report 这个结果，因为 WNLI 的 train 和 dev set 的设置有问题，并且 test set 的分布和 train set 的分布不同。
 
 ### 6. 如何实现 BERT 代码？
-笔者没有自己实现 BERT 的代码，给出几个
+笔者没有自己实现 BERT 的代码，给出几个源码连接，大家感兴趣的自己去学习吧。
+
 -   **Google原版bert**:  [https://github.com/google-research/bert](https://github.com/google-research/bert)
--   **徐亮版roberta**:  [https://github.com/brightmart/roberta_zh](https://github.com/brightmart/roberta_zh)
--   **哈工大版roberta**:  [https://github.com/ymcui/Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)
--   **Google原版albert**[[例子]](https://github.com/bojone/bert4keras/issues/29#issuecomment-552188981):  [https://github.com/google-research/google-research/tree/master/albert](https://github.com/google-research/google-research/tree/master/albert)
--   **徐亮版albert**:  [https://github.com/brightmart/albert_zh](https://github.com/brightmart/albert_zh)
+- **CyberZHG 大佬版**：[https://github.com/CyberZHG/keras-bert](https://github.com/CyberZHG/keras-bert)
 -  **bojoni 版**：[https://github.com/bojone/bert4keras](https://github.com/bojone/bert4keras)
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NzkwNzYwOCwtMzMxOTUxNTAyLDU2Nz
-Q3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5NTczLC05Mzc3ODU5
-MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMwMyw0Mz
-I5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMDU5NzY4
-OV19
+eyJoaXN0b3J5IjpbLTEwNzk2NTY1ODYsLTMzMTk1MTUwMiw1Nj
+c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
+OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
+MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
+ODldfQ==
 -->
