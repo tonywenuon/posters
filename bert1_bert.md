@@ -62,7 +62,7 @@
 General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务。下面我会分开介绍一下每个任务都是什么。整体的 [leaderboard ](https://gluebenchmark.com/leaderboard/) 请点击链接查看（目前已被 Google T5 屠榜）。里面的英文名字我就不翻译了，我也还没找到 commonly accepted 的中文翻译名。如果谁知道每一个任务的中文名，烦请指教。
 
 **（1）MNLI** 
-全称 Multi-Genre Natural Language Inference。MNLI 是一个蕴含关系分类的任务，它是一个大语料集，BERT 中表述用了 392k 的数据。
+全称 Multi-Genre Natural Language Inference。MNLI 是一个蕴含关系分类的任务，它是一个大语料集，BERT 中表述用了 392k 的数据。它的任务是：给定一个
 
 
 
@@ -70,7 +70,7 @@ General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzM3MDAzODAsMjA1NzE1OTU3MywtOT
+eyJoaXN0b3J5IjpbLTExOTQ3NDYyMzMsMjA1NzE1OTU3MywtOT
 M3Nzg1OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkz
 MDMsNDMyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMD
 A1OTc2ODldfQ==
