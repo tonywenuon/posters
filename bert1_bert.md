@@ -66,9 +66,9 @@ General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 
 **（2）QQP** 
 Quora Question Pairs 是一个二分类任务，其目的是判别在 Quora 上的两个问题是否在语义上是相同的。
 **（3）QNLI** 
-Question Natural Language Inference，是 Standford Question Answering 数据集的另一个版本，与原始版本不同，这里转换成了一个二分类任务。正样本是 （question，sentence）这个句子对中包含了
+Question Natural Language Inference，是 Standford Question Answering 数据集的另一个版本，与原始版本不同，这里转换成了一个二分类任务。正样本是 （question，sentence）这个句子对中包含了正确的答案，负样本是句子对中不包含答案。
 **（4）SST-2** 
-
+Standford Sentiment Treebank 是一个单句子的二分类任务，他包含了关于影评的句子。人工的来标注他们的
 **（5）CoLA** 
 
 **（6）STS-B** 
@@ -86,7 +86,7 @@ Question Natural Language Inference，是 Standford Question Answering 数据集
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5ODUzNzA4NiwtMjEyMzM3MzgzMCwyMD
+eyJoaXN0b3J5IjpbMTc0NzMwNDQ0NiwtMjEyMzM3MzgzMCwyMD
 U3MTU5NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDky
 OTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02Nj
 gxNTIyOTAsLTEwMDU5NzY4OV19
