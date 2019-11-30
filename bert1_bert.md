@@ -67,20 +67,27 @@ General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 
 
 **（3）QNLI** 
 
-**（3）QNLI** 
-**（3）QNLI** 
+**（4）SST-2** 
 
-**（3）QNLI** 
+**（5）CoLA** 
 
-**（3）QNLI** 
+**（6）STS-B** 
+
+**（7）MRPC** 
+
+**（8）RTE** 
+
+**（9）WNLI** 
+
+
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyODI3NzA1NSwyMDU3MTU5NTczLC05Mz
-c3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMTA0OTU4OTMw
-Myw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIyOTAsLTEwMD
-U5NzY4OV19
+eyJoaXN0b3J5IjpbLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOT
+M3Nzg1OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkz
+MDMsNDMyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMD
+A1OTc2ODldfQ==
 -->
