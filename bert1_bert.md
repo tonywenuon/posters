@@ -23,7 +23,7 @@
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/2stages.png?raw=true)
 
-### 1. Motivtion of BERT
+### 1. Motivation of BERT
 这一小节里，首先来描述一下为什么要提出 BERT。BERT 的主要贡献之一是证明了双向向量表示的重要性。这里所说的双向是深度双向表示，我们慢慢来说。
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert1/3models.png?raw=true)
@@ -107,9 +107,9 @@ Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 repo
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjYyMTk5MTgsLTMzMTk1MTUwMiw1Nj
-c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
-OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
-MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
-ODldfQ==
+eyJoaXN0b3J5IjpbMTE1NzE4OTQ2MSwtMTMyNjIxOTkxOCwtMz
+MxOTUxNTAyLDU2NzQ3MTM5OSwtMjEyMzM3MzgzMCwyMDU3MTU5
+NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDkyOTYsMT
+A0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02NjgxNTIy
+OTAsLTEwMDU5NzY4OV19
 -->
