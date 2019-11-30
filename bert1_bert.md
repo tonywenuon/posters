@@ -74,9 +74,9 @@ Corpus of Linguistic Acceptability 也是一个单句子的二分类任务。其
 **（6）STS-B** 
 Semantic Textual Similarity Benchmark 是句子对集合，他是从新闻的标题和其他来源聚合而成。他的标注是从 1 分到 5 分的标注，来表示给定的两个句子在语义上的相似度有多大。
 **（7）MRPC** 
-Microsoft Research Paraphrase Corpus 也是句子对集合。他是自动的重
+Microsoft Research Paraphrase Corpus 也是句子对集合。他是自动的从互联网新闻中抽取出来并且由人工来标注给定的句子对是否语义一致。
 **（8）RTE** 
-
+Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他的数据规模
 **（9）WNLI** 
 
 
@@ -86,7 +86,7 @@ Microsoft Research Paraphrase Corpus 也是句子对集合。他是自动的重
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NDY5ODM5NSwtMjEyMzM3MzgzMCwyMD
+eyJoaXN0b3J5IjpbMTcyODE2ODE0OCwtMjEyMzM3MzgzMCwyMD
 U3MTU5NTczLC05Mzc3ODU5MzgsMjI2OTIwMTIzLDE1NzUyMDky
 OTYsMTA0OTU4OTMwMyw0MzI5MjY1NzIsMTM5NTQ5OTM3LC02Nj
 gxNTIyOTAsLTEwMDU5NzY4OV19
