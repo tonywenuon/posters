@@ -61,21 +61,21 @@
 
 General Language Understanding Evaluation (GLUE) 是一个自然语言理解的 benchmark。它包含了 9 个不同的自然语言处理任务，数据可以在[这里下载](https://gluebenchmark.com/tasks)到。下面我会分开介绍一下每个任务都是什么。整体的 [leaderboard ](https://gluebenchmark.com/leaderboard/) 请点击链接查看（目前已被 Google T5 屠榜）。里面的英文名字我就不翻译了，我也还没找到 commonly accepted 的中文翻译名。如果谁知道每一个任务的中文名，烦请指教。
 
-**（1）MNLI** 
+**（1）MNLI（392k）** 
 全称 Multi-Genre Natural Language Inference。MNLI 是一个蕴含关系分类的任务，它是一个大语料集，BERT 中表述用了 392k 的数据。它的任务是，给定一个句子对，目的是预测第二个句子跟第一个句子是否是：包含，互斥还是中立关系。
-**（2）QQP** 
+**（2）QQP（363k）** 
 Quora Question Pairs 是一个二分类任务，其目的是判别在 Quora 上的两个问题是否在语义上是相同的。
-**（3）QNLI** 
+**（3）QNLI（108k）** 
 Question Natural Language Inference，是 Standford Question Answering 数据集的另一个版本，与原始版本不同，这里转换成了一个二分类任务。正样本是 （question，sentence）这个句子对中包含了正确的答案，负样本是句子对中不包含答案。
-**（4）SST-2** 
+**（4）SST-2（67k）** 
 Standford Sentiment Treebank 是一个单句子的二分类任务，他包含了关于影评的句子。人工的来标注他们对该电影的评价。
-**（5）CoLA** 
+**（5）CoLA（8.5k）** 
 Corpus of Linguistic Acceptability 也是一个单句子的二分类任务。其目标是判断一个英文句子是否在语言上是“可接受的”。
-**（6）STS-B** 
+**（6）STS-B（5.7k）** 
 Semantic Textual Similarity Benchmark 是句子对集合，他是从新闻的标题和其他来源聚合而成。他的标注是从 1 分到 5 分的标注，来表示给定的两个句子在语义上的相似度有多大。
-**（7）MRPC** 
+**（7）MRPC（3.5k）** 
 Microsoft Research Paraphrase Corpus 也是句子对集合。他是自动的从互联网新闻中抽取出来并且由人工来标注给定的句子对是否语义一致。
-**（8）RTE** 
+**（8）RTE（2.5k）** 
 Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他的数据规模比较小。
 **（9）WNLI** 
 Winograd NLI 是一个小的自然语言推理数据集。
@@ -86,7 +86,7 @@ Winograd NLI 是一个小的自然语言推理数据集。
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk0MzM1ODQxLC0yMTIzMzczODMwLDIwNT
+eyJoaXN0b3J5IjpbNTY3NDcxMzk5LC0yMTIzMzczODMwLDIwNT
 cxNTk1NzMsLTkzNzc4NTkzOCwyMjY5MjAxMjMsMTU3NTIwOTI5
 NiwxMDQ5NTg5MzAzLDQzMjkyNjU3MiwxMzk1NDk5MzcsLTY2OD
 E1MjI5MCwtMTAwNTk3Njg5XX0=
