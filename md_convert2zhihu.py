@@ -1,6 +1,6 @@
 import re
 
-src_file_name = 'important3_multi_task'
+src_file_name = 'bert1_bert'
 src_file = src_file_name + '.md'
 tar_file = src_file_name + '_2.md'
 
