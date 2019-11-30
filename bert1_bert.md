@@ -9,8 +9,7 @@
 * BERT 最重要的贡献是什么？
 * 如何用 BERT 来实现几个下游 NLP 任务？
 * BERT 用到了哪些数据集？以及数据集的简介和地址是什么？
-* BERT 的局限性在哪里？
-* 如何实现一个 BERT 代码？
+* 如何实现 BERT 代码？
 
 #### 重要文章
 * <span id = "paper1">Paper 1</span>:[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
@@ -98,13 +97,13 @@ Recognizing Textual Entailment 是一个和 MNLI 很类似的数据集但是他�
 **（9）WNLI** 
 Winograd NLI 是一个小的自然语言推理数据集。BERT 中并没有 report 这个结果，因为 WNLI 的 train 和 dev set 的设置有问题，并且 test set 的分布和 train set 的分布不同。
 
-### 6. BERT 的局限性
+### 6. 如何实现 BERT 代码？
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTM4ODQwNDcsLTMzMTk1MTUwMiw1Nj
+eyJoaXN0b3J5IjpbLTE1MDE1NzAwNjcsLTMzMTk1MTUwMiw1Nj
 c0NzEzOTksLTIxMjMzNzM4MzAsMjA1NzE1OTU3MywtOTM3Nzg1
 OTM4LDIyNjkyMDEyMywxNTc1MjA5Mjk2LDEwNDk1ODkzMDMsND
 MyOTI2NTcyLDEzOTU0OTkzNywtNjY4MTUyMjkwLC0xMDA1OTc2
