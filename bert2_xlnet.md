@@ -15,11 +15,13 @@
 ---
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。
 
-之所以把 XLNet 归到 BERT 系列是因为 XLNet 的逻辑是提升 BERT 模型天然的短板，弥补了 BERT 中的两个缺陷。
+之所以把 XLNet 归到 BERT 系列是因为 XLNet 的逻辑是提升 BERT 模型天然的短板，弥补了 BERT 中的两个缺陷。加上在他们之后发布的文章很多也会拿他们俩来比较，我在这里也把他们分到同一个系列中。
+
+### 自回归（AutoRegressive, AR）和自编码（AutoEncoder, AE）思想
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyOTg4NTA5NiwtNTUzODgwODM1LC0xNz
-A4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbOTE0NDc1MDE1LC01NTM4ODA4MzUsLTE3MD
+g4NDU3ODZdfQ==
 -->
