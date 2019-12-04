@@ -4,7 +4,8 @@
 
 
 #### 本文收获
-* 什么是 XLNet？XLNet 的创作动机是什么？
+* 自回归（AutoRegressive, AR）和自编码（AutoEncoder, AE）思想的区别？
+* XLNet 的创作动机是什么？
 * 什么是双流注意力机制（Two-steam Attention）？
 * XLNet 和 BERT 的对比。
 
@@ -17,5 +18,5 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY0MTE3MDU1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTU1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
 -->
