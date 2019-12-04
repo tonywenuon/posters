@@ -15,11 +15,11 @@
 ---
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。
 
-之所以把 XLNet 归到 BERT 系列是因为 XLNet 的逻辑是提升 BERT 模型天然的短板，弥补了 BERT 中的两个缺陷。虽然 XLNet 和 BERT 属于完全不同机制 pre-train 模型，但是
+之所以把 XLNet 归到 BERT 系列是因为 XLNet 的逻辑是提升 BERT 模型天然的短板，弥补了 BERT 中的两个缺陷。
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczOTg2ODIzOSwtNTUzODgwODM1LC0xNz
+eyJoaXN0b3J5IjpbMTMyOTg4NTA5NiwtNTUzODgwODM1LC0xNz
 A4ODQ1Nzg2XX0=
 -->
