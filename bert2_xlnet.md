@@ -68,7 +68,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 介绍双流注意力之前要指出“两个不可以”。
 **标准语言模型不可以**，整个 XLNet 框架都是用 Transformer 来实现的（有对 Transformer 不了解的，请参见 [【重要系列 2】之 Transformer](https://zhuanlan.zhihu.com/p/93488997)）。而 Transformer 在计算的时候，每个 token 的 vector 都要参与到其他 token 的计算中。这对于未排列的句子是没有问题的，但是对于排序语言模型就行不通了。还是拿 `1,2,3,4` 来举例子，假设现在我们有两个排序序列：（1）我爱中国（`1,2,3,4`）；（2）我爱国中（`1,2,4,3`）。前面两个位置都是 `1,2` 那么根据标准语言模型，第三个位置的概率是 $p(中 | 我爱)$，而问题是 $我爱$ 在这两个序列中是完全一样的，所以无法直接套用标准语言模型。为了解决这个问题，在 XLNet 中，作者把 token 和 token 的位置区分开（文章中叫做 re-parameterize）。即在（1）的例子中，$p(中 | 我爱; 3)$，在（2）中，$p(国 | 我爱; 4)$。这样引入了 target 位置信息到概率计算中，就解决了 *标准语言模型不可以* 的问题。为了后面好解释，这里还是给出一个正式的公式：$p(x_{z_t}=x | x_{z<t}) = p(x_{z<t}, z_t)$，其中 $z_t$ 是当前要预测的位置（注意是排序位置，不是绝对位置，拿（2）为例，4 在序列的第三个位置，那么这个 $z_t$ 是 4，而不是 3）。
-**标准 Transformer 不可以**，在标准语言模型中，一个 token 要么参加其他 token 的计算，要么不参加，即非 0 即 1 的关系。这在排序语言模型，就是 XLNet 中就引出了下面的矛盾。（1）为了预测 $x_{x_t}$，
+**标准 Transformer 不可以**，在标准语言模型中，一个 token 要么参加其他 token 的计算，要么不参加，即非 0 即 1 的关系。这在排序语言模型，就是 XLNet 中就引出了下面的矛盾。（1）为了预测 $x_{z_t}$，根据上面的讨论，只用到 $z_t$（位置信息），而不是 $x_{z_t}$（token 内容信息）；（2）当预测
 
 
 
@@ -77,9 +77,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ5NzIxMTcwLDczNTAxNzY1MCwtMTcxOD
-c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
-ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
-04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
-MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbLTE0MTUyNDkzNiw3MzUwMTc2NTAsLTE3MT
+g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
+NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
+wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
+ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
