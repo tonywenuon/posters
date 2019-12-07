@@ -62,7 +62,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert2/objective.png?raw=true)
 
-这里的 $Z_T$ 表示所有的排列，$x_{z<t}$ 指的是所有排列在 t 前面的 token。其实看到这个公式里，在括号部分就是语言模型，只是把这个语言模型应用到了所有的排列后的序列上，并且让所有排列序列的生成概率都最大。这样就是侧面的让一个词看到了其他所有词的信息，那么通过这样的方式，这个
+这里的 $Z_T$ 表示所有的排列，$x_{z<t}$ 指的是所有排列在 t 前面的 token。其实看到这个公式里，在括号部分就是语言模型，只是把这个语言模型应用到了所有的排列后的序列上，并且让所有排列序列的生成概率都最大。这样就是侧面的让一个词看到了其他所有词的信息，那么通过这样的方式，这个模型既遵循了语言模型从左向右建模的特点，又整合了双向语义建模的结构。这就是 XLNet 最核心的思想。接下来的问题就是如何实现这一思路。
 
 
 
@@ -74,8 +74,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNjI1OTUwMSwyMDcwOTMyMDg0LC0xMz
-M5NTcwMzkzLDE2ODc4Njg1ODMsLTE2OTUxMDk3NDAsLTEwMzgx
-ODkyNjgsLTk1OTkxMjQ4LC04NDQwNzM1MiwzMDY3MDI4NzksLT
-EzODM5MjEzOTEsLTU1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbLTE3MTg3Nzg2MDcsMjA3MDkzMjA4NCwtMT
+MzOTU3MDM5MywxNjg3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4
+MTg5MjY4LC05NTk5MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC
+0xMzgzOTIxMzkxLC01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
+
 -->
