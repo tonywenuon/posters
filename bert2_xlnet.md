@@ -38,14 +38,15 @@
 正如上面介绍的，语言模型（Language Model，LM）属于自回归方式来训练，BERT 则正是属于自编码的训练方式。我们首先来说 BERT，基于上面的分析，BERT 存在两个问题。
 **BERT 问题1**，在预测 [MASK] 位置的词的时候，每个 [MASK] 都是独立地预测，比如：
 
-> 
-> 
+> 原句子：深圳是个大都市
+> Mask 句子：[MASK] [MASK] 是个大都市
 
+可以看到，在预测的时候，这两个 [MASK] 相当于是
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MDgwODQxMSwtODQ0MDczNTIsMzA2Nz
-AyODc5LC0xMzgzOTIxMzkxLC01NTM4ODA4MzUsLTE3MDg4NDU3
-ODZdfQ==
+eyJoaXN0b3J5IjpbODg5OTM3MTQ0LC04NDQwNzM1MiwzMDY3MD
+I4NzksLTEzODM5MjEzOTEsLTU1Mzg4MDgzNSwtMTcwODg0NTc4
+Nl19
 -->
