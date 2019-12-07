@@ -90,6 +90,8 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 可以忽略这张图的左侧，只关注右侧。右侧是 `3-2-4-1` 这个排列的 mask，我们一起来看上面的矩阵，即 content representation 的 mask 矩阵。每一行，每一列表示原序列中的位置，从 1 到 4。由于在排列 `3-2-4-1` 中，1 是在最后，因此在计算 content stream 的时候，他可以看到所有其他 token 的内容，因此在矩阵里，每一列都是 1，也就是标红的。那么第二行呢，可以看到在排列中，2 只能看到其前面的 3，所以第二行只有第 2 和第 3 列标红。以此类推，第三行只有第 3 列标红，第四行有 2,3,4 列标红。这都是依据排列中的顺序来定的。接下来我们看下面的 mask 矩阵，即 query stream。图中用虚线把对角线去掉了，也就是说在计算 query representation 的时候，每个 token 自身的内容是不参与计算的，所以直接把 content mask 矩阵的对角线去掉就可以了。
 
+### 5. XLNet 的训练
+双流注意力是 XLNet 实现中最不好理解的，理解了这部分其他部分就好办了。那么在训练的时候，输入采用了和 BERT 类似的 segment 方法。唯一的区别是 [CLS]
 
 
 
@@ -98,9 +100,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MDMxMjYyLDczNTAxNzY1MCwtMTcxOD
-c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
-ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
-04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
-MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbMTA0MzAzNDYyMSw3MzUwMTc2NTAsLTE3MT
+g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
+NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
+wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
+ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
