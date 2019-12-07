@@ -49,16 +49,17 @@
 BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合两者的优点呢？即结合 BERT 的双向语义建模和语言模型从左至右预测的特点。当然有啦，就是 XLNet 咯。
 
 ### XLNet 之排列语言模型（Permutation Language Model）
-为了解决上面的问题，XLNet 提出了排列语言模型。其含义是说，每个序列输入进来以后，他都会有各种排列组合，比如一个序列一共有 T 个词，那么他的排列组合就有 T! 个。这个时候，当计算某个特定位置 t 的时候，在所有的排列组合中，对于小于 t 的位置，
+为了解决上面的问题，XLNet 提出了排列语言模型。其含义是说，每个序列输入进来以后，他都会有各种排列组合，比如一个序列一共有 T 个词，那么他的排列组合就有 T! 个。这个时候，依然遵循语言模型的规则，当计算某个特定位置 t 的时候，在所有的排列组合中，t 能看到所有的信息（包括前面和后面），因为大于 t 的位置的字都会出现在小于 t 的位置上。这么说比较抽象，拿个例子来说。
 
+> 原序列： 
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYzMjA3NjE2LC0xMzM5NTcwMzkzLDE2OD
-c4Njg1ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkx
-MjQ4LC04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLT
-U1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbMTY5OTM0OTkwNSwtMTMzOTU3MDM5MywxNj
+g3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5
+MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC
+01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
