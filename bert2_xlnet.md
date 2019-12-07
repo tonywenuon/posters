@@ -66,7 +66,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ### 4. 双流自注意力（Two-Stream Self-Attention）
 
-
+介绍
 
 
 
@@ -75,9 +75,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM1MDE3NjUwLC0xNzE4Nzc4NjA3LDIwNz
-A5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2ODU4MywtMTY5NTEw
-OTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyNDgsLTg0NDA3MzUyLD
-MwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUzODgwODM1LC0xNzA4
-ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbMTYwNjY2MTY0OCw3MzUwMTc2NTAsLTE3MT
+g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
+NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
+wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
+ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
