@@ -84,11 +84,11 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 图 (a) 表达的是和正常的 Transformer 一样，每个 h，即 token 内容都参与计算。图 (b) 表达的是，计算 g 的时候，当前的 token，只有其位置（图中是 $g_1^{(0)}$）参与向量的计算。
 
-在具体实现的时候，并不是把输入序列直接进行排列，而是通过 attention mask 来在 Transformer 内部实现。我们一起来看下图。
+在具体实现的时候，并不是把输入序列直接进行排列，而是通过 attention mask 来在 Transformer 内部实现，输入保持原序列的样子。我们一起来看下图。
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert2/content_query.png?raw=true)
 
-可以忽略这张图的左侧，只关注右侧。右侧是 `3-2-4-1` 这个排列的 mask，我们一起来看上面的矩阵，即 content representation 的 mask 矩阵。每一行表示
+可以忽略这张图的左侧，只关注右侧。右侧是 `3-2-4-1` 这个排列的 mask，我们一起来看上面的矩阵，即 content representation 的 mask 矩阵。每一行，每一列表示原序列中的位置，从 1 到 4。由于在排列 `3-2-4-1` 中，1 是在最后，因此在计算 content representation 的时候，他可以看到所有其他 token 的内容，因此在
 
 
 
@@ -98,9 +98,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTMxMjk5MTYsNzM1MDE3NjUwLC0xNz
-E4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2
-ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyND
-gsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUz
-ODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbMTYxNzkyNzE3Miw3MzUwMTc2NTAsLTE3MT
+g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
+NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
+wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
+ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
