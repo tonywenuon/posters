@@ -5,7 +5,7 @@
 
 #### 本文收获
 * 自回归（AutoRegressive, AR）和自编码（AutoEncoder, AE）思想的区别？
-* XLNet 的创作动机是什么？
+* XLNet 的研究出发点是什么？
 * 什么是双流注意力机制（Two-steam Attention）？
 * XLNet 和 BERT 的对比。
 
@@ -34,13 +34,13 @@
 
 可以看到，他是把原文字段中的某些字或词 mask 掉（通过占位符 [MASK]来替代原有文字），这就相当于去掉了部分有用信息而引入了部分噪音。其预测的目标是把这些去掉的信息还原回来。
 
-
+### 2. XLNet 的创作动机
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMxMDA1ODMwLDMwNjcwMjg3OSwtMTM4Mz
-kyMTM5MSwtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbMjU1Mzk2NiwzMDY3MDI4NzksLTEzODM5Mj
+EzOTEsLTU1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
 -->
