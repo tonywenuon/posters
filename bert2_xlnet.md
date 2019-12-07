@@ -48,12 +48,16 @@
 
 BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合两者的优点呢？即结合 BERT 的双向语义建模和语言模型从左至右预测的特点。当然有啦，就是 XLNet 咯。
 
-### XLNet
+### XLNet 之排列语言模型（Permutation Language Model）
+
+
+
+
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM0NDcwNTc1LC0xMDM4MTg5MjY4LC05NT
-k5MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkx
-LC01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
+eyJoaXN0b3J5IjpbLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLT
+k1OTkxMjQ4LC04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEz
+OTEsLTU1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
 -->
