@@ -111,6 +111,8 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 首先，XLNet 把 Next Sentence Prediction 去掉了，因为实验结果显示，这个 NSP 任务并不会提高模型效果，甚至还有副作用。当然了，这是从结果反推的结论。这里我想讨论的是在训练过程中两者的异同，参考了 @张俊林 大神的文章 [XLNet:运行机制及和Bert的异同比较](https://zhuanlan.zhihu.com/p/70257427)，感兴趣的小伙伴自行关注。
 
+在原文章中，作者指出了 BERT 的独立性假设，即预测 [MASK] 位置的词的时候，各个 
+
 
 
 
@@ -118,10 +120,10 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTA3ODgzNzgsLTExMzQ0ODQ2NjIsNz
-U4MzY2NjcsLTIxMjE2NjQyMzMsLTEyOTQ5Mjg5MDgsNzM1MDE3
-NjUwLC0xNzE4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOT
-MsMTY4Nzg2ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwt
-OTU5OTEyNDgsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMT
-M5MSwtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTQ4OTU4Mjk0NCwtMTEzNDQ4NDY2Miw3NT
+gzNjY2NywtMjEyMTY2NDIzMywtMTI5NDkyODkwOCw3MzUwMTc2
+NTAsLTE3MTg3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5My
+wxNjg3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05
+NTk5MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMz
+kxLC01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
