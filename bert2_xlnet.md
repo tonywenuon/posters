@@ -62,7 +62,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert2/objective.png?raw=true)
 
-这里的 $Z_T$ 表示所有的排列，
+这里的 $Z_T$ 表示所有的排列，$x_{z<t}$ 指的是所有排列在 t 前面的 token。其实看到这个公式里，在括号部分就是语言模型，只是把这个语言模型应用到了所有的排列后的序列上，并且让所有排列序列的生成概率都最大。这样就是侧面的让一个词看到了其他所有词的信息，那么通过这样的方式，这个
 
 
 
@@ -74,8 +74,8 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU2ODQ3MDQ4LDIwNzA5MzIwODQsLTEzMz
-k1NzAzOTMsMTY4Nzg2ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4
-OTI2OCwtOTU5OTEyNDgsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMT
-M4MzkyMTM5MSwtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTkyNjI1OTUwMSwyMDcwOTMyMDg0LC0xMz
+M5NTcwMzkzLDE2ODc4Njg1ODMsLTE2OTUxMDk3NDAsLTEwMzgx
+ODkyNjgsLTk1OTkxMjQ4LC04NDQwNzM1MiwzMDY3MDI4NzksLT
+EzODM5MjEzOTEsLTU1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
 -->
