@@ -96,14 +96,19 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 > **BERT Input** = `[CLS]` the man went to `[MASK]` store `[SEP]` he bought a gallon `[MASK]` milk `[SEP]`
 > **XLNet Input** = the man went to `[MASK]` store `[SEP]` he bought a gallon `[MASK]` milk `[SEP]` `[CLS]`
 
-可以看到，BERT 把`[CLS]` 作为第一个 token，而 XLN
+可以看到，BERT 把`[CLS]` 作为第一个 token，而 XLNet 作为最后一个 token。
+
+
+
+
+Next Sentence Prediction 的区别
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQxNTE4ODksNzM1MDE3NjUwLC0xNz
+eyJoaXN0b3J5IjpbLTE0Mzc3MTc2NjUsNzM1MDE3NjUwLC0xNz
 E4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2
 ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyND
 gsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUz
