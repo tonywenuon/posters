@@ -78,13 +78,19 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 可以看到，公式中一个是 $z<t$，一个是 $z \leqslant t$，还可以看到在计算 g 的时候，除了 $z_t$，其他的 token 都是用的 h，即内容向量表示来计算。更形象化的来理解，我们一起看下图。
 
+![](https://github.com/tonywenuon/posters/blob/master/images/bert2/content.png?raw=true)
+
+![](https://github.com/tonywenuon/posters/blob/master/images/bert2/query.png?raw=true)
+
+图 (a) 表达的是和正常的 Transformer 一样，每个 h，即 token 内容都参与计算。图 (b) 表达的是，计算 g 的时候，
+
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0ODA5MDg2OSw3MzUwMTc2NTAsLTE3MT
+eyJoaXN0b3J5IjpbLTU3NDA0NDU4Miw3MzUwMTc2NTAsLTE3MT
 g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
 NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
 wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
