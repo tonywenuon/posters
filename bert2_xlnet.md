@@ -92,7 +92,12 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ### 5. 段循环机制和相对位置编码
 
-对应到原文，段循环机制叫做 segment recurrence mechanism；相对位置编码叫做 Relative Segment Encodings。这两个概念都是从 Transformer-XL 引入的，感兴趣的读者可以详细的阅读其文章，因为他们不是 XLNet 的原创，在这里我就简单介绍他们的功能。段循环机制是为了解决长句依赖问题的。因为在 BERT 中，句子在训练的时候是相对独立的，也就是每个 sample 并没有前面 sample 的信息。引入段循环机制后，每个句子在
+对应到原文，段循环机制叫做 segment recurrence mechanism；相对位置编码叫做 Relative Segment Encodings。这两个概念都是从 Transformer-XL 引入的，感兴趣的读者可以详细的阅读其文章，因为他们不是 XLNet 的原创，在这里我就简单介绍他们的功能。段循环机制是为了解决长句依赖问题的。因为在 BERT 中，句子在训练的时候是相对独立的，也就是每个 sample 并没有前面 sample 的信息。引入段循环机制后，每个句子在计算向量表示的时候还会加入上一个句子的信息，见下图，也就是图中的 mem，上个句子的每一层的 memory 都会被保存。这样赋予了 XLNet 更强的长句记忆的功能。
+
+![](https://github.com/tonywenuon/posters/blob/master/images/bert2/content_split.png?raw=true)
+
+而相对位置编码
+
 
 ### 6. XLNet 的训练
 双流注意力是 XLNet 实现中最不好理解的，理解了这部分其他部分就好办了。那么在训练的时候，输入采用了和 BERT 类似的 segment 方法。唯一的区别是 `[CLS]` 的位置。
@@ -112,9 +117,9 @@ Next Sentence Prediction 的区别
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU3MTQ3MDkxLDczNTAxNzY1MCwtMTcxOD
-c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
-ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
-04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
-MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbLTE0Njg1MDQzMTksNzM1MDE3NjUwLC0xNz
+E4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2
+ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyND
+gsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUz
+ODgwODM1LC0xNzA4ODQ1Nzg2XX0=
 -->
