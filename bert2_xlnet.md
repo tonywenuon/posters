@@ -41,12 +41,13 @@
 > 原句子：深圳是个大都市
 > Mask 句子：[MASK] [MASK] 是个大都市
 
-可以看到，在预测的时候，这两个 [MASK] 相当于是这样预测的，在给定 `是个大都市` 的条件下，预测 `深` 和 `圳` 的概率分别是：p(深 | 是个大都市) 和 p(圳 | 是个大都市)。而这显然是有缺陷的，没有考虑到 `深圳` 这两个词的关系（）
+可以看到，在预测的时候，这两个 [MASK] 相当于是这样预测的，在给定 `是个大都市` 的条件下，预测 `深` 和 `圳` 的概率分别是：p(深 | 是个大都市) 和 p(圳 | 是个大都市)。而这显然是有缺陷的，没有考虑到 `深圳` 这两个词的关系（当然了，这里不考虑汉语的词表，只考虑单个字）。
+**BERT 问题2**，在训练好 BERT 与训练模型以后，
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjk3MDA1NTIsLTg0NDA3MzUyLDMwNj
-cwMjg3OSwtMTM4MzkyMTM5MSwtNTUzODgwODM1LC0xNzA4ODQ1
-Nzg2XX0=
+eyJoaXN0b3J5IjpbNjc4ODI5NzM4LC04NDQwNzM1MiwzMDY3MD
+I4NzksLTEzODM5MjEzOTEsLTU1Mzg4MDgzNSwtMTcwODg0NTc4
+Nl19
 -->
