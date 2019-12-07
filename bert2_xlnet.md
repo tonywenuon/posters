@@ -58,15 +58,15 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 > 排列4：中  我  爱  国（3,1,2,4）
 > ......
 
-这里不把全部的排列都列出来，只介绍重点含义就好了。看这个例子，我们拿 `中`（序列号是3）为例。由于训练方式还是用语言模型的方式来训练，站在某个字上，他只能看到其左边字的信息，所以在原序列中，`中` 可以看到 `我` 和 `爱` 的信息，但是看不到 `国` 的信息。但是在排列 1 中，当
+这里不把全部的排列都列出来，只介绍重点含义就好了。看这个例子，我们拿 `中`（序列号是3）为例。由于训练方式还是用语言模型的方式来训练，站在某个字上，他只能看到其左边字的信息，所以在原序列中，`中` 可以看到 `我` 和 `爱` 的信息，但是看不到 `国` 的信息。但是在排列 1 中，`中` 却可以看到所有其他字的信息，因为 1,2,4 都排在 3 的前面。同样的道理，对于 `我` 在原序列中，
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODY2MzY2MywtMTMzOTU3MDM5MywxNj
-g3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5
-MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC
-01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
+eyJoaXN0b3J5IjpbLTEwMTY0NDM1NjYsLTEzMzk1NzAzOTMsMT
+Y4Nzg2ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5
+OTEyNDgsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MS
+wtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
 -->
