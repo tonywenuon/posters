@@ -24,7 +24,7 @@
 > 部分文字段：知乎问答不回答专栏的文章
 > 需预测文字段：很好很棒很赞
 
-现在的要求是给定
+现在的要求是给定 `部分分字段` 来预测 `需预测文字段`，那么就要根据 `知乎问答不回答专栏的文章` 先来预测 `很`，再根据 `知乎问答不回答专栏的文章很` 来预测 `好`。接下来依次类推，每次把预测出来的文字加入到 `部分文字段` 中，来预测下一个字。这也是
 
 
 
@@ -34,6 +34,6 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NjQwMDQ5OSwtMTM4MzkyMTM5MSwtNT
-UzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbMzA5NDkzMTk4LC0xMzgzOTIxMzkxLC01NT
+M4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
