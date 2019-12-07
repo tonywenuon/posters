@@ -109,19 +109,17 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ### 7. XLNet 和 BERT 的对比
 
-
-
-Next Sentence Prediction 的区别
+首先，XLNet 把 Next Sentence Prediction 去掉了，因为实验结果显示，这个 NSP 任务并不会提高模型效果，甚至还有副作用。当然了，这是从结果反推的结论。这里我想讨论的是
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU4MzY2NjcsLTIxMjE2NjQyMzMsLTEyOT
-Q5Mjg5MDgsNzM1MDE3NjUwLC0xNzE4Nzc4NjA3LDIwNzA5MzIw
-ODQsLTEzMzk1NzAzOTMsMTY4Nzg2ODU4MywtMTY5NTEwOTc0MC
-wtMTAzODE4OTI2OCwtOTU5OTEyNDgsLTg0NDA3MzUyLDMwNjcw
-Mjg3OSwtMTM4MzkyMTM5MSwtNTUzODgwODM1LC0xNzA4ODQ1Nz
-g2XX0=
+eyJoaXN0b3J5IjpbLTExMzQ0ODQ2NjIsNzU4MzY2NjcsLTIxMj
+E2NjQyMzMsLTEyOTQ5Mjg5MDgsNzM1MDE3NjUwLC0xNzE4Nzc4
+NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2ODU4My
+wtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyNDgsLTg0
+NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUzODgwOD
+M1LC0xNzA4ODQ1Nzg2XX0=
 -->
