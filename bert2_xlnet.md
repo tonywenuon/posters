@@ -18,7 +18,7 @@
 之所以把 XLNet 归到 BERT 系列是因为 XLNet 的逻辑是提升 BERT 模型天然的短板，弥补了 BERT 中的两个缺陷。加上在他们之后发布的文章很多也会拿他们俩来比较，我在这里也把他们分到同一个系列中。
 
 ### 1. 自回归（AutoRegressive, AR）和自编码（AutoEncoder, AE）
-如果了解语言模型的话，自回归就很好理解了。拿预测一段文字序列来举例子，AR 的意思是依赖于前面的文字来生成后面的文字。而自编码指的是在所有
+**自回归**，如果了解语言模型的话，自回归就很好理解了。拿预测一段文字序列来举例子，AR 的意思是依赖于前面的文字来生成后面的文字。那下面的例子来说，假设给定一段完整的文字 ``
 
 
 
@@ -29,6 +29,6 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNzQwMDQ2MSwtMTM4MzkyMTM5MSwtNT
-UzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTE2ODM1ODU0NjgsLTEzODM5MjEzOTEsLT
+U1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
 -->
