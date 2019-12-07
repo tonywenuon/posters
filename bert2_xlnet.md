@@ -115,12 +115,12 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 但正如 @张俊林 大神所说，毕竟一个 AR 任务，一个是 AE 任务，在生成式设定上，XLNet 的设计选择优于 BERT，毕竟他遵从了从左到右建模及预测的程式，因此在生成式任务的表现，理论上 XLNet 应优于 BERT。
 
-对于上面所
+对于上面所提到的 RoBERTa ，感兴趣的小伙伴请关注后续【BERT 系列 3 】之 RoBERTa，精化 BERT 模型。
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NTExNTI4NiwtMTEzNDQ4NDY2Miw3NT
+eyJoaXN0b3J5IjpbMTA5NDg2MTc5NiwtMTEzNDQ4NDY2Miw3NT
 gzNjY2NywtMjEyMTY2NDIzMywtMTI5NDkyODkwOCw3MzUwMTc2
 NTAsLTE3MTg3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5My
 wxNjg3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05
