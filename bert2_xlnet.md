@@ -111,7 +111,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 首先，XLNet 把 Next Sentence Prediction 去掉了，因为实验结果显示，这个 NSP 任务并不会提高模型效果，甚至还有副作用。当然了，这是从结果反推的结论。这里我想讨论的是在训练过程中两者的异同，参考了 @张俊林 大神的文章 [XLNet:运行机制及和Bert的异同比较](https://zhuanlan.zhihu.com/p/70257427)，感兴趣的小伙伴自行关注。
 
-在原文章中，作者指出了 BERT 的独立性假设，即预测 [MASK] 位置的词的时候，各个 [MASK] 是独立的，而实际情况下，他们可能并不独立，一个 [MASK] 可能依赖于另一个 [MASK]，如假设 “北京” 被 mask 掉，那么预测 “京” 的时候，是要依赖于 “北” 的。而 XLNet 可以解决这个问题。这个问题从表面上看是这样的，XLNet 通过排列，能够使得每个词都看到其他词，也就达到了非独立性假设的目的。但是试想，这是靠着排列来实现的，也就是说数据冗余，每一条数据被排列成 n 份，通过这样的数据冗余，总能使得各个词都有依赖关系。那么 BERT 呢？他真的做不到非独立吗？其实不然，BERT 在训练过程中每个 sample 只有一份，被 [MASK] 掉的词在当前的 sample 中确实相互预测时是独立的。那么这里就有个潜在的待验证的问题，通过大量数据，甚至是海量数据，总有其他的 sample 在预测的时候能把这个 sample 的两个词给关联起来。假设其他的句子中 “京” 被 mask 了，而 “北” 没有被 mask，那么就有了这样的依赖关系。所以在大量数据训练的情况下，可以认为 BERT 不存在独立性假设。另外，他们俩不能直接对比独立性假设的另一个原因是数据冗余问题（XLNet 通过排列存在数据冗余，BERT 不存在），这里做个大胆的设想，假设 BERT 在训练的时候，对于每一个 sample 不是只做一次 15% 的 mask，而是在随机 mask 以后，对所有被 mask 了的词，挨个的 unmaks 即去掉其 mask。这样相当于每个 sample 又生成了 n 个可训练 sample。通过这样的设定，也解决了
+在原文章中，作者指出了 BERT 的独立性假设，即预测 [MASK] 位置的词的时候，各个 [MASK] 是独立的，而实际情况下，他们可能并不独立，一个 [MASK] 可能依赖于另一个 [MASK]，如假设 “北京” 被 mask 掉，那么预测 “京” 的时候，是要依赖于 “北” 的。而 XLNet 可以解决这个问题。这个问题从表面上看是这样的，XLNet 通过排列，能够使得每个词都看到其他词，也就达到了非独立性假设的目的。但是试想，这是靠着排列来实现的，也就是说数据冗余，每一条数据被排列成 n 份，通过这样的数据冗余，总能使得各个词都有依赖关系。那么 BERT 呢？他真的做不到非独立吗？其实不然，BERT 在训练过程中每个 sample 只有一份，被 [MASK] 掉的词在当前的 sample 中确实相互预测时是独立的。那么这里就有个潜在的待验证的问题，通过大量数据，甚至是海量数据，总有其他的 sample 在预测的时候能把这个 sample 的两个词给关联起来。假设其他的句子中 “京” 被 mask 了，而 “北” 没有被 mask，那么就有了这样的依赖关系。所以在大量数据训练的情况下，可以认为 BERT 不存在独立性假设。另外，他们俩不能直接对比独立性假设的另一个原因是数据冗余问题（XLNet 通过排列存在数据冗余，BERT 不存在），这里做个大胆的设想，假设 BERT 在训练的时候，对于每一个 sample 不是只做一次 15% 的 mask，而是在随机 mask 以后，对所有被 mask 了的词，挨个的 unmaks 即去掉其 mask。这样相当于每个 sample 又生成了 n 个可训练 sample。通过这样的设定，被 mask 了的词，总能看到其他被 mask 的词的信息。这样也解决了独立性假设的问题。所以综上，依赖于大量数据或者数据冗余，BERT 也都不存在独立性假设的问题。
 
 
 
@@ -120,10 +120,10 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzM5MjAyODQsLTExMzQ0ODQ2NjIsNz
-U4MzY2NjcsLTIxMjE2NjQyMzMsLTEyOTQ5Mjg5MDgsNzM1MDE3
-NjUwLC0xNzE4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOT
-MsMTY4Nzg2ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwt
-OTU5OTEyNDgsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMT
-M5MSwtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTM1MTg1NTU2LC0xMTM0NDg0NjYyLDc1OD
+M2NjY3LC0yMTIxNjY0MjMzLC0xMjk0OTI4OTA4LDczNTAxNzY1
+MCwtMTcxODc3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLD
+E2ODc4Njg1ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1
+OTkxMjQ4LC04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOT
+EsLTU1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
 -->
