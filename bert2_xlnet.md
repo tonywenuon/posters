@@ -111,7 +111,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 首先，XLNet 把 Next Sentence Prediction 去掉了，因为实验结果显示，这个 NSP 任务并不会提高模型效果，甚至还有副作用。当然了，这是从结果反推的结论。这里我想讨论的是在训练过程中两者的异同，参考了 @张俊林 大神的文章 [XLNet:运行机制及和Bert的异同比较](https://zhuanlan.zhihu.com/p/70257427)，感兴趣的小伙伴自行关注。
 
-在原文章中，作者指出了 BERT 的独立性假设，即预测 [MASK] 位置的词的时候，各个 [MASK] 是独立的，而实际情况下，他们可能并不独立，一个 [MASK] 可能依赖于另一个 [MASK]，如假设 “北京” 被 mask 掉，那么预测 “京” 的时候，是要依赖于 “北” 的。而 XLNet 可以解决这个问题。这个问题从表面上看是这样的，
+在原文章中，作者指出了 BERT 的独立性假设，即预测 [MASK] 位置的词的时候，各个 [MASK] 是独立的，而实际情况下，他们可能并不独立，一个 [MASK] 可能依赖于另一个 [MASK]，如假设 “北京” 被 mask 掉，那么预测 “京” 的时候，是要依赖于 “北” 的。而 XLNet 可以解决这个问题。这个问题从表面上看是这样的，XLNet 通过排列，能够使得每个词都看到其他词，也就达到了非独立性假设的目的。但是试想，这是靠着排列来实现的，也就是说数据冗余，每一条数据被排列成 n 份，通过这样的数据冗余，总能使得各个词都有依赖关系。那么 BERT 呢？他真的做不到非独立吗？其实不然，BERT 在训练过程中每个 sample 
 
 
 
@@ -120,10 +120,10 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM3ODcyMzU4LC0xMTM0NDg0NjYyLDc1OD
-M2NjY3LC0yMTIxNjY0MjMzLC0xMjk0OTI4OTA4LDczNTAxNzY1
-MCwtMTcxODc3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLD
-E2ODc4Njg1ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1
-OTkxMjQ4LC04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOT
-EsLTU1Mzg4MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbMTkxMjQ2MTc2OSwtMTEzNDQ4NDY2Miw3NT
+gzNjY2NywtMjEyMTY2NDIzMywtMTI5NDkyODkwOCw3MzUwMTc2
+NTAsLTE3MTg3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5My
+wxNjg3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05
+NTk5MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMz
+kxLC01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
