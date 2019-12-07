@@ -35,12 +35,14 @@
 可以看到，他是把原文字段中的某些字或词 mask 掉（通过占位符 [MASK]来替代原有文字），这就相当于去掉了部分有用信息而引入了部分噪音。其预测的目标是把这些去掉的信息还原回来。
 
 ### 2. XLNet 的出发点
-正如上面介绍的，语言模型（Language Model，LM）属于自回归方式来训练，BERT 则正是属于自编码的训练方式。
+正如上面介绍的，语言模型（Language Model，LM）属于自回归方式来训练，BERT 则正是属于自编码的训练方式。我们首先来说 BERT，基于上面的分析，BERT 存在两个问题。
+
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4Mz
-kyMTM5MSwtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTEwODQwMTg1NCwtODQ0MDczNTIsMzA2Nz
+AyODc5LC0xMzgzOTIxMzkxLC01NTM4ODA4MzUsLTE3MDg4NDU3
+ODZdfQ==
 -->
