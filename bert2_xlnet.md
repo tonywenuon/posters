@@ -96,7 +96,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert2/content_split.png?raw=true)
 
-而相对位置编码
+而相对位置编码相对于 BERT 的绝对位置编码更加灵活。还记得在 BERT 中 segment A 和 segment B 的编码是强行将各自的位置 embedding 加到 word embedding 中。在 XLNet 中，位置编码只区分两个位置是否在同一个 segment 中，而不做绝对区分。具体来说，$$
 
 
 ### 6. XLNet 的训练
@@ -117,9 +117,9 @@ Next Sentence Prediction 的区别
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Njg1MDQzMTksNzM1MDE3NjUwLC0xNz
-E4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2
-ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyND
-gsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUz
-ODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbNzU2ODQ5MjcxLDczNTAxNzY1MCwtMTcxOD
+c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
+ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
+04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
+MDgzNSwtMTcwODg0NTc4Nl19
 -->
