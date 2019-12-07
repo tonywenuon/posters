@@ -51,19 +51,22 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ### XLNet 之排列语言模型（Permutation Language Model）
 为了解决上面的问题，XLNet 提出了排列语言模型。其含义是说，每个序列输入进来以后，他都会有各种排列组合，比如一个序列一共有 T 个词，那么他的排列组合就有 T! 个。这个时候，依然遵循语言模型的规则，当计算某个特定位置 t 的时候，在所有的排列组合中，t 能看到所有的信息（包括前面和后面），因为大于 t 的位置的字都会出现在小于 t 的位置上。这么说比较抽象，拿个例子来说。
 
-> 原序列： 我  爱  中  国
-> 排列1：我  爱  国  中
+> 原序列： 我  爱  中  国 （1,2,3,4）
+> 排列1：我  爱  国  中 （）
 > 排列2：我  中  爱  国
 > 排列3：我  中  国  爱
-> 排列4： 
+> 排列4：中  我  爱  国
+> ......
+
+这里不把全部的排列都列出来，只介绍重点含义就好了。看这个例子，对于
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDU2NDc4ODMsLTEzMzk1NzAzOTMsMT
-Y4Nzg2ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5
-OTEyNDgsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MS
-wtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbMTM1MDY1ODgwNSwtMTMzOTU3MDM5MywxNj
+g3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5
+MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC
+01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
