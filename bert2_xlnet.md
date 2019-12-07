@@ -36,13 +36,16 @@
 
 ### 2. XLNet 的出发点
 正如上面介绍的，语言模型（Language Model，LM）属于自回归方式来训练，BERT 则正是属于自编码的训练方式。我们首先来说 BERT，基于上面的分析，BERT 存在两个问题。
+**BERT 问题1**，在预测 [MASK] 位置的词的时候，每个 [MASK] 都是独立地预测，比如：
 
+> 
+> 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQwMTg1NCwtODQ0MDczNTIsMzA2Nz
+eyJoaXN0b3J5IjpbMTI4MDgwODQxMSwtODQ0MDczNTIsMzA2Nz
 AyODc5LC0xMzgzOTIxMzkxLC01NTM4ODA4MzUsLTE3MDg4NDU3
 ODZdfQ==
 -->
