@@ -96,7 +96,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert2/content_split.png?raw=true)
 
-而相对位置编码相对于 BERT 的绝对位置编码更加灵活。还记得在 BERT 中 segment A 和 segment B 的编码是强行将各自的位置 embedding 加到 word embedding 中。在 XLNet 中，位置编码只区分两个位置是否在同一个 segment 中，而不做绝对区分。具体来说，如果位置 i 和位置 j 来自于同一个 segment，那么 $s_{ij}=s_+$，否则 $s_{ij}=s_-$，这里的 $s_+$ 和 $s_-$ 是两个可训练参数向量。那么当位置 i 的token 参与到位置 j 的向量计算的时候，根据位置编码来计算一个 attention，$a_{ij}=(q_i+b)^Ts_{ij}$，这里的 $q_i$ 是 i 位置的向量表示。计算完以后再把这个 attention 加到正常的
+而相对位置编码相对于 BERT 的绝对位置编码更加灵活。还记得在 BERT 中 segment A 和 segment B 的编码是强行将各自的位置 embedding 加到 word embedding 中。在 XLNet 中，位置编码只区分两个位置是否在同一个 segment 中，而不做绝对区分。具体来说，如果位置 i 和位置 j 来自于同一个 segment，那么 $s_{ij}=s_+$，否则 $s_{ij}=s_-$，这里的 $s_+$ 和 $s_-$ 是两个可训练参数向量。那么当位置 i 的token 参与到位置 j 的向量计算的时候，根据位置编码来计算一个 attention，$a_{ij}=(q_i+b)^Ts_{ij}$，这里的 $q_i$ 是 i 位置的向量表示。计算完以后再把这个 attention 加到正常的 attention 中，当做是位置的 attention。这样的相对位置编码的好处是更加灵活，想象下如果训练的输入不是两个 segment 的拼接，而是三个以上拼接的时候，
 
 
 ### 6. XLNet 的训练
@@ -117,9 +117,9 @@ Next Sentence Prediction 的区别
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTE4NDAxMDMsNzM1MDE3NjUwLC0xNz
-E4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2
-ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyND
-gsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUz
-ODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTYxNDAzOTAwOCw3MzUwMTc2NTAsLTE3MT
+g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
+NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
+wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
+ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
