@@ -67,7 +67,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ### 4. 双流自注意力（Two-Stream Self-Attention）
 
 介绍双流注意力之前要指出“两个不可以”。
-**标准语言模型不可以**，整个 XLNet 框架都是用 Transformer 来实现的（有对 Transformer 不了解的，请参见[https://zhuanlan.zhihu.com/p/93488997](https://zhuanlan.zhihu.com/p/93488997)）
+**标准语言模型不可以**，整个 XLNet 框架都是用 Transformer 来实现的（有对 Transformer 不了解的，请参见 [【重要系列 2】之 Transformer](https://zhuanlan.zhihu.com/p/93488997)）。而 Transformer 在计算的时候，每个 token 的 vector 都要参与到其他 token 的计算中。这对于未排列的句子是没有问题的，但是对于排序语言模型就行不通了。假设现在我们有两个排序序列
 
 
 
@@ -76,9 +76,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMDQ1MTM0Niw3MzUwMTc2NTAsLTE3MT
-g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
-NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
-wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
-ODA4MzUsLTE3MDg4NDU3ODZdfQ==
+eyJoaXN0b3J5IjpbMzIwOTY0ODA3LDczNTAxNzY1MCwtMTcxOD
+c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
+ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
+04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
+MDgzNSwtMTcwODg0NTc4Nl19
 -->
