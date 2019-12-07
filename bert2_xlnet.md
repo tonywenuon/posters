@@ -88,7 +88,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 ![](https://github.com/tonywenuon/posters/blob/master/images/bert2/content_query.png?raw=true)
 
-可以忽略这张图的左侧，只关注右侧。右侧是 `3-2-4-1` 这个排列的 mask，我们一起来看上面的矩阵，即 content representation 的 mask 矩阵。每一行，每一列表示原序列中的位置，从 1 到 4。由于在排列 `3-2-4-1` 中，1 是在最后，因此在计算 content representation 的时候，他可以看到所有其他 token 的内容，因此在
+可以忽略这张图的左侧，只关注右侧。右侧是 `3-2-4-1` 这个排列的 mask，我们一起来看上面的矩阵，即 content representation 的 mask 矩阵。每一行，每一列表示原序列中的位置，从 1 到 4。由于在排列 `3-2-4-1` 中，1 是在最后，因此在计算 content representation 的时候，他可以看到所有其他 token 的内容，因此在矩阵里，每一列都是 1，也就是标红的。那么第二行呢，可以看到在排列中，2 只能看到其前面的 3，所以第二行只有第 2 和第 3 列标红。以此类推，第三行只有第 3 列标红，第四行有 2,3,4 列标红。这哦都
 
 
 
@@ -98,9 +98,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNzkyNzE3Miw3MzUwMTc2NTAsLTE3MT
-g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
-NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
-wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
-ODA4MzUsLTE3MDg4NDU3ODZdfQ==
+eyJoaXN0b3J5IjpbNDA2NTcwODIyLDczNTAxNzY1MCwtMTcxOD
+c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
+ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
+04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
+MDgzNSwtMTcwODg0NTc4Nl19
 -->
