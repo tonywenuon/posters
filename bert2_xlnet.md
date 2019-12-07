@@ -67,7 +67,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ### 4. 双流自注意力（Two-Stream Self-Attention）
 
 介绍双流注意力之前要指出“两个不可以”。
-**标准语言模型不可以**，整个 XLNet 框架都是用 Transformer 来实现的（有对 Transformer 不了解的，请参见 [【重要系列 2】之 Transformer](https://zhuanlan.zhihu.com/p/93488997)）。而 Transformer 在计算的时候，每个 token 的 vector 都要参与到其他 token 的计算中。这对于未排列的句子是没有问题的，但是对于排序语言模型就行不通了。还是拿 `1,2,3,4` 来举例子，假设现在我们有两个排序序列：（1）`1,2,3,4`；（2）`1,2,4,3`。前面两个位置都是 `1,2` 那么根据标准语言模型，第三个位置的概率是 p()
+**标准语言模型不可以**，整个 XLNet 框架都是用 Transformer 来实现的（有对 Transformer 不了解的，请参见 [【重要系列 2】之 Transformer](https://zhuanlan.zhihu.com/p/93488997)）。而 Transformer 在计算的时候，每个 token 的 vector 都要参与到其他 token 的计算中。这对于未排列的句子是没有问题的，但是对于排序语言模型就行不通了。还是拿 `1,2,3,4` 来举例子，假设现在我们有两个排序序列：（1）`1,2,3,4`；（2）`1,2,4,3`。前面两个位置都是 `1,2` 那么根据标准语言模型，第三个位置的概率是 $p(x_3 | x_1, x_2)$，而问题是 $x_1, x_2$ 在这两个序列中是完全一样的，所以无法直接套用标准语言模型。为了解决这个问题，在 XLNet 中，
 
 
 
@@ -76,9 +76,9 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI1MDUyMDY1LDczNTAxNzY1MCwtMTcxOD
-c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
-ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
-04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
-MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbLTEzMzMzOTE2MDksNzM1MDE3NjUwLC0xNz
+E4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2
+ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyND
+gsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUz
+ODgwODM1LC0xNzA4ODQ1Nzg2XX0=
 -->
