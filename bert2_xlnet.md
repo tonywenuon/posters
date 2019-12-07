@@ -15,7 +15,7 @@
 ---
 **本文收获**和**重要文章**我先列在前面，以使得在读正文之前能有个概念。文章也会根据**本文收获**的逻辑路线来写。
 
-之所以把 XLNet 归到 BERT 系列是因为 XLNet 的逻辑是提升 BERT 模型天然的短板，弥补了 BERT 中的两个缺陷。加上在他们之后发布的文章很多也会拿他们俩来比较，我在这里也把他们分到同一个系列中。原文章里涉及到比较多的公式，我这里能省就省了。对 BERT 不了解的童鞋们，可以先读一下 [#【BERT 系列 1】之 BERT 本尊](https://zhuanlan.zhihu.com/p/94513051)
+之所以把 XLNet 归到 BERT 系列是因为 XLNet 的逻辑是提升 BERT 模型天然的短板，弥补了 BERT 中的两个缺陷。加上在他们之后发布的文章很多也会拿他们俩来比较，我在这里也把他们分到同一个系列中。原文章里涉及到比较多的公式，我这里能省就省了。对 BERT 不了解的童鞋们，可以先读一下 [【BERT 系列 1】之 BERT 本尊](https://zhuanlan.zhihu.com/p/94513051)
 
 ### 1. 自回归（AutoRegressive, AR）和自编码（AutoEncoder, AE）
 **自回归**，如果了解语言模型的话，自回归就很好理解了。拿预测一段文字序列来举例子，AR 的意思是依赖于前面的文字来生成后面的文字。那下面的例子来说，假设给一段文字 ：
@@ -120,10 +120,11 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NDg2MTc5NiwtMTEzNDQ4NDY2Miw3NT
-gzNjY2NywtMjEyMTY2NDIzMywtMTI5NDkyODkwOCw3MzUwMTc2
-NTAsLTE3MTg3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5My
-wxNjg3ODY4NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05
-NTk5MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMz
-kxLC01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
+eyJoaXN0b3J5IjpbLTIxMjIxNjQ0NTcsMTA5NDg2MTc5NiwtMT
+EzNDQ4NDY2Miw3NTgzNjY2NywtMjEyMTY2NDIzMywtMTI5NDky
+ODkwOCw3MzUwMTc2NTAsLTE3MTg3Nzg2MDcsMjA3MDkzMjA4NC
+wtMTMzOTU3MDM5MywxNjg3ODY4NTgzLC0xNjk1MTA5NzQwLC0x
+MDM4MTg5MjY4LC05NTk5MTI0OCwtODQ0MDczNTIsMzA2NzAyOD
+c5LC0xMzgzOTIxMzkxLC01NTM4ODA4MzUsLTE3MDg4NDU3ODZd
+fQ==
 -->
