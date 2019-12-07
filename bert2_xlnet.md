@@ -107,6 +107,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 
 可以看到，BERT 把`[CLS]` 作为第一个 token，而 XLNet 作为最后一个 token。
 
+### 7. XLNet 和 BERT 的对比
 
 
 
@@ -117,9 +118,9 @@ Next Sentence Prediction 的区别
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTQ5Mjg5MDgsNzM1MDE3NjUwLC0xNz
-E4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2
-ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OTI2OCwtOTU5OTEyND
-gsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUz
-ODgwODM1LC0xNzA4ODQ1Nzg2XX0=
+eyJoaXN0b3J5IjpbLTIxMjE2NjQyMzMsLTEyOTQ5Mjg5MDgsNz
+M1MDE3NjUwLC0xNzE4Nzc4NjA3LDIwNzA5MzIwODQsLTEzMzk1
+NzAzOTMsMTY4Nzg2ODU4MywtMTY5NTEwOTc0MCwtMTAzODE4OT
+I2OCwtOTU5OTEyNDgsLTg0NDA3MzUyLDMwNjcwMjg3OSwtMTM4
+MzkyMTM5MSwtNTUzODgwODM1LC0xNzA4ODQ1Nzg2XX0=
 -->
