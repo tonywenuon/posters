@@ -46,12 +46,14 @@
 
 **语言模型问题：单向模型**，说完了 BERT，我们再来说语言模型，虽然语言模型没有上述问题，但是其最大的短板是非双向可达，双向可达是指在计算一个字的语义的时候，这个语义应该既考虑到前面的字的信息，又考虑到后面的字的信息。BERT 已经明确验证过双向语义模型对于语义表达的重要性。但是在语言模型中，只有单向，最常见的是从左向右建模，即右边的字只能看到其左边的字的信息。语言模型的优点是符合自然预测的习惯即根据前面的信息，来生成后面的文字。
 
-BERT 和语言模型有各自的优缺点
+BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合两者的优点呢？即结合 BERT 的双向语义建模和语言模型从左至右预测的特点。当然有啦，就是 XLNet 咯。
+
+### XLNet
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC04ND
-QwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4MDgz
-NSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbMjM0NDcwNTc1LC0xMDM4MTg5MjY4LC05NT
+k5MTI0OCwtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkx
+LC01NTM4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
