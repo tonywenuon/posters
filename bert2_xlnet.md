@@ -32,7 +32,7 @@
 > 部分文字段：知乎问答 [MASK] 回答专栏的 [MASK] 很好 [MASK] 很赞
 > 需预测文字段：不  文章  很棒
 
-可以看到，他是把原文字段中的某些字
+可以看到，他是把原文字段中的某些字或词 mask 掉（通过占位符 [MASK]来替代原有文字），这就相当于去掉了部分有用信息而引入了部分噪音。其预测的目标是把这些去掉的信息还原回来。
 
 
 
@@ -41,6 +41,6 @@
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxOTY5MzE1LC0xMzgzOTIxMzkxLC01NT
+eyJoaXN0b3J5IjpbMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NT
 M4ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
