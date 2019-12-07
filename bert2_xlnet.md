@@ -42,14 +42,15 @@
 > Mask 句子：[MASK] [MASK] 是个大都市
 
 可以看到，在预测的时候，这两个 [MASK] 相当于是这样预测的，在给定 `是个大都市` 的条件下，预测 `深` 和 `圳` 的概率分别是：p(深 | 是个大都市) 和 p(圳 | 是个大都市)。而这显然是有缺陷的，没有考虑到 `深圳` 这两个词的关系（当然了，这里不考虑汉语的词表，只考虑单个字）。
-**BERT 问题2：**，在训练好 BERT 与训练模型以后，在下游任务进行 fine-tuning。但是下游任务是没有 [MASK] 标记的。这就引起了训练-预测不一致的问题，虽然说在 BERT 训练好了以后，基本上能够生成出每个词的语义向量，但是毕竟有 [MASK] 的存在，这不是一个自然的预测下游任务的方式。
+**BERT 问题2：训练-预测不一致**，在训练好 BERT 与训练模型以后，在下游任务进行 fine-tuning。但是下游任务是没有 [MASK] 标记的。这就引起了训练-预测不一致的问题，虽然说在 BERT 训练好了以后，基本上能够生成出每个词的语义向量，但是毕竟有 [MASK] 的存在，这不是一个自然的预测下游任务的方式。
 
+说完了 BERT，我们再来说语言模型，虽然语言模型没有上述问题，但是其最大的短板是非双向可达，双向可达是指在计算一个字的。BERT 已经明确验证过双向语义模型对于语义表达的重要性。
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0ODAwNjAxMSwtODQ0MDczNTIsMzA2Nz
-AyODc5LC0xMzgzOTIxMzkxLC01NTM4ODA4MzUsLTE3MDg4NDU3
-ODZdfQ==
+eyJoaXN0b3J5IjpbLTE5MzgxODQzMTYsLTg0NDA3MzUyLDMwNj
+cwMjg3OSwtMTM4MzkyMTM5MSwtNTUzODgwODM1LC0xNzA4ODQ1
+Nzg2XX0=
 -->
