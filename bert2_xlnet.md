@@ -105,7 +105,7 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 > **BERT Input** = `[CLS]` the man went to `[MASK]` store `[SEP]` he bought a gallon `[MASK]` milk `[SEP]`
 > **XLNet Input** = the man went to `[MASK]` store `[SEP]` he bought a gallon `[MASK]` milk `[SEP]` `[CLS]`
 
-可以看到，BERT 把`[CLS]` 作为第一个 token，而 XLNet 作为最后一个 token。同时对于训练目标，BERT 是预测被 mask 掉的词。而 XLNet 则是在每个输入的句子中间选择一个位置 c，来进行预测 c 以后的部分句子。实现起来是，设定一个超参数 K，那么
+可以看到，BERT 把`[CLS]` 作为第一个 token，而 XLNet 作为最后一个 token。同时对于训练目标，BERT 是预测被 mask 掉的词。而 XLNet 则是在每个输入的句子中间选择一个位置 c，来进行预测 c 以后的部分句子。实现起来是，设定一个超参数 K，那么 1/K 的词用来预测，其他的词用来训练。K 越大，则越多的上下文信息可用，
 
 ### 7. XLNet 和 BERT 的对比
 
@@ -118,10 +118,10 @@ Next Sentence Prediction 的区别
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTg0NzExNTksLTIxMjE2NjQyMzMsLT
-EyOTQ5Mjg5MDgsNzM1MDE3NjUwLC0xNzE4Nzc4NjA3LDIwNzA5
-MzIwODQsLTEzMzk1NzAzOTMsMTY4Nzg2ODU4MywtMTY5NTEwOT
-c0MCwtMTAzODE4OTI2OCwtOTU5OTEyNDgsLTg0NDA3MzUyLDMw
-NjcwMjg3OSwtMTM4MzkyMTM5MSwtNTUzODgwODM1LC0xNzA4OD
-Q1Nzg2XX0=
+eyJoaXN0b3J5IjpbMTE3OTQ3NzkyMywtMjEyMTY2NDIzMywtMT
+I5NDkyODkwOCw3MzUwMTc2NTAsLTE3MTg3Nzg2MDcsMjA3MDkz
+MjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4NTgzLC0xNjk1MTA5Nz
+QwLC0xMDM4MTg5MjY4LC05NTk5MTI0OCwtODQ0MDczNTIsMzA2
+NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4ODA4MzUsLTE3MDg4ND
+U3ODZdfQ==
 -->
