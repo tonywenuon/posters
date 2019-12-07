@@ -74,16 +74,17 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 * **Content representation**，简写为 $h_{z_t}$，这个向量表征在计算的时候和标准 Transformer 一模一样，即每个 token 的内容加入其他 token 的计算。
 * **Query representation**，简写为 $g_{z_t}$，而这个向量表征的计算，只用当前的位置信息计算，而不是内容。
 
+![](https://github.com/tonywenuon/posters/blob/master/images/bert2/two_stream.png?raw=true)
 
-
+可以看到，公式中一个是 $z<t$，一个是 $z \leqslant $
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1MzU4NzExMCw3MzUwMTc2NTAsLTE3MT
-g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
-NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
-wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
-ODA4MzUsLTE3MDg4NDU3ODZdfQ==
+eyJoaXN0b3J5IjpbNTEzNTk5MDMxLDczNTAxNzY1MCwtMTcxOD
+c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
+ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
+04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
+MDgzNSwtMTcwODg0NTc4Nl19
 -->
