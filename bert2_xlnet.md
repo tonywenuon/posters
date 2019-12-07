@@ -71,16 +71,19 @@ BERT 和语言模型有各自的优缺点，那么有没有一种方式能结合
 **标准 Transformer 不可以**，在标准语言模型中，一个 token 要么参加其他 token 的计算，要么不参加，即非 0 即 1 的关系。这在排序语言模型，就是 XLNet 中就引出了下面的矛盾。（1）为了预测 $x_{z_t}$，根据上面的讨论，只用到 $z_t$（位置信息），而不是 $x_{z_t}$（token 内容信息）；（2）当预测 $x_{z_j}$，j>t 的时候，即预测 t 位置之后的 token 的时候，又需要用到 内容信息 $x_{z_t}$。标准 Transformer，$x_{z_t}$ 要么加入，要么不加入，此时他就无法使用了。这个时候才引出了双流注意力机制。
 
 **双流注意力**
-* **Content representation**，简写为 $h_{z_t}$，这个向量表征在计算的时候和标准 Transformer 一模一样，即每个 token 的内容加入其他 token 的
+* **Content representation**，简写为 $h_{z_t}$，这个向量表征在计算的时候和标准 Transformer 一模一样，即每个 token 的内容加入其他 token 的计算。
+* **Query representation**，简写为 $g_{z_t}$，而这个向量表征的计算，只用当前的位置信息计算，而不是内容。
+
+
 
 
 
 ---
 > [“知乎专栏-问答不回答”](https://zhuanlan.zhihu.com/question-no-answer)，一个期待问答能回答的专栏。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0NzMzMzUyLDczNTAxNzY1MCwtMTcxOD
-c3ODYwNywyMDcwOTMyMDg0LC0xMzM5NTcwMzkzLDE2ODc4Njg1
-ODMsLTE2OTUxMDk3NDAsLTEwMzgxODkyNjgsLTk1OTkxMjQ4LC
-04NDQwNzM1MiwzMDY3MDI4NzksLTEzODM5MjEzOTEsLTU1Mzg4
-MDgzNSwtMTcwODg0NTc4Nl19
+eyJoaXN0b3J5IjpbMjA1MzU4NzExMCw3MzUwMTc2NTAsLTE3MT
+g3Nzg2MDcsMjA3MDkzMjA4NCwtMTMzOTU3MDM5MywxNjg3ODY4
+NTgzLC0xNjk1MTA5NzQwLC0xMDM4MTg5MjY4LC05NTk5MTI0OC
+wtODQ0MDczNTIsMzA2NzAyODc5LC0xMzgzOTIxMzkxLC01NTM4
+ODA4MzUsLTE3MDg4NDU3ODZdfQ==
 -->
